@@ -1,0 +1,60 @@
+/*
+Project: Justhink
+Author:  Justhink Software Development Team
+Version: 1.0
+
+This Copyright Legal Text (the "Agreement") is made and entered into on 2.12.2023 by Justhink company, (hereinafter referred to as "Justhink" or the "Company"), and Furkan Esen, Emir Ayaz, Eray Güleşen, Mert Kozanoğlu, Oğulcan Öztürk, Ahmet Çağlar, (hereinafter referred to as the "Creators").
+
+The purpose of this Agreement is to protect the proprietary rights of Justhink in the software that has been created by the Creators (the "Software"). The Software is a valuable, confidential, and proprietary asset of Justhink and is protected by copyright law.
+
+The Creators hereby acknowledge that the Software is the sole and exclusive property of Justhink and that the Creators have no right, title or interest in or to the Software except as expressly set forth in this Agreement. The Creators shall not copy, publish, distribute, or otherwise use the Software except as specifically authorized by Justhink in writing.
+
+The Creators agree to hold the Software in confidence and to take all reasonable steps to protect the confidential information of Justhink, including but not limited to, using at least the same degree of care as the Creators use to protect their own confidential information of like importance, but in no event using less than a reasonable degree of care.
+
+This Agreement shall be binding upon the Creators and their respective successors, assigns, and legal representatives. The Creators may not assign their rights or delegate their duties under this Agreement without the prior written consent of Justhink.
+
+Justhink shall have the right to terminate this Agreement at any time if the Creators breach any of the provisions of this Agreement. Upon termination, the Creators shall immediately return all confidential information of Justhink, including all copies of the Software.
+
+IN WITNESS WHEREOF, the parties have executed this Agreement as of the date first written above.
+
+Furkan Esen, Emir Ayaz, Eray Güleşen, Mert Kozanoğlu, Oğulcan Öztürk, Ahmet Çağlar
+
+Justhink
+
+*/
+
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/base";
+@import "base/typography";
+
+@import "components/buttons";
+
+@import "layout/grid";
+@import "layout/forms";
+@import "layout/header";
+@import "layout/sidebar";
+@import "layout/footer";
+
+@import "pages/landing";
+@import "pages/about";
+@import "pages/contact";
+@import "pages/home";
+@import "pages/profile";
+@import "pages/leaderboard";
+@import "pages/ideas";
+@import "pages/inspect-idea";
+@import "pages/random-ideas";
+@import "pages/surveys";
+
+@import "themes/thinker";
+@import "themes/dark";
+@import "themes/ocean";
+@import "themes/sand";
+@import "themes/forest";
+
+@import "vendors/violence";
+@import "vendors/wearus";
+@import "vendors/miralay";
