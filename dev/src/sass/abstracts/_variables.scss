@@ -1,0 +1,76 @@
+// Path: sass\abstracts\_variables.scss
+
+$colours: (
+  "primary-light": #5c346b,
+  "primary-dark": #400556,
+  "primary": #4e1c60,
+
+  "light": #fafafa,
+  "dark": #222,
+
+  "grey-light-1": hsl(0, 0%, 80%),
+  "grey-light-2": hsl(0, 0%, 89%),
+  "grey-light-3": hsl(0, 0%, 98%),
+  "grey-dark-1": #555,
+  "grey-dark-2": #444,
+  "grey-dark-3": #333,
+
+  "success": #5cb85c,
+  "info": #5bc0de,
+  "warning": #f0ad4e,
+  "danger": #d9534f,
+);
+
+$fonts: (
+  "primary": "Montserrat",
+);
+
+$font-sizes: (
+  "xs": 1.2rem,
+  "sm": 1.4rem,
+  "base": 1.6rem,
+  "lg": 1.8rem,
+  "xl": 2.4rem,
+  "xxl": 2.8rem,
+  "xxxl": 3.6rem,
+);
+
+$font-weights: (
+  "light": 300,
+  "normal": 400,
+  "bold": 700,
+);
+
+$border-radius: (
+  "sm": 0.32rem,
+  "base": 0.64rem,
+  "lg": 0.96rem,
+);
+
+$shadows: (
+  "light": 0 0.1rem 0.3rem rgba(map-get($colours, "grey-dark-1"), 0.12),
+  "default": 0 0.2rem 0.5rem rgba(map-get($colours, "grey-dark-2"), 0.12),
+  "dark": 0 0.5rem 1rem rgba(map-get($colours, "grey-dark-3"), 0.12),
+);
+
+$breakpoints: ();
+
+$grid: (
+  "columns": 12,
+  "gutter-horizontal": 1.6rem,
+  "gutter-vertical": 2rem,
+);
+
+$sizes: (
+  "navbar-height": 6rem,
+);
+
+$spacings: (
+  "xs": 1.28rem,
+  "sm": 2.56rem,
+  "base": 3.84rem,
+  "lg": 5.12rem,
+  "xl": 6.4rem,
+  "xxl": 7.68rem,
+  "xxxl": 8.96rem,
+);

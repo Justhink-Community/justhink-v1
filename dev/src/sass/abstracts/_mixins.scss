@@ -1,0 +1,22 @@
+// Path: sass\abstracts\_mixins.scss
+
+@mixin abs-center($direction) {
+  position: absolute;
+
+  @if ($direction == "vertical") {
+    top: 50%;
+    transform: translateY(-50%);
+  } @else if ($direction == "horizontal") {
+    left: 50%;
+    transform: translateX(-50%);
+  } @else {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+// MEDIA QUERY MANAGER - To do
+
+@mixin respond($device) {
+}
