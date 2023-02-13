@@ -1,9 +1,9 @@
 {
-  "name": "zafer-buna",
-  "version": "0.1.0",
-  "description": "Zafer Buna Website",
+  "name": "Justhink",
+  "version": "1.0.0",
+  "description": "Justhink Website",
   "main": "public/index.html",
-  "author": "Furkan Esen",
+  "author": "Justhink Software Development Team",
   "scripts": {
     "build:sass": "sass  --no-source-map src/sass:public/css",
     "copy:assets": "copyfiles -u 1 ./assets/**/* public",
