@@ -58,3 +58,43 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+body {
+  background-color: black;
+}
+
+.footer {
+  position: fixed;
+  width: 100%;
+  height: 3.5rem;
+  bottom: 0;
+  background-color: hsl(0deg, 0%, 80%);
+}
+.footer__nav {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.footer__nav--main {
+  left: 3.84rem;
+  gap: 3.84rem;
+  justify-content: start;
+}
+.footer__nav--icons {
+  right: 3.84rem;
+  gap: 1.28rem;
+  justify-content: end;
+}
+.footer__link {
+  color: #4e1c60;
+  transition: all 0.25s ease;
+  border-bottom: 1px solid transparent;
+}
+.footer__link:visited {
+  color: #4e1c60;
+}
+.footer__link:hover {
+  color: #5c346b;
+  border-bottom-color: #5c346b;
+}
