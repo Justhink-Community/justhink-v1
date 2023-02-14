@@ -44,6 +44,7 @@ body {
   font-weight: 400;
   line-height: 1.3;
   min-height: 100vh;
+  background-color: #e3e3e3;
 }
 
 img,
@@ -60,41 +61,60 @@ a {
 }
 
 body {
-  background-color: black;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.header {
+  height: 10rem;
+  background-color: #fafafa;
 }
 
 .footer {
-  position: fixed;
-  width: 100%;
-  height: 3.5rem;
-  bottom: 0;
-  background-color: hsl(0deg, 0%, 80%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4.25rem;
+  background-color: #fafafa;
+  padding-inline: 3rem;
 }
 .footer__nav {
-  position: absolute;
   display: flex;
   align-items: center;
+  gap: 2.4rem;
   height: 100%;
 }
 .footer__nav--main {
-  left: 3.84rem;
-  gap: 3.84rem;
   justify-content: start;
 }
 .footer__nav--icons {
-  right: 3.84rem;
-  gap: 1.28rem;
+  gap: 1.2rem;
   justify-content: end;
 }
 .footer__link {
+  position: relative;
   color: #4e1c60;
   transition: all 0.25s ease;
-  border-bottom: 1px solid transparent;
 }
-.footer__link:visited {
-  color: #4e1c60;
-}
-.footer__link:hover {
+.footer__link:hover, .footer__link:active {
   color: #5c346b;
-  border-bottom-color: #5c346b;
+}
+.footer__link:hover:not(:has(.footer__icon))::after, .footer__link:active:not(:has(.footer__icon))::after {
+  background-color: #5c346b;
+}
+.footer__link:hover .footer__icon, .footer__link:active .footer__icon {
+  color: #5c346b;
+}
+.footer__link::after {
+  content: "";
+  position: absolute;
+  bottom: 0.2rem;
+  left: 0;
+  width: 100%;
+  height: 0.1rem;
+  background-color: transparent;
+}
+.footer__icon {
+  font-size: 1.8rem;
+  color: #4e1c60;
 }

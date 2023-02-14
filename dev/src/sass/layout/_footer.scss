@@ -1,46 +1,59 @@
-body {
-  background-color: black;
-}
-
 .footer {
-  position: fixed;
-  width: 100%;
-  height: 3.5rem;
-  bottom: 0;
-  background-color: map-get($colours, "grey-light-1");
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 4.25rem;
+  background-color: map-get($colours, "light");
+  padding-inline: map-get($spacings, "base");
 
   &__nav {
-    position: absolute;
     display: flex;
     align-items: center;
-
+    gap: map-get($spacings, "sm");
     height: 100%;
 
     &--main {
-      left: map-get($spacings, "base");
-      gap: map-get($spacings, "base");
       justify-content: start;
     }
 
     &--icons {
-      right: map-get($spacings, "base");
       gap: map-get($spacings, "xs");
       justify-content: end;
     }
   }
 
   &__link {
+    position: relative;
     color: map-get($colours, "primary");
     transition: all 0.25s ease;
-    border-bottom: 1px solid transparent;
 
-    &:visited {
-      color: map-get($colours, "primary");
-    }
-
-    &:hover {
+    &:hover,
+    &:active {
       color: map-get($colours, "primary-light");
-      border-bottom-color: map-get($colours, "primary-light");
+
+      &:not(:has(.footer__icon))::after {
+        background-color: map-get($colours, "primary-light");
+      }
+
+      .footer__icon {
+        color: map-get($colours, "primary-light");
+      }
     }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0.2rem;
+      left: 0;
+      width: 100%;
+      height: 0.1rem;
+      background-color: transparent;
+    }
+  }
+
+  &__icon {
+    font-size: map-get($font-sizes, "lg");
+    color: map-get($colours, "primary");
   }
 }

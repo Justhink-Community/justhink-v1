@@ -8,9 +8,9 @@ $colours: (
   "light": #fafafa,
   "dark": #222,
 
-  "grey-light-1": hsl(0, 0%, 80%),
-  "grey-light-2": hsl(0, 0%, 89%),
-  "grey-light-3": hsl(0, 0%, 98%),
+  "grey-light-1": #cccccc,
+  "grey-light-2": #e3e3e3,
+  "grey-light-3": #fafafa,
   "grey-dark-1": #555,
   "grey-dark-2": #444,
   "grey-dark-3": #333,
@@ -66,11 +66,11 @@ $sizes: (
 );
 
 $spacings: (
-  "xs": 1.28rem,
-  "sm": 2.56rem,
-  "base": 3.84rem,
-  "lg": 5.12rem,
+  "xs": 1.2rem,
+  "sm": 2.4rem,
+  "base": 3rem,
+  "lg": 5.4rem,
   "xl": 6.4rem,
-  "xxl": 7.68rem,
-  "xxxl": 8.96rem,
+  "xxl": 7.2rem,
+  "xxxl": 9.6rem,
 );

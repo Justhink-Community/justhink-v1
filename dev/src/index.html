@@ -14,9 +14,14 @@
       rel="stylesheet"
     />
 
+    <link rel="stylesheet" href="css/icons.css" />
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
+    <header class="header">header</header>
+
+    <main class="main">main</main>
+
     <footer class="footer">
       <nav class="footer__nav footer__nav--main">
         <a href="/home" class="footer__link">Anasayfa</a>
@@ -25,10 +30,38 @@
       </nav>
 
       <nav class="footer__nav footer__nav--icons">
-        <a href="#" class="footer__link">Google</a>
-        <a href="#" class="footer__link">Instagram</a>
-        <a href="#" class="footer__link">LinkedIn</a>
-        <a href="#" class="footer__link">YouTube</a>
+        <a href="mailto:noreply@justhink.net" class="footer__link">
+          <svg class="footer__icon">
+            <use xlink:href="assets/sprite.svg#icon-email"></use>
+          </svg>
+        </a>
+        <a
+          href="https://www.instagram.com/justhinkofficial/"
+          class="footer__link"
+          target="_blank"
+        >
+          <svg class="footer__icon">
+            <use xlink:href="assets/sprite.svg#icon-instagram"></use>
+          </svg>
+        </a>
+        <a
+          href="https://www.linkedin.com/company/justhink"
+          class="footer__link"
+          target="_blank"
+        >
+          <svg class="footer__icon">
+            <use xlink:href="assets/sprite.svg#icon-linkedin"></use>
+          </svg>
+        </a>
+        <a
+          href="https://www.youtube.com/@jsthink"
+          class="footer__link"
+          target="_blank"
+        >
+          <svg class="footer__icon">
+            <use xlink:href="assets/sprite.svg#icon-youtube"></use>
+          </svg>
+        </a>
       </nav>
     </footer>
   </body>
