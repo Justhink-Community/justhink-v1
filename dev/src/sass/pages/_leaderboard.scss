@@ -1,0 +1,114 @@
+.leaderboard__main {
+  display: flex;
+  flex-direction: row;
+  padding: 3rem;
+  justify-content: space-between;
+}
+
+.main__summary {
+  height: 100%;
+  width: clamp(30rem, 25vw, 40rem);
+  background-color: map-get($colours, primary);
+  border-radius: 1rem;
+  padding: 10rem 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.summary__hastag-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.summary__hastags {
+  color: map-get($colours, grey-light-1);
+}
+
+.summary__subject {
+  color: map-get($colours, light);
+  font-size: map-get($font-sizes, xxxl);
+}
+
+.summary__statistics-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.summary__statistics {
+  color: map-get($colours, grey-light-1);
+}
+
+.main__leaderboard {
+  background-color: map-get($colours, light);
+  border-radius: 1rem;
+  max-height: 80vh;
+  width: 50%;
+}
+
+.leaderboard__header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 1.6rem;
+  align-items: center;
+}
+
+.leaderboard__title {
+  position: relative;
+  color: map-get($colours, dark);
+  font-size: map-get($font-sizes, xxl);
+}
+
+.leaderboard__time-btn {
+  font-size: map-get($font-sizes, base);
+  color: map-get($colours, grey-dark-1);
+  transition: all 0.2s;
+}
+
+.leaderboard__time-btn::after {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  width: 100%;
+  height: 0.1rem;
+  transform: translateX(-50%);
+  background-color: #ccc;
+}
+
+.leaderboard__list {
+  padding: 1.6rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  overflow-y: scroll;
+  margin-block-start: 0.5rem;
+}
+
+.leaderboard__list-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: inherit;
+}
+
+.leaderboard__index {
+  color: map-get($colours, grey-light-2);
+  background-color: map-get($colours, grey-light-3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.2rem;
+  height: 3.2rem;
+  margin-inline-end: 2rem;
+}
+
+.leaderboard__username {
+  font-size: map-get($colours, xl);
+  margin-inline-end: 1.2rem;
+}
