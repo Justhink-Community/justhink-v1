@@ -1,112 +1,100 @@
+// Path: sass\layout\_header.scss
+
 .header {
-  width: 100%;
-  height: 10rem;
-  padding: 0 2.88rem;
+  height: map-get($sizes, "navbar-height");
+  padding-inline: map-get($spacings, "md");
   background-color: map-get($colours, "light");
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
 
-.header_logo{
-  width: 100%;
-}
+  &__start {
+    display: flex;
+    align-items: center;
+    gap: map-get($spacings, "upper-md");
+  }
 
-.header__logo-source{
-  color: map-get($colours, primary);
-  width: 100%;
-}
+  &__end {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
 
-.header__header-start {
-  display: flex;
-  align-items: center;
-  gap: 4rem;
-}
+  &__hamburger-menu {
+    position: relative;
 
-.header__hamburger-menu,
-.header__hamburger-menu::before,
-.header__hamburger-menu::after {
-  position: relative;
-  display: inline-block;
-  width: 4.5rem;
-  height: 0.7rem;
-  background-color: map-get($colours, primary);
-  border-radius: 1rem;
-  transition: all 0.2s ease;
-}
+    &,
+    &::before,
+    &::after {
+      display: inline-block;
+      width: map-get($spacings, "semi-lg");
+      height: 0.7rem;
+      background-color: map-get($colours, "primary");
+      border-radius: map-get($border-radius, "lg");
+    }
 
-.header__hamburger-menu::before,
-.header__hamburger-menu::after {
-  content: "";
-  position: absolute;
-  left: 0;
-}
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all 0.2s ease;
+    }
 
-.header__hamburger-menu::before {
-  top: -1.3rem;
-}
+    &::before {
+      top: -1.3rem;
+    }
 
-.header__hamburger-menu::after {
-  bottom: -1.3rem;
-}
+    &::after {
+      bottom: -1.3rem;
+    }
 
-.header__search-box {
-  width: clamp(60rem, 45vw, 80rem);
-  height: 5.5rem;
-  background-color: map-get($colours, light);
-  border-radius: 1rem;
-  border: 0.3rem solid map-get($colours, dark);
-  display: flex;
-  align-items: center;
-  padding: 0 1rem;
-  gap: 1.5rem;
-  color: inherit;
-  font: inherit;
-}
+    &:hover {
+      &::before {
+        transform: translateY(-0.15rem);
+      }
 
-.header__search-input {
-  background: none;
-  border: none;
-  color: map-get($colours, dark);
-  font-size: map-get($font-sizes, lg);
-  width: 100%;
-  height: 100%;
-  outline: none;
-}
+      &::after {
+        transform: translateY(0.15rem);
+      }
+    }
+  }
 
-.header__header-end {
-  display: flex;
-  align-items: center;
-  gap: 3rem;
-}
+  &__search {
+    &-box {
+      width: clamp(60rem, 45vw, 80rem);
+      height: map-get($spacings, "lg");
+      background: linear-gradient(
+            map-get($colours, "light"),
+            map-get($colours, "light")
+          )
+          padding-box,
+        map-get($colours, "primary-dark") border-box;
+      border-radius: 1rem;
+      border: 0.3rem solid transparent;
+      display: flex;
+      align-items: center;
+      padding: 0 1rem;
+      gap: 1.5rem;
+      color: inherit;
+      font: inherit;
+    }
 
-.header__notifications-btn {
-  color: map-get($colours, primary);
-  font-size: map-get($font-sizes, xxl);
-}
+    &-input {
+      background: none;
+      color: map-get($colours, "dark");
+      font-size: 1.8rem;
+      font-weight: 500;
+      width: 100%;
+      height: 100%;
+      border: none;
+      outline: none;
+    }
 
-.header__login-btn,
-.header__login-btn:link,
-.header__login-btn:visited {
-  background-color: map-get($colours, primary-light);
-}
-
-.header__login-btn:hover,
-.header__login-btn:active {
-  background-color: map-get($colours, primary-light);
-}
-
-.header__login-btn,
-.header__login-btn:link,
-.header__login-btn:visited {
-  text-decoration: none;
-  font-size: 2rem;
-  padding: 1.5rem 3rem;
-  border-radius: 1rem;
-  transition: all 0.2s ease;
-  cursor: pointer;
-  border: none;
-  outline: none;
-  letter-spacing: 0.5px;
-  color: map-get($colours, light);
+    &-icon {
+      font-size: map-get($font-sizes, "xxl");
+      color: map-get($colours, "primary-dark");
+      transform: scaleX(-1);
+    }
+  }
 }

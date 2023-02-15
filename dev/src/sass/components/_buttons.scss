@@ -1,0 +1,27 @@
+// Path: sass\components\_buttons.scss
+
+.btn {
+  display: inline-block;
+  padding: map-get($spacings, "semi-sm") map-get($spacings, "base");
+  font-size: map-get($font-sizes, "lg");
+  cursor: pointer;
+  outline: none;
+  border: none;
+  box-shadow: map-get($shadows, "default");
+  letter-spacing: 0.5px;
+  border-radius: map-get($border-radius, "lg");
+  transition: all 0.2s ease;
+
+  &--primary {
+    &:link,
+    &:visited {
+      background-color: map-get($colours, "primary");
+      color: map-get($colours, "light");
+    }
+
+    &:hover,
+    &:active {
+      background-color: map-get($colours, "primary-light");
+    }
+  }
+}

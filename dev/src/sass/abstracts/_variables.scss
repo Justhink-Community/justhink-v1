@@ -1,7 +1,7 @@
 // Path: sass\abstracts\_variables.scss
 
 $colours: (
-  "primary-light": #5c346b,
+  "primary-light": #5a2a76,
   "primary-dark": #400556,
   "primary": #4e1c60,
 
@@ -29,9 +29,9 @@ $font-sizes: (
   "xs": 1.2rem,
   "sm": 1.4rem,
   "base": 1.6rem,
-  "lg": 1.8rem,
+  "lg": 2rem,
   "xl": 2.4rem,
-  "xxl": 2.8rem,
+  "xxl": 3.2rem,
   "xxxl": 3.6rem,
 );
 
@@ -44,7 +44,7 @@ $font-weights: (
 $border-radius: (
   "sm": 0.32rem,
   "base": 0.64rem,
-  "lg": 0.96rem,
+  "lg": 1.1rem,
 );
 
 $shadows: (
@@ -62,13 +62,17 @@ $grid: (
 );
 
 $sizes: (
-  "navbar-height": 6rem,
+  "navbar-height": clamp(10rem, 10vh, 11.7rem),
 );
 
 $spacings: (
   "xs": 1.2rem,
+  "semi-sm": 1.5rem,
   "sm": 2.4rem,
   "base": 3rem,
+  "md": 3.2rem,
+  "upper-md": 4rem,
+  "semi-lg": 4.5rem,
   "lg": 5.4rem,
   "xl": 6.4rem,
   "xxl": 7.2rem,

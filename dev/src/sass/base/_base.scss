@@ -36,3 +36,8 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+::selection {
+  background-color: map-get($colours, "primary");
+  color: map-get($colours, "light");
+}
