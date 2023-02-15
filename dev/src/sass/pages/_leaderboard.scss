@@ -1,146 +1,148 @@
-.leaderboard__main {
-  display: flex;
-  flex-direction: row;
-  padding: 3rem;
-  justify-content: space-between;
+.leaderboard {
+  padding: 0;
+  display: grid;
   align-items: center;
+  grid-template-columns: 1fr 3fr 1fr;
+  padding: map-get($spacings, "md");
+  grid-template-rows: 100%;
+  gap: calc(map-get($spacings, "md") + 0.3rem);
 }
 
-.main__summary {
+.summary {
   height: 100%;
-  width: 25%;
-  background-color: map-get($colours, primary);
-  border-radius: 1rem;
-  padding: 10rem 3.5rem;
+  background-image: linear-gradient(
+    to bottom right,
+    map-get($colours, primary-light),
+    map-get($colours, primary-dark)
+  );
+  border-radius: map-get($border-radius, "lg");
+  padding: calc(map-get($spacings, "xxxl") + 0.4rem)
+    calc(map-get($spacings, "md") + 0.3rem);
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  width: clamp(30rem, 25vw, 40rem);
+
+  &__hashtags-container {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    color: #eee;
+    opacity: 0.8;
+    font-weight: 400;
+    font-size: map-get($font-sizes, "base");
+    margin-bottom: map-get($spacings, "semi-sm");
+    color: map-get($colours, "grey-light-1");
+  }
+
+  &__topic {
+    color: map-get($colours, light);
+    font-size: map-get($font-sizes, xxxl);
+  }
+
+  &__statistics {
+    color: rgba(map-get($colours, "light"), 0.5);
+    font-size: calc(map-get($font-sizes, "lg") + 0.2rem);
+
+    &-container {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-top: calc(map-get($spacings, "sm") + 0.1rem);
+    }
+  }
 }
 
-.summary__hastag-container {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
+.ranking {
+  background-color: map-get($colours, "grey-light-4");
+  border-radius: map-get($border-radius, "lg");
+  height: min(100%, 54rem);
+
+  &__header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-inline: calc(map-get($spacings, "semi-sm") + 0.1rem);
+    align-items: center;
+  }
+
+  &__title {
+    position: relative;
+    color: map-get($colours, dark);
+    font-size: map-get($font-sizes, xxl);
+    font-weight: calc(map-get($font-weights, bold) - 100);
+  }
+
+  &__time-btn {
+    font-size: map-get($font-sizes, base);
+    color: map-get($colours, grey-dark-1);
+    transition: all 0.2s;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -0.5rem;
+      left: 50%;
+      width: 100%;
+      height: 0.1rem;
+      transform: translateX(-50%);
+      background-color: #ccc;
+    }
+  }
+
+  &__list {
+    padding: calc(map-get($spacings, "semi-sm") + 0.1rem);
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: calc(map-get($spacings, "semi-sm") + 0.1rem);
+    margin-block-start: 0.5rem;
+    height: 100%;
+
+    &-item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      color: inherit;
+    }
+  }
+
+  &__index {
+    color: map-get($colours, "grey-light-1");
+    background-color: map-get($colours, "grey-light-2");
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: map-get($spacings, "md");
+    height: map-get($spacings, "md");
+    margin-inline-end: calc(map-get($spacings, "sm") - 0.4rem);
+  }
+
+  &__username {
+    font-size: map-get($font-sizes, xl);
+    margin-inline-end: map-get($spacings, "xsm");
+    color: map-get($colours, grey-dark-1);
+  }
 }
 
-.summary__hastags {
-  color: map-get($colours, grey-light-1);
-}
-
-.summary__subject {
-  color: map-get($colours, light);
-  font-size: map-get($font-sizes, xxxl);
-}
-
-.summary__statistics-container {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.summary__statistics {
-  color: map-get($colours, grey-light-1);
-}
-
-.main__leaderboard {
-  background-color: map-get($colours, light);
-  border-radius: 1rem;
-  height: 70vh;
-  width: 52%;
-}
-
-.leaderboard__header {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  padding-inline: 1.6rem;
-  align-items: center;
-}
-
-.leaderboard__title {
-  position: relative;
-  color: map-get($colours, dark);
-  font-size: map-get($font-sizes, xxl);
-  font-weight: calc(map-get($font-weights, bold) - 100);
-}
-
-.leaderboard__time-btn {
-  font-size: map-get($font-sizes, base);
-  color: map-get($colours, grey-dark-1);
-  transition: all 0.2s;
-}
-
-.leaderboard__time-btn::after {
-  content: "";
-  position: absolute;
-  bottom: -0.5rem;
-  left: 50%;
-  width: 100%;
-  height: 0.1rem;
-  transform: translateX(-50%);
-  background-color: #ccc;
-}
-
-.leaderboard__list {
-  padding: 1.6rem;
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 1.6rem;
-  margin-block-start: 0.5rem;
+.suggestions {
   height: 100%;
-}
-
-.leaderboard__list-item {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  color: inherit;
-}
-
-.leaderboard__index {
-  color: map-get($colours, grey-dark-1);
-  background-color: map-get($colours, grey-light-2);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.5rem;
-  height: 2.5rem;
-  margin-inline-end: 2rem;
-}
-
-.leaderboard__username {
-  font-size: map-get($font-sizes, xl);
-  margin-inline-end: 1.2rem;
-  color: map-get($colours, grey-dark-1);
-}
-
-.main__suggestions {
-  height: 100%;
-  width: 18%;
-  background-color: map-get($colours, light);
-  padding: 2rem;
-  border-radius: 1rem;
+  background-color: map-get($colours, "grey-light-4");
+  padding: calc(map-get($spacings, "sm") - 0.4rem);
+  border-radius: map-get($border-radius, "lg");
   color: map-get($colours, dark);
-}
 
-.suggestion__heading {
-  color: map-get($colours, primary);
-  font-size: map-get($font-sizes, lg);
-  font-weight: 600;
-}
+  &__list {
+    margin-block-start: calc(map-get($spacings, "sm") + 0.1rem);
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: calc(map-get($spacings, "xs") + 0.05rem);
+  }
 
-.suggestions__list{
-  margin-block-start: 2.5rem;
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-}
-
-.suggestions__link {
-  text-decoration: none;
-  color: map-get($colours, dark);
-  font-weight: calc(map-get($font-weights, bold) - 100);
+  &__link {
+    text-decoration: none;
+    color: map-get($colours, dark);
+    font-weight: calc(map-get($font-weights, bold) - 100);
+  }
 }

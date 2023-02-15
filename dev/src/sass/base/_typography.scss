@@ -1,0 +1,5 @@
+.heading-tertiary {
+  color: map-get($colours, primary);
+  font-size: map-get($font-sizes, lg);
+  font-weight: 600;
+}
