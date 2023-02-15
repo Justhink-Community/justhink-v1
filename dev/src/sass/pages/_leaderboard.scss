@@ -3,11 +3,12 @@
   flex-direction: row;
   padding: 3rem;
   justify-content: space-between;
+  align-items: center;
 }
 
 .main__summary {
   height: 100%;
-  width: clamp(30rem, 25vw, 40rem);
+  width: 25%;
   background-color: map-get($colours, primary);
   border-radius: 1rem;
   padding: 10rem 3.5rem;
@@ -44,8 +45,8 @@
 .main__leaderboard {
   background-color: map-get($colours, light);
   border-radius: 1rem;
-  max-height: 80vh;
-  width: 50%;
+  height: 70vh;
+  width: 52%;
 }
 
 .leaderboard__header {
@@ -60,6 +61,7 @@
   position: relative;
   color: map-get($colours, dark);
   font-size: map-get($font-sizes, xxl);
+  font-weight: calc(map-get($font-weights, bold) - 100);
 }
 
 .leaderboard__time-btn {
@@ -85,8 +87,8 @@
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
-  overflow-y: scroll;
   margin-block-start: 0.5rem;
+  height: 100%;
 }
 
 .leaderboard__list-item {
@@ -97,18 +99,48 @@
 }
 
 .leaderboard__index {
-  color: map-get($colours, grey-light-2);
-  background-color: map-get($colours, grey-light-3);
+  color: map-get($colours, grey-dark-1);
+  background-color: map-get($colours, grey-light-2);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 3.2rem;
-  height: 3.2rem;
+  width: 2.5rem;
+  height: 2.5rem;
   margin-inline-end: 2rem;
 }
 
 .leaderboard__username {
-  font-size: map-get($colours, xl);
+  font-size: map-get($font-sizes, xl);
   margin-inline-end: 1.2rem;
+  color: map-get($colours, grey-dark-1);
+}
+
+.main__suggestions {
+  height: 100%;
+  width: 18%;
+  background-color: map-get($colours, light);
+  padding: 2rem;
+  border-radius: 1rem;
+  color: map-get($colours, dark);
+}
+
+.suggestion__heading {
+  color: map-get($colours, primary);
+  font-size: map-get($font-sizes, lg);
+  font-weight: 600;
+}
+
+.suggestions__list{
+  margin-block-start: 2.5rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.suggestions__link {
+  text-decoration: none;
+  color: map-get($colours, dark);
+  font-weight: calc(map-get($font-weights, bold) - 100);
 }

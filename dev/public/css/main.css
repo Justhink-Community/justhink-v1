@@ -221,11 +221,12 @@ body {
   flex-direction: row;
   padding: 3rem;
   justify-content: space-between;
+  align-items: center;
 }
 
 .main__summary {
   height: 100%;
-  width: clamp(30rem, 25vw, 40rem);
+  width: 25%;
   background-color: #4e1c60;
   border-radius: 1rem;
   padding: 10rem 3.5rem;
@@ -262,8 +263,8 @@ body {
 .main__leaderboard {
   background-color: #fafafa;
   border-radius: 1rem;
-  max-height: 80vh;
-  width: 50%;
+  height: 70vh;
+  width: 52%;
 }
 
 .leaderboard__header {
@@ -278,6 +279,7 @@ body {
   position: relative;
   color: #222;
   font-size: 3.2rem;
+  font-weight: 600;
 }
 
 .leaderboard__time-btn {
@@ -303,8 +305,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
-  overflow-y: scroll;
   margin-block-start: 0.5rem;
+  height: 100%;
 }
 
 .leaderboard__list-item {
@@ -315,17 +317,48 @@ body {
 }
 
 .leaderboard__index {
-  color: #e3e3e3;
-  background-color: #fafafa;
+  color: #555;
+  background-color: #e3e3e3;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 3.2rem;
-  height: 3.2rem;
+  width: 2.5rem;
+  height: 2.5rem;
   margin-inline-end: 2rem;
 }
 
 .leaderboard__username {
+  font-size: 2.4rem;
   margin-inline-end: 1.2rem;
+  color: #555;
+}
+
+.main__suggestions {
+  height: 100%;
+  width: 18%;
+  background-color: #fafafa;
+  padding: 2rem;
+  border-radius: 1rem;
+  color: #222;
+}
+
+.suggestion__heading {
+  color: #4e1c60;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.suggestions__list {
+  margin-block-start: 2.5rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.suggestions__link {
+  text-decoration: none;
+  color: #222;
+  font-weight: 600;
 }
