@@ -24,8 +24,8 @@ Justhink
 */
 
 @import "abstracts/variables";
+@import "abstracts/functions";
 @import "abstracts/mixins";
-@import "abstracts/variables";
 
 @import "base/base";
 @import "base/typography";
@@ -48,6 +48,7 @@ Justhink
 @import "pages/inspect-idea";
 @import "pages/random-ideas";
 @import "pages/surveys";
+@import "pages/login";
 
 @import "themes/thinker";
 @import "themes/dark";

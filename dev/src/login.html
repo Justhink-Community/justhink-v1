@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Justhink &ndash; Anasayfa</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/icons.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__start">
+        <a
+          href="index.html"
+          class="hamburger-btn"
+          aria-label="Justhink web sitesinin menüsünü görüntülemek için tıkla."
+        >
+          <span class="header__hamburger-menu"></span>
+        </a>
+        <h1 class="header__logo">
+          <a
+            href="#"
+            aria-label="Justhink sitesinin anasayfasına gitmek için tıkla."
+          >
+            <img src="assets/logo.webp" alt="Justhink Logo" />
+          </a>
+        </h1>
+      </div>
+      <div class="header__center">
+        <form action="search" method="get">
+          <div class="header__search-box">
+            <a
+              href="#"
+              class="header__search-btn"
+              aria-label="İstediğiniz bir şeyi aratın"
+            >
+              <svg class="header__search-icon">
+                <use xlink:href="assets/sprite.svg#icon-search"></use>
+              </svg>
+            </a>
+            <input
+              class="header__search-input"
+              type="text"
+              placeholder="Dilediğiniz şeyi arayın."
+            />
+          </div>
+        </form>
+      </div>
+      <div class="header__end">
+        <a href="/login" class="btn btn--primary">Giriş Yap</a>
+      </div>
+    </header>
+
+    <main class="main section">
+      <section class="wrapper auth">
+        <div class="auth__title">
+          <h2 class="auth__heading">jusTHINK</h2>
+          <span class="auth__description">günlük inovasyon dozu</span>
+        </div>
+        <div class="register-box auth-box">
+          <h3 class="auth-box__heading-tertiary">Hesabın yok mu? Kayıt ol</h3>
+          <form action method="post" class="register-box__form">
+            <div class="auth-box__input-box">
+              <label for="username" class="auth-box__label"
+                >Kullanıcı adı:</label
+              >
+              <input
+                type="text"
+                name="username"
+                class="auth-box__input"
+                placeholder="Username"
+                minlength="2"
+                maxlength="20"
+                oninvalid="setCustomValidity('Kullanıcı adınız 2 ila 20 karakter arasında alfanumerik bir yapıda olmalıdır')"
+                oninput="setCustomValidity('')"
+                required
+              />
+            </div>
+            <div class="auth-box__input-box">
+              <label for="email" class="auth-box__label">E-posta:</label>
+              <input
+                type="email"
+                name="email"
+                class="auth-box__input"
+                placeholder="username@mail.com"
+                oninvalid="setCustomValidity('E-posta adresinizi doğru girmelisiniz')"
+                oninput="setCustomValidity('')"
+                required
+              />
+            </div>
+            <div class="auth-box__input-box">
+              <label for="password" class="auth-box__label">Şifre:</label>
+              <input
+                type="password"
+                name="password"
+                class="auth-box__input"
+                placeholder="*******"
+                minlength="8"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                oninvalid="setCustomValidity('Şifreniz; en az bir büyük harf, bir küçük harf, bir özel karakter veya rakamdan oluşan, minimum 8 haneli bir yapıda olmalı')"
+                oninput="setCustomValidity('')"
+                required
+              />
+            </div>
+            <div class="auth-box__input-box">
+              <label for="reference-code" class="auth-box__label"
+                >Referans Kodu (Zorunlu Değil):</label
+              >
+              <input
+                type="reference-code"
+                name="reference-code"
+                class="auth-box__input auth-box__input-ref"
+                placeholder="xxxxxx"
+                minlength="6"
+                maxlength="6"
+              />
+            </div>
+            <a href="#" class="auth__politics-btn"
+              >İlgili politikaları okumak için tıkla</a
+            >
+            <div class="bottom-box">
+              <div class="bottom-box__controller">
+                <div class="auth-box__checkbox-box">
+                  <input
+                    type="checkbox"
+                    name="ks-agreed"
+                    class="auth-box__input-checkbox"
+                  />
+                  <label for="ks-agreed" class="auth-box__checkbox-label"
+                    ><a><abbr title="Kullanıcı Sözleşmesi">KS</abbr>'yı</a>
+                    kabul ediyorum.</label
+                  >
+                </div>
+              </div>
+              <input
+                type="submit"
+                value="Kayıt Ol"
+                class="btn btn--primary auth-btn__submit"
+              />
+            </div>
+          </form>
+        </div>
+        <div class="login-box auth-box"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <nav class="footer__nav footer__nav--main">
+        <a href="/home" class="footer__link">Anasayfa</a>
+        <a href="/about" class="footer__link">Hakkımızda</a>
+        <a href="/dashboard" class="footer__link">Medya</a>
+      </nav>
+
+      <nav class="footer__nav footer__nav--icons">
+        <a href="mailto:noreply@justhink.net" class="footer__link">
+          <svg class="footer__icon">
+            <use xlink:href="assets/sprite.svg#icon-email"></use>
+          </svg>
+        </a>
+        <a
+          href="https://www.instagram.com/justhinkofficial/"
+          class="footer__link"
+          target="_blank"
+        >
+          <svg class="footer__icon">
+            <use xlink:href="assets/sprite.svg#icon-instagram"></use>
+          </svg>
+        </a>
+        <a
+          href="https://www.linkedin.com/company/justhink"
+          class="footer__link"
+          target="_blank"
+        >
+          <svg class="footer__icon">
+            <use xlink:href="assets/sprite.svg#icon-linkedin"></use>
+          </svg>
+        </a>
+        <a
+          href="https://www.youtube.com/@jsthink"
+          class="footer__link"
+          target="_blank"
+        >
+          <svg class="footer__icon">
+            <use xlink:href="assets/sprite.svg#icon-youtube"></use>
+          </svg>
+        </a>
+      </nav>
+    </footer>
+  </body>
+</html>

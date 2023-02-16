@@ -1,0 +1,97 @@
+.selection {
+  height: auto;
+  position: relative;
+  padding: map-get($spacings, sm) map-get($spacings, upper-md) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: map-get($spacings, md);
+  padding-block-start: 0;
+}
+
+.auth {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 2.5fr;
+  column-gap: calc(map-get($grid, gutter-horizontal) * 10);
+  row-gap: calc(map-get($grid, gutter-horizontal) * 2);
+  backface-visibility: hidden;
+
+  &__title {
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  &__heading {
+    font-size: calc(map-get($font-sizes, sm) * 4);
+    font-weight: map-get($font-weights, normal);
+    color: map-get($colours, primary);
+  }
+
+  &-box {
+    position: relative;
+    padding-inline: map-get($spacings, upper-md);
+    padding-block: map-get($spacings, base);
+    background-color: map-get($colours, primary-light);
+    color: map-get($colours, light);
+    border-radius: map-get($border-radius, lg);
+
+    &__heading-tertiary {
+      font-size: map-get($font-sizes, xxl);
+      letter-spacing: 0.75px;
+      font-weight: map-get($font-weights, normal);
+      margin-block-end: calc(map-get($spacings, md) - map-get($spacings, xs));
+    }
+
+    &__input-box {
+      display: flex;
+      flex-direction: column;
+      gap: calc(map-get(&spacings, xs) / 3);
+    }
+
+    &__label {
+      opacity: 0.75;
+      letter-spacing: 0.75px;
+      font-size: map-get($font-sizes, lg);
+      font-weight: map-get($font-weights, normal);
+    }
+
+    &__input {
+      background-color: map-get($colours, light);
+      outline: none;
+      border: none;
+      border-radius: map-get($border-radius, base);
+      max-width: 90%;
+      padding-inline: map-get($spacings, xs);
+      padding-block: 0.9rem;
+      border-bottom: 2px solid transparent;
+      transition: border-bottom-color 0.2s ease;
+      color: map-get($colours, dark);
+    }
+  }
+
+  &__politics-btn {
+    color: map-get($colours, light);
+  }
+
+  &__description {
+    font-size: map-get($font-sizes, xxl);
+    font-weight: map-get($font-weights, normal);
+    color: map-get($colours, primary);
+    opacity: 0.5;
+  }
+}
+
+.register-box {
+  grid-row: span 2;
+  grid-column: 2;
+  overflow: hidden;
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: map-get($spacings, sm);
+    overflow: hidden;
+  }
+}
