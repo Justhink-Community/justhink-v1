@@ -1,30 +1,26 @@
-.body {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-}
-
-.selection {
-  height: auto;
-  position: relative;
-  padding: map-get($spacings, sm) map-get($spacings, upper-md) 0;
+main.login {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: map-get($spacings, md);
   padding-block-start: 0;
 }
 
 .auth {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 2.5fr;
   column-gap: calc(map-get($grid, gutter-horizontal) * 10);
   row-gap: calc(map-get($grid, gutter-horizontal) * 2);
   backface-visibility: hidden;
+  padding: map-get($spacings, upper-md);
 
   &__forget-password {
     color: map-get($colours, light);
+    text-decoration: underline;
+  }
+
+  &-mobile {
+    display: none;
   }
 
   &__title {
@@ -79,7 +75,7 @@
       color: map-get($colours, dark);
 
       &-checkbox {
-        accent-color: map-get($colours, primary-light);
+        accent-color: map-get($colours, "light");
       }
     }
 
@@ -89,6 +85,10 @@
       align-items: center;
       gap: 0.6rem;
       grid-column: 1;
+
+      & :is(*, *:before, *:after) {
+        cursor: pointer;
+      }
     }
 
     &__checkbox-label {
@@ -98,6 +98,7 @@
 
   &__politics-btn {
     color: map-get($colours, light);
+    text-decoration: underline;
   }
 
   &__description {

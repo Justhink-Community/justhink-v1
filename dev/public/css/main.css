@@ -54,7 +54,8 @@ video {
   max-width: 100%;
 }
 
-a {
+a,
+abbr {
   display: inline-block;
   color: inherit;
   text-decoration: none;
@@ -71,8 +72,9 @@ a {
   font-weight: 600;
 }
 
-.btn {
+.btn, .btn--secondary:is(.btn--animate)::after {
   display: inline-block;
+  position: relative;
   padding: 1.5rem 3rem;
   font-size: 2rem;
   cursor: pointer;
@@ -83,12 +85,40 @@ a {
   border-radius: 1.1rem;
   transition: all 0.2s ease;
 }
-.btn--primary:link, .btn--primary:visited {
+.btn--primary:link, .btn--primary:visited, .btn--primary {
   background-color: #4e1c60;
   color: #fafafa;
 }
 .btn--primary:hover, .btn--primary:active {
   background-color: #5a2a76;
+}
+.btn--secondary:link, .btn--secondary:visited, .btn--secondary, .btn--secondary:is(.btn--animate)::after {
+  background-color: #fafafa;
+  color: #4e1c60;
+}
+.btn--secondary:not(:is(.btn--animated)):hover, .btn--secondary:not(:is(.btn--animated)):hover:is(.btn--animate)::after {
+  background-color: #f0f0f0;
+  transform: translateY(-0.4rem);
+}
+.btn--secondary:not(:is(.btn--animated)):active, .btn--secondary:not(:is(.btn--animated)):active:is(.btn--animate)::after {
+  background-color: #e3e3e3;
+  transform: translateY(-0.2rem);
+  box-shadow: 0 0.2rem 0.5rem rgba(85, 85, 85, 0.12);
+}
+.btn--secondary:is(.btn--animate):hover::after, .btn--secondary:is(.btn--animate):active::after {
+  transform: scale(1.5);
+  opacity: 0;
+}
+.btn--secondary:is(.btn--animate)::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transition: all 0.4s ease;
 }
 
 body {
@@ -352,33 +382,28 @@ body {
   font-weight: 600;
 }
 
-.body {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-}
-
-.selection {
-  height: auto;
-  position: relative;
-  padding: 2.4rem 4rem 0;
+main.login {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 3.2rem;
   padding-block-start: 0;
 }
 
 .auth {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 2.5fr;
   column-gap: 16rem;
   row-gap: 3.2rem;
   backface-visibility: hidden;
+  padding: 4rem;
 }
 .auth__forget-password {
   color: #fafafa;
+  text-decoration: underline;
+}
+.auth-mobile {
+  display: none;
 }
 .auth__title {
   grid-row: 1;
@@ -427,7 +452,7 @@ body {
   color: #222;
 }
 .auth-box__input-checkbox {
-  accent-color: #5a2a76;
+  accent-color: #fafafa;
 }
 .auth-box__checkbox-box {
   display: flex;
@@ -436,11 +461,15 @@ body {
   gap: 0.6rem;
   grid-column: 1;
 }
+.auth-box__checkbox-box :is(*, *:before, *:after) {
+  cursor: pointer;
+}
 .auth-box__checkbox-label {
   font-size: 1.6rem;
 }
 .auth__politics-btn {
   color: #fafafa;
+  text-decoration: underline;
 }
 .auth__description {
   font-size: 3.2rem;

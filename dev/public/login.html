@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="css/icons.css" />
     <link rel="stylesheet" href="css/main.css" />
   </head>
-  <body class="body">
+  <body>
     <header class="header">
       <div class="header__start">
         <a
@@ -61,7 +61,7 @@
       </div>
     </header>
 
-    <main class="main section">
+    <main class="main login">
       <section class="wrapper auth">
         <div class="auth__title">
           <h2 class="auth__heading">jusTHINK</h2>
@@ -78,7 +78,7 @@
                 type="text"
                 name="username"
                 class="auth-box__input"
-                placeholder="Username"
+                placeholder="FurkanEsen"
                 minlength="2"
                 maxlength="20"
                 oninvalid="setCustomValidity('Kullanıcı adınız 2 ila 20 karakter arasında alfanumerik bir yapıda olmalıdır')"
@@ -87,12 +87,12 @@
               />
             </div>
             <div class="auth-box__input-box">
-              <label for="email" class="auth-box__label">E-posta:</label>
+              <label for="email" class="auth-box__label">E-Posta:</label>
               <input
                 type="email"
                 name="email"
                 class="auth-box__input"
-                placeholder="username@mail.com"
+                placeholder="ornek@merhaba.com"
                 oninvalid="setCustomValidity('E-posta adresinizi doğru girmelisiniz')"
                 oninput="setCustomValidity('')"
                 required
@@ -134,6 +134,7 @@
                   <input
                     type="checkbox"
                     name="ks-agreed"
+                    id="ks-agreed"
                     class="auth-box__input-checkbox"
                   />
                   <label for="ks-agreed" class="auth-box__checkbox-label"
@@ -142,11 +143,7 @@
                   >
                 </div>
               </div>
-              <input
-                type="submit"
-                value="Kayıt Ol"
-                class="btn btn--primary auth-btn__submit"
-              />
+              <button type="submit" class="btn btn--secondary">Kayıt Ol</button>
             </div>
           </form>
         </div>
@@ -160,7 +157,7 @@
               <input
                 type="text"
                 name="current-username"
-                placeholder="Username"
+                placeholder="FurkanEsen"
                 class="auth-box__input"
                 oninvalid="setCustomValidity('Kullanıcı adınız 2 - 20 karakter arasında, alfanumerik bir yapıda olmalı')"
                 oninput="setCustomValidity('')"
@@ -188,7 +185,7 @@
             <div class="bottom-box">
               <a
                 href="#register"
-                class="auth__forget-password auth__new-account"
+                class="auth__forget-password auth__new-account auth-mobile"
                 style="text-decoration: none; margin-top: 1.2rem"
                 >jusTHINK'e katılmak ister misin?
                 <span style="font-weight: 600">Şimdi kaydol!</span></a
@@ -198,6 +195,7 @@
                   <input
                     type="checkbox"
                     name="remember-me"
+                    id="remember-me"
                     class="auth-box__input-checkbox"
                   />
                   <label for="remember-me" class="auth-box__checkbox-label"
@@ -205,7 +203,9 @@
                   >
                 </div>
               </div>
-              <input type="submit" value="Giriş Yap" class="btn btn--primary" />
+              <button type="submit" class="btn btn--secondary">
+                Giriş Yap
+              </button>
             </div>
           </form>
         </div>
