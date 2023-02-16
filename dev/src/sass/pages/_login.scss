@@ -1,3 +1,8 @@
+.body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
 .selection {
   height: auto;
   position: relative;
@@ -17,6 +22,10 @@
   column-gap: calc(map-get($grid, gutter-horizontal) * 10);
   row-gap: calc(map-get($grid, gutter-horizontal) * 2);
   backface-visibility: hidden;
+
+  &__forget-password {
+    color: map-get($colours, light);
+  }
 
   &__title {
     grid-row: 1;
@@ -47,7 +56,7 @@
     &__input-box {
       display: flex;
       flex-direction: column;
-      gap: calc(map-get(&spacings, xs) / 3);
+      gap: calc(map-get($spacings, xs) / 3);
     }
 
     &__label {
@@ -68,6 +77,22 @@
       border-bottom: 2px solid transparent;
       transition: border-bottom-color 0.2s ease;
       color: map-get($colours, dark);
+
+      &-checkbox {
+        accent-color: map-get($colours, primary-light);
+      }
+    }
+
+    &__checkbox-box {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 0.6rem;
+      grid-column: 1;
+    }
+
+    &__checkbox-label {
+      font-size: map-get($font-sizes, base);
     }
   }
 
@@ -94,4 +119,23 @@
     gap: map-get($spacings, sm);
     overflow: hidden;
   }
+}
+
+.login-box {
+  grid-row: 2;
+  grid-column: 1;
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    overflow: hidden;
+  }
+}
+
+.bottom-box {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
