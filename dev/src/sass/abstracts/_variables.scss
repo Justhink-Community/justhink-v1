@@ -56,7 +56,16 @@ $shadows: (
   "dark": 0 0.5rem 1rem rgba(map-get($colours, "grey-dark-3"), 0.12),
 );
 
-$breakpoints: ();
+$breakpoints: (
+  "desktop": 81.25em,
+  // 13000 px,
+  "mobile": 40.625em,
+  // 650 px
+  "sm-mobile": 18.75em,
+  // 300 px
+  "xs-mobile": 12.5em,
+  // 200 px
+);
 
 $grid: (
   "columns": 12,

@@ -16,7 +16,29 @@
   }
 }
 
-// MEDIA QUERY MANAGER - To do
+/* MEDIA QUERY MANAGER
+
+1300px: desktop = 81.25em
+650px: mobile = 40.625em
+300px: sm-mobile = 18.75em
+*/
 
 @mixin respond($device) {
+  @if ($device == desktop) {
+    @media only screen and (max-width: map-get($breakpoints, "desktop")) {
+      @content;
+    }
+  } @else if ($device == mobile) {
+    @media only screen and (max-width: map-get($breakpoints, "mobile")) {
+      @content;
+    }
+  } @else if ($device == sm-mobile) {
+    @media only screen and (max-width: map-get($breakpoints, "sm-mobile")) {
+      @content;
+    }
+  } @else if($device == xs-mobile) {
+    @media only screen and (max-width: map-get($breakpoints, "xs-mobile")) {
+      @content;
+    }
+  }
 }

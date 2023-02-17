@@ -13,12 +13,22 @@
     display: flex;
     align-items: center;
     gap: map-get($spacings, "upper-md");
+
+    @include respond(mobile) {
+      justify-content: space-between;
+      gap: 0;
+      width: 100%;
+    }
   }
 
   &__end {
     display: flex;
     align-items: center;
     gap: 3rem;
+
+    @include respond(mobile) {
+      display: none;
+    }
   }
 
   &__hamburger-menu {
@@ -79,6 +89,10 @@
       gap: 1.5rem;
       color: inherit;
       font: inherit;
+
+      @include respond(desktop) {
+        display: none;
+      }
     }
 
     &-input {
@@ -96,6 +110,17 @@
       font-size: map-get($font-sizes, "xxl");
       color: map-get($colours, "primary-dark");
       transform: scaleX(-1);
+    }
+  }
+
+  &__logo-img {
+    @include respond(mobile) {
+      max-width: 75%;
+      float: right;
+    }
+
+    @include respond(sm-mobile) {
+      max-width: 65%;
     }
   }
 }

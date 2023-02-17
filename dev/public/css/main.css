@@ -23,6 +23,12 @@ Furkan Esen, Emir Ayaz, Eray Güleşen, Mert Kozanoğlu, Oğulcan Öztürk, Ahme
 Justhink
 
 */
+/* MEDIA QUERY MANAGER
+
+1300px: desktop = 81.25em
+650px: mobile = 40.625em
+300px: sm-mobile = 18.75em
+*/
 *,
 *::before,
 *::after {
@@ -37,6 +43,26 @@ html {
   box-sizing: border-box;
   color-scheme: light;
 }
+@media only screen and (max-width: 81.25em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media only screen and (max-width: 40.625em) {
+  html {
+    font-size: 43.75%;
+  }
+}
+@media only screen and (max-width: 18.75em) {
+  html {
+    font-size: 37.5%;
+  }
+}
+@media only screen and (max-width: 12.5em) {
+  html {
+    font-size: 31.25%;
+  }
+}
 
 body {
   font-family: "Montserrat", sans-serif;
@@ -49,7 +75,8 @@ body {
 img,
 picture,
 svg,
-video {
+video,
+source {
   display: block;
   max-width: 100%;
 }
@@ -140,10 +167,22 @@ body {
   align-items: center;
   gap: 4rem;
 }
+@media only screen and (max-width: 40.625em) {
+  .header__start {
+    justify-content: space-between;
+    gap: 0;
+    width: 100%;
+  }
+}
 .header__end {
   display: flex;
   align-items: center;
   gap: 3rem;
+}
+@media only screen and (max-width: 40.625em) {
+  .header__end {
+    display: none;
+  }
 }
 .header__hamburger-menu {
   position: relative;
@@ -186,6 +225,11 @@ body {
   color: inherit;
   font: inherit;
 }
+@media only screen and (max-width: 81.25em) {
+  .header__search-box {
+    display: none;
+  }
+}
 .header__search-input {
   background: none;
   color: #222;
@@ -201,6 +245,17 @@ body {
   color: #400556;
   transform: scaleX(-1);
 }
+@media only screen and (max-width: 40.625em) {
+  .header__logo-img {
+    max-width: 75%;
+    float: right;
+  }
+}
+@media only screen and (max-width: 18.75em) {
+  .header__logo-img {
+    max-width: 65%;
+  }
+}
 
 .footer {
   display: flex;
@@ -210,6 +265,14 @@ body {
   background-color: #fafafa;
   padding-inline: 3rem;
 }
+@media only screen and (max-width: 40.625em) {
+  .footer {
+    flex-direction: column;
+    gap: 1.2rem;
+    height: auto;
+    padding-block: 1.5rem;
+  }
+}
 .footer__nav {
   display: flex;
   align-items: center;
@@ -218,6 +281,11 @@ body {
 }
 .footer__nav--main {
   justify-content: start;
+}
+@media only screen and (max-width: 18.75em) {
+  .footer__nav--main {
+    display: none;
+  }
 }
 .footer__nav--icons {
   gap: 1.2rem;
@@ -262,6 +330,13 @@ body {
   grid-template-rows: 100%;
   gap: 3.5rem;
 }
+@media only screen and (max-width: 81.25em) {
+  .leaderboard {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 2.7rem;
+  }
+}
 
 .summary {
   height: 100%;
@@ -297,11 +372,23 @@ body {
   gap: 0.5rem;
   margin-top: 2.5rem;
 }
+@media only screen and (max-width: 81.25em) {
+  .summary {
+    width: 100%;
+    padding: 4rem 2.4rem;
+    text-align: center;
+  }
+}
 
 .ranking {
   background-color: #f0f0f0;
   border-radius: 1.1rem;
   height: min(100%, 54rem);
+}
+@media only screen and (max-width: 40.625em) {
+  .ranking {
+    height: 100%;
+  }
 }
 .ranking__header {
   position: relative;
@@ -309,6 +396,12 @@ body {
   justify-content: space-between;
   padding-inline: 1.6rem;
   align-items: center;
+}
+@media only screen and (max-width: 40.625em) {
+  .ranking__header {
+    flex-direction: column;
+    align-items: start;
+  }
 }
 .ranking__title {
   position: relative;

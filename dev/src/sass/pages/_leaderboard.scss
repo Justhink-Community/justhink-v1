@@ -6,6 +6,12 @@
   padding: map-get($spacings, "md");
   grid-template-rows: 100%;
   gap: calc(map-get($spacings, "md") + 0.3rem);
+
+  @include respond(desktop) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: calc(map-get($spacings, "sm") + 0.3rem);
+  }
 }
 
 .summary {
@@ -50,6 +56,12 @@
       margin-top: calc(map-get($spacings, "sm") + 0.1rem);
     }
   }
+
+  @include respond(desktop) {
+    width: 100%;
+    padding: map-get($spacings, "upper-md") map-get($spacings, "sm");
+    text-align: center;
+  }
 }
 
 .ranking {
@@ -57,12 +69,21 @@
   border-radius: map-get($border-radius, "lg");
   height: min(100%, 54rem);
 
+  @include respond(mobile) {
+    height: 100%;
+  }
+
   &__header {
     position: relative;
     display: flex;
     justify-content: space-between;
     padding-inline: calc(map-get($spacings, "semi-sm") + 0.1rem);
     align-items: center;
+
+    @include respond(mobile) {
+      flex-direction: column;
+      align-items: start;
+    }
   }
 
   &__title {

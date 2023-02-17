@@ -13,6 +13,22 @@ html {
   font-size: 62.5%; // 1rem = 10px
   box-sizing: border-box;
   color-scheme: light;
+
+  @include respond(desktop) {
+    font-size: 56.25%; // 1rem = 9px
+  }
+
+  @include respond(mobile) {
+    font-size: 43.75%; // 1rem = 7px
+  }
+
+  @include respond(sm-mobile) {
+    font-size: 37.5%; // 1rem = 6px
+  }
+
+  @include respond(xs-mobile) {
+    font-size: 31.25%; // 1rem = 5px
+  }
 }
 
 body {
@@ -26,7 +42,8 @@ body {
 img,
 picture,
 svg,
-video {
+video,
+source {
   display: block;
   max-width: 100%;
 }
