@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Justhink &ndash; Anasayfa</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/icons.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__start">
+        <a
+          href="index.html"
+          class="hamburger-btn"
+          aria-label="Justhink web sitesinin menüsünü görüntülemek için tıkla."
+        >
+          <span class="header__hamburger-menu"></span>
+        </a>
+        <h1 class="header__logo">
+          <a
+            href="#"
+            aria-label="Justhink sitesinin anasayfasına gitmek için tıkla."
+          >
+            <img src="assets/logo.webp" alt="Justhink Logo" />
+          </a>
+        </h1>
+      </div>
+      <div class="header__center">
+        <form action="search" method="get">
+          <div class="header__search-box">
+            <a
+              href="#"
+              class="header__search-btn"
+              aria-label="İstediğiniz bir şeyi aratın"
+            >
+              <svg class="header__search-icon">
+                <use xlink:href="assets/sprite.svg#icon-search"></use>
+              </svg>
+            </a>
+            <input
+              class="header__search-input"
+              type="text"
+              placeholder="Dilediğiniz şeyi arayın."
+            />
+          </div>
+        </form>
+      </div>
+      <div class="header__end">
+        <a href="/login" class="btn btn--primary">Giriş Yap</a>
+      </div>
+    </header>
+    <section class="inspect">
+      <div class="inspect__header inspect__section">
+        <p class="inspect__header--tags inspect__header--text">
+          #justhink #v1 #geliyor
+        </p>
+        <a href="#" class="inspect__header--topic inspect__header--text"
+          >Justhink V1</a
+        >
+        <p class="inspect__header--total--comment inspect__header--text">
+          toplam yorum: 0
+        </p>
+        <p class="inspect__header--total--idea inspect__header--text">
+          toplam fikir: 1
+        </p>
+      </div>
+      <div class="inspect__main inspect__section">
+        <div class="inspect__main--comment">
+          <input
+            type="text"
+            name="comment-content"
+            id="comment-content"
+            class="inspect__main--comment--input"
+            placeholder="Yorum ekle..."
+            required=""
+            minlength="10"
+            maxlength="1000"
+          />
+          <input
+            type="submit"
+            value="Paylaş"
+            class="inspect__main--comment--btn"
+            data-url=""
+          />
+        </div>
+        <div class="inspect__main--idea">
+          <div class="inspect__main--idea--icons">
+            <a href="#" class="inspect__main--idea--icons--icon">
+              <svg class="footer__icon">
+                <use xlink:href="assets/sprite.svg#icon-outlined_flag"></use>
+              </svg>
+            </a>
+            <a href="#" class="inspect__main--idea--icons--icon">
+              <svg class="footer__icon">
+                <use xlink:href="assets/sprite.svg#icon-help"></use>
+              </svg>
+            </a>
+          </div>
+          <h2 class="inspect__main--idea--header">Emir:</h2>
+          <p class="inspect__main--idea--text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Necessitatibus tenetur architecto quibusdam. Deserunt modi qui
+            tenetur dolorem fuga laboriosam esse placeat reprehenderit? Ab,
+            repudiandae dolorem quos rem eligendi voluptatum ipsum! Ratione
+            aspernatur illo voluptas optio expedita unde ducimus, reiciendis
+            explicabo enim eius ipsa reprehenderit in nemo rerum perspiciatis
+            facere est quisquam voluptatibus perferendis nihil deserunt culpa ad
+            architecto vero! Ad pariatur perferendis, saepe ullam quis
+            repudiandae dolorum dicta facilis officia eligendi hic, non
+            deserunt! Dolor dolores asperiores voluptatem quisquam. Nihil itaque
+            earum animi est et quam hic vero sed voluptates architecto beatae
+            vel, explicabo enim quidem aperiam quasi? Distinctio quasi ad
+            tempore tempora voluptates velit pariatur, non corporis,
+            consequuntur quaerat unde vel. Eos sequi ipsa beatae perferendis
+            iure aspernatur suscipit? Tempora non corrupti, hic eius dignissimos
+            id fugit nisi iusto pariatur? Aliquid reprehenderit voluptate
+            pariatur earum doloremque ullam, voluptatibus unde, atque quo
+            deleniti odit vero nisi quia quisquam voluptatem alias!
+          </p>
+          <div class="inspect__main--idea--social">
+            <a href="#" class="inspect__main--idea--social--icon">
+              <svg>
+                <use xlink:href="assets/sprite.svg#icon-favorite_outline"></use>
+              </svg>
+              <p>1</p>
+            </a>
+            <a href="#" class="inspect__main--idea--social--icon">
+              <svg>
+                <use
+                  xlink:href="assets/sprite.svg#icon-chat_bubble_outline"
+                ></use>
+              </svg>
+              <p>1</p>
+            </a>
+            <a href="#" class="inspect__main--idea--social--icon">
+              <svg><use xlink:href="assets/sprite.svg#icon-share"></use></svg>
+            </a>
+          </div>
+          <div class="inspect__main--idea--comments">
+            <div class="inspect__main--idea--comments--comment">
+              <p class="inspect__main--idea--comments--comment--header">
+                @emir
+              </p>
+              <p class="inspect__main--idea--comments--comment--text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Architecto aliquid, quisquam alias iusto excepturi voluptate
+                facere iure cum tempora tenetur corporis illo consequuntur,
+                adipisci tempore.
+              </p>
+            </div>
+            <div class="inspect__main--idea--comments--comment">
+              <p class="inspect__main--idea--comments--comment--header">
+                @yunan
+              </p>
+              <p class="inspect__main--idea--comments--comment--text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Delectus fugiat ducimus quibusdam tempore similique! Ipsum
+                perspiciatis vel saepe eum obcaecati accusantium aliquam
+                distinctio. Voluptates aliquam unde amet illo ipsa asperiores,
+                voluptatum velit magnam voluptas esse numquam sint doloremque
+                obcaecati impedit fugit assumenda maiores rem. Perspiciatis at
+                voluptatem iste quia ipsam, non assumenda earum qui autem in
+                aliquam, laboriosam odio repudiandae facere vitae deserunt
+                officia facilis sequi quidem nobis officiis ab incidunt
+                aspernatur dolore. Vel, laborum.
+              </p>
+            </div>
+            <div class="inspect__main--idea--comments--comment">
+              <p class="inspect__main--idea--comments--comment--header">
+                @furkan
+              </p>
+              <p class="inspect__main--idea--comments--comment--text">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex
+                sunt fuga fugit explicabo rem saepe sint sequi nihil ducimus
+                architecto. Quas nisi neque distinctio cupiditate praesentium?
+                Enim dolorem molestiae consectetur sed pariatur, quidem sapiente
+                tenetur harum. Facilis adipisci recusandae error nesciunt odit
+                veniam officia vitae, ab quibusdam illo itaque, perspiciatis
+                blanditiis sequi omnis cupiditate magni, sed quos ratione eum
+                in. Maxime temporibus, non, perspiciatis velit sint alias
+                praesentium esse ratione aperiam explicabo ea necessitatibus,
+                officiis quia culpa voluptatem. Veniam molestiae aperiam nihil
+                deserunt! Velit soluta libero earum sequi saepe fuga consequatur
+                eos unde eligendi sint. Id, excepturi sit corrupti recusandae
+                veritatis porro natus fugit unde repellendus exercitationem at
+                error tempore molestiae ipsam et laboriosam, vitae fuga
+                explicabo voluptas aspernatur vero ea eaque. Nemo iure soluta ab
+                tempora tenetur unde enim provident vitae ex doloremque
+                praesentium minima accusantium numquam impedit delectus
+                explicabo recusandae id mollitia, voluptatibus ut dolor
+                perspiciatis. Alias, velit ducimus odit, a quisquam veniam
+                reiciendis optio quia architecto voluptas tempora! Fugit saepe
+                perspiciatis reiciendis doloribus. Libero deleniti quam tenetur
+                laudantium eum? Corporis, aut? Impedit labore nihil aspernatur
+                earum ipsum molestias libero deleniti suscipit rem, doloribus et
+                ab culpa illo aliquid laudantium, expedita nam temporibus
+                asperiores voluptates ipsam unde autem.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="inspect__footer inspect__section">
+        <p class="inspect__footer--header">
+          Beğenileceğini düşündüğümüz metinler:
+        </p>
+        <div class="inspect__footer--topics">
+          <a href="#" class="inspect__footer--topics--topic">#123</a>
+          <a href="#" class="inspect__footer--topics--topic">#456</a>
+          <a href="#" class="inspect__footer--topics--topic">#789</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <nav class="footer__nav footer__nav--main">
+        <a href="/home" class="footer__link">Anasayfa</a>
+        <a href="/about" class="footer__link">Hakkımızda</a>
+        <a href="/dashboard" class="footer__link">Medya</a>
+      </nav>
+
+      <nav class="footer__nav footer__nav--icons">
+        <a href="mailto:noreply@justhink.net" class="footer__link">
+          <svg class="footer__icon">
+            <use xlink:href="assets/sprite.svg#icon-email"></use>
+          </svg>
+        </a>
+        <a
+          href="https://www.instagram.com/justhinkofficial/"
+          class="footer__link"
+          target="_blank"
+        >
+          <svg class="footer__icon">
+            <use xlink:href="assets/sprite.svg#icon-instagram"></use>
+          </svg>
+        </a>
+        <a
+          href="https://www.linkedin.com/company/justhink"
+          class="footer__link"
+          target="_blank"
+        >
+          <svg class="footer__icon">
+            <use xlink:href="assets/sprite.svg#icon-linkedin"></use>
+          </svg>
+        </a>
+        <a
+          href="https://www.youtube.com/@jsthink"
+          class="footer__link"
+          target="_blank"
+        >
+          <svg class="footer__icon">
+            <use xlink:href="assets/sprite.svg#icon-youtube"></use>
+          </svg>
+        </a>
+      </nav>
+    </footer>
+  </body>
+</html>

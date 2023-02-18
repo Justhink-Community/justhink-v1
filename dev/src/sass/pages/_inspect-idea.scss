@@ -1,0 +1,174 @@
+body {
+  background-color: map-get($colours, "grey-light-1");
+}
+
+.inspect {
+  height: calc(100vh - 14.4rem);
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  padding: 3.2rem;
+  grid-template-rows: 100%;
+
+  &__section {
+    position: relative;
+    height: 100%;
+    border-radius: map-get($border-radius, "lg");
+  }
+
+  &__header {
+    position: static;
+    width: clamp(30rem, 25vw, 40rem);
+    height: 100%;
+    padding: 10rem 3.5rem;
+    background-color: map-get($colours, "primary");
+
+    &--text {
+      display: grid;
+      grid-auto-flow: column;
+      grid-gap: 10px;
+      color: #b8b8b8;
+      font-size: map-get($font-sizes, "lg");
+    }
+
+    &--topic {
+      position: relative;
+      color: map-get($colours, "light");
+      font-size: map-get($font-sizes, "xxxl");
+      word-break: break-word;
+      margin-bottom: map-get($spacings, "xs");
+    }
+  }
+
+  &__main {
+    background-color: map-get($colours, "light");
+    margin-left: map-get($spacings, "base");
+    margin-right: map-get($spacings, "base");
+
+    &--idea {
+      overflow: auto;
+      height: 95%;
+      margin-left: 25px;
+      box-sizing: content-box;
+
+      &--icons {
+        width: 99%;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        gap: 10px;
+      }
+
+      &--header {
+        font-size: map-get($font-sizes, "xxl");
+        font-weight: 500;
+        color: map-get($colours, "primary");
+        margin: 15px 0;
+      }
+
+      &--text {
+        max-width: 80%;
+      }
+
+      &--social {
+        margin-top: 30px;
+        padding-bottom: 30px;
+        font-size: map-get($font-sizes, "xxxl");
+        width: 100%;
+        height: 20px;
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+        width: 98%;
+
+        border-bottom: map-get($colours, "primary") 2px solid;
+        color: map-get($colours, "primary");
+
+        &--icon {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+        }
+
+        &--icon p {
+          margin-left: 5px;
+          font-size: map-get($font-sizes, "xl");
+        }
+      }
+
+      &--comments {
+        color: black;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 98%;
+        height: 30vh;
+
+        &--comment {
+          &--header {
+            padding-bottom: 15px;
+            font-weight: 700;
+          }
+
+          &--text {
+            padding-bottom: 30px;
+            border-bottom: map-get($colours, "grey-light-1") 2px solid;
+          }
+        }
+      }
+    }
+
+    &--comment {
+      position: absolute;
+      bottom: 0;
+      height: 50px;
+      background-color: map-get($colours, "grey-light-2");
+      width: 100%;
+      border-radius: 0 0 map-get($border-radius, "lg")
+        map-get($border-radius, "lg");
+
+      &--input {
+        border: none;
+        outline: none;
+        width: 90%;
+        height: 100%;
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+        background-color: inherit;
+        vertical-align: middle;
+        border-bottom-left-radius: inherit;
+      }
+
+      &--btn {
+        position: absolute;
+        height: 100%;
+        width: 10%;
+        right: 0;
+        border: none;
+        color: white;
+        background-color: map-get($colours, "primary");
+        border-radius: 0 0 map-get($border-radius, "lg");
+      }
+    }
+  }
+  &__footer {
+    background-color: map-get($colours, "light");
+
+    &--header {
+      margin: 25px;
+      font-size: map-get($font-sizes, "lg");
+      color: map-get($colours, "primary");
+      font-weight: 600;
+    }
+
+    &--topics {
+      margin: 25px;
+      display: flex;
+      flex-direction: column;
+      font-weight: 500;
+      font-size: map-get($font-sizes, "lg");
+      gap: 5px;
+    }
+  }
+}
