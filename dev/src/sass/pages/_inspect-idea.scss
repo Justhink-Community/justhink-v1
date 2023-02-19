@@ -1,174 +1,158 @@
-body {
-  background-color: map-get($colours, "grey-light-1");
-}
-
 .inspect {
-  height: calc(100vh - 14.4rem);
-  display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
-  padding: 3.2rem;
-  grid-template-rows: 100%;
-
   &__section {
     position: relative;
-    height: 100%;
     border-radius: map-get($border-radius, "lg");
-  }
-
-  &__header {
-    position: static;
-    width: clamp(30rem, 25vw, 40rem);
+    background-color: map-get($colours, "grey-light-4");
     height: 100%;
-    padding: 10rem 3.5rem;
+  }
+}
+
+.send-comment {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+
+  &__form {
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+    height: 4.5rem;
+  }
+
+  &__textbox {
+    border-bottom-left-radius: 11px;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    background-color: darken(map-get($colours, "grey-light-2"), 5%);
+  }
+
+  &__btn {
+    display: grid;
+    place-items: center;
     background-color: map-get($colours, "primary");
+    color: map-get($colours, "light");
+    border-bottom-right-radius: 11px;
+    transition: background-color 0.2s ease;
+    font-size: 1.6rem;
+    font-weight: 500;
+    cursor: pointer;
+  }
 
-    &--text {
-      display: grid;
-      grid-auto-flow: column;
-      grid-gap: 10px;
-      color: #b8b8b8;
-      font-size: map-get($font-sizes, "lg");
-    }
+  &__btn:hover {
+    background-color: map-get($colours, "primary-light");
+  }
 
-    &--topic {
-      position: relative;
-      color: map-get($colours, "light");
-      font-size: map-get($font-sizes, "xxxl");
-      word-break: break-word;
-      margin-bottom: map-get($spacings, "xs");
+  & input {
+    outline: none;
+    border: none;
+  }
+}
+
+.idea-container {
+  max-height: calc(100% - 4.5rem);
+  overflow-y: scroll;
+
+  @include respond(desktop) {
+    max-height: calc(66vh - 4.5rem);
+  }
+}
+
+.idea {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  align-items: center;
+  padding: 3rem 2rem;
+  gap: 2rem;
+
+  &--comment {
+    padding-top: 0;
+  }
+
+  &__content {
+    margin-top: 2.5rem;
+  }
+
+  &__author {
+    color: map-get($colours, "primary-dark");
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+  }
+
+  &__text {
+    font-size: 1.8rem;
+    color: map-get($colours, "grey-dark-1");
+    font-weight: 400;
+    hyphens: auto;
+  }
+
+  &__interactions {
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+    position: relative;
+  }
+
+  &:not(:last-child) &__interactions::after {
+    content: "";
+    position: absolute;
+    bottom: -2.5rem;
+    left: 0;
+    height: 0.2rem;
+  }
+
+  &:not(&--comment) &__interactions::after {
+    width: 100%;
+    background-color: map-get($colours, "primary");
+  }
+
+  &--comment &__interactions::after {
+    width: 50%;
+    background-color: map-get($colours, "dark");
+  }
+
+  &__btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    gap: 1rem;
+  }
+
+  &__interaction-icon {
+    color: map-get($colours, "primary-dark");
+    font-size: 4.5rem;
+    transition: all 0.2s ease;
+
+    &:hover {
+      color: map-get($colours, "primary-light");
     }
   }
 
-  &__main {
-    background-color: map-get($colours, "light");
-    margin-left: map-get($spacings, "base");
-    margin-right: map-get($spacings, "base");
+  &__counter {
+    font-size: 2rem;
+    color: map-get($colours, "primary-dark");
+  }
 
-    &--idea {
-      overflow: auto;
-      height: 95%;
-      margin-left: 25px;
-      box-sizing: content-box;
+  &__administration-menu {
+    position: absolute;
+    top: 0;
+    right: 1.5rem;
+    padding: 1.2rem;
+    display: flex;
+    gap: 1.2rem;
+    z-index: 1;
 
-      &--icons {
-        width: 99%;
-        height: 45px;
-        display: flex;
-        align-items: center;
-        justify-content: end;
-        gap: 10px;
-      }
-
-      &--header {
-        font-size: map-get($font-sizes, "xxl");
-        font-weight: 500;
-        color: map-get($colours, "primary");
-        margin: 15px 0;
-      }
-
-      &--text {
-        max-width: 80%;
-      }
-
-      &--social {
-        margin-top: 30px;
-        padding-bottom: 30px;
-        font-size: map-get($font-sizes, "xxxl");
-        width: 100%;
-        height: 20px;
-        display: flex;
-        flex-direction: row;
-        gap: 25px;
-        width: 98%;
-
-        border-bottom: map-get($colours, "primary") 2px solid;
-        color: map-get($colours, "primary");
-
-        &--icon {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-        }
-
-        &--icon p {
-          margin-left: 5px;
-          font-size: map-get($font-sizes, "xl");
-        }
-      }
-
-      &--comments {
-        color: black;
-        margin-top: 20px;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        width: 98%;
-        height: 30vh;
-
-        &--comment {
-          &--header {
-            padding-bottom: 15px;
-            font-weight: 700;
-          }
-
-          &--text {
-            padding-bottom: 30px;
-            border-bottom: map-get($colours, "grey-light-1") 2px solid;
-          }
-        }
-      }
-    }
-
-    &--comment {
-      position: absolute;
-      bottom: 0;
-      height: 50px;
-      background-color: map-get($colours, "grey-light-2");
-      width: 100%;
-      border-radius: 0 0 map-get($border-radius, "lg")
-        map-get($border-radius, "lg");
-
-      &--input {
-        border: none;
-        outline: none;
-        width: 90%;
-        height: 100%;
-        padding-left: 1.2rem;
-        padding-right: 1.2rem;
-        background-color: inherit;
-        vertical-align: middle;
-        border-bottom-left-radius: inherit;
-      }
-
-      &--btn {
-        position: absolute;
-        height: 100%;
-        width: 10%;
-        right: 0;
-        border: none;
-        color: white;
-        background-color: map-get($colours, "primary");
-        border-radius: 0 0 map-get($border-radius, "lg");
-      }
+    & a {
+      cursor: pointer;
     }
   }
-  &__footer {
-    background-color: map-get($colours, "light");
 
-    &--header {
-      margin: 25px;
-      font-size: map-get($font-sizes, "lg");
-      color: map-get($colours, "primary");
-      font-weight: 600;
-    }
+  &__administration-icon {
+    color: map-get($colours, "primary-dark");
+    transition: color 0.2s ease;
 
-    &--topics {
-      margin: 25px;
-      display: flex;
-      flex-direction: column;
-      font-weight: 500;
-      font-size: map-get($font-sizes, "lg");
-      gap: 5px;
+    &:hover {
+      color: map-get($colours, "primary-light");
     }
   }
 }

@@ -1,0 +1,21 @@
+.suggestions {
+  height: 100%;
+  background-color: map-get($colours, "grey-light-4");
+  padding: calc(map-get($spacings, "sm") - 0.4rem);
+  border-radius: map-get($border-radius, "lg");
+  color: map-get($colours, dark);
+
+  &__list {
+    margin-block-start: calc(map-get($spacings, "sm") + 0.1rem);
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: calc(map-get($spacings, "xs") + 0.05rem);
+  }
+
+  &__link {
+    text-decoration: none;
+    color: map-get($colours, dark);
+    font-weight: calc(map-get($font-weights, bold) - 100);
+  }
+}

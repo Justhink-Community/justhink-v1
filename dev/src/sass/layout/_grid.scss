@@ -2,3 +2,40 @@ body {
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
+
+.grid-col-3 {
+  padding: 0;
+  display: grid;
+
+  &--adapt {
+    height: max(
+      calc(
+        100vh -
+          (map-get($sizes, "navbar-height") + map-get($sizes, "footer-height"))
+      ),
+      40rem
+    );
+
+    @include respond(desktop) {
+      height: auto;
+      grid-template-rows: auto 1fr auto !important;
+      align-content: start;
+
+      & > *:nth-child(2) {
+        height: 66vh;
+      }
+    }
+  }
+
+  align-items: center;
+  grid-template-columns: 1fr 3fr 1fr;
+  padding: map-get($spacings, "md");
+  grid-template-rows: 100%;
+  gap: calc(map-get($spacings, "md") + 0.3rem);
+
+  @include respond(desktop) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: calc(map-get($spacings, "sm") + 0.3rem);
+  }
+}

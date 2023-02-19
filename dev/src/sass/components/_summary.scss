@@ -1,0 +1,49 @@
+.summary {
+  height: 100%;
+  background-image: linear-gradient(
+    to bottom right,
+    map-get($colours, primary-light),
+    map-get($colours, primary-dark)
+  );
+  border-radius: map-get($border-radius, "lg");
+  padding: calc(map-get($spacings, "xxxl") + 0.4rem)
+    calc(map-get($spacings, "md") + 0.3rem);
+  display: flex;
+  flex-direction: column;
+  width: clamp(30rem, 25vw, 40rem);
+
+  &__hashtags-container {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    color: #eee;
+    opacity: 0.8;
+    font-weight: 400;
+    font-size: map-get($font-sizes, "base");
+    margin-bottom: map-get($spacings, "semi-sm");
+    color: map-get($colours, "grey-light-1");
+  }
+
+  &__topic {
+    color: map-get($colours, light);
+    font-size: map-get($font-sizes, xxxl);
+  }
+
+  &__statistics {
+    color: rgba(map-get($colours, "light"), 0.5);
+    font-size: calc(map-get($font-sizes, "lg") + 0.2rem);
+
+    &-container {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-top: calc(map-get($spacings, "sm") + 0.1rem);
+    }
+  }
+
+  @include respond(desktop) {
+    width: 100%;
+    padding: map-get($spacings, "upper-md") map-get($spacings, "sm");
+    text-align: center;
+  }
+}

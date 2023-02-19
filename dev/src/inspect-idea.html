@@ -32,7 +32,21 @@
             href="#"
             aria-label="Justhink sitesinin anasayfasına gitmek için tıkla."
           >
-            <img src="assets/logo.webp" alt="Justhink Logo" />
+            <picture class="header__logo-img">
+              <source
+                srcset="
+                  assets/logo-mobile.webp    1x,
+                  assets/logo-mobile-2x.webp 2x
+                "
+                src="assets/logo.webp"
+                media="(max-width: 40.625em)"
+              />
+              <img
+                srcset="assets/logo.webp 1x, assets/logo-2x.webp 2x"
+                src="assets/logo.webp"
+                alt="Justhink Logo"
+              />
+            </picture>
           </a>
         </h1>
       </div>
@@ -60,168 +74,477 @@
         <a href="/login" class="btn btn--primary">Giriş Yap</a>
       </div>
     </header>
-    <section class="inspect">
-      <div class="inspect__header inspect__section">
-        <p class="inspect__header--tags inspect__header--text">
-          #justhink #v1 #geliyor
-        </p>
-        <a href="#" class="inspect__header--topic inspect__header--text"
-          >Justhink V1</a
-        >
-        <p class="inspect__header--total--comment inspect__header--text">
-          toplam yorum: 0
-        </p>
-        <p class="inspect__header--total--idea inspect__header--text">
-          toplam fikir: 1
-        </p>
-      </div>
-      <div class="inspect__main inspect__section">
-        <div class="inspect__main--comment">
-          <input
-            type="text"
-            name="comment-content"
-            id="comment-content"
-            class="inspect__main--comment--input"
-            placeholder="Yorum ekle..."
-            required=""
-            minlength="10"
-            maxlength="1000"
-          />
-          <input
-            type="submit"
-            value="Paylaş"
-            class="inspect__main--comment--btn"
-            data-url=""
-          />
+    <main class="main inspect grid-col-3 grid-col-3--adapt">
+      <section class="summary">
+        <div class="summary__hashtags-container">#teknoloji #akademik</div>
+        <p class="summary__topic">GDO</p>
+        <div class="summary__statistics-container">
+          <span class="summary__statistics">toplam yorum: 0</span>
+          <span class="summary__statistics">toplam fikir: 12</span>
         </div>
-        <div class="inspect__main--idea">
-          <div class="inspect__main--idea--icons">
-            <a href="#" class="inspect__main--idea--icons--icon">
-              <svg class="footer__icon">
-                <use xlink:href="assets/sprite.svg#icon-outlined_flag"></use>
-              </svg>
-            </a>
-            <a href="#" class="inspect__main--idea--icons--icon">
-              <svg class="footer__icon">
-                <use xlink:href="assets/sprite.svg#icon-help"></use>
-              </svg>
-            </a>
-          </div>
-          <h2 class="inspect__main--idea--header">Emir:</h2>
-          <p class="inspect__main--idea--text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Necessitatibus tenetur architecto quibusdam. Deserunt modi qui
-            tenetur dolorem fuga laboriosam esse placeat reprehenderit? Ab,
-            repudiandae dolorem quos rem eligendi voluptatum ipsum! Ratione
-            aspernatur illo voluptas optio expedita unde ducimus, reiciendis
-            explicabo enim eius ipsa reprehenderit in nemo rerum perspiciatis
-            facere est quisquam voluptatibus perferendis nihil deserunt culpa ad
-            architecto vero! Ad pariatur perferendis, saepe ullam quis
-            repudiandae dolorum dicta facilis officia eligendi hic, non
-            deserunt! Dolor dolores asperiores voluptatem quisquam. Nihil itaque
-            earum animi est et quam hic vero sed voluptates architecto beatae
-            vel, explicabo enim quidem aperiam quasi? Distinctio quasi ad
-            tempore tempora voluptates velit pariatur, non corporis,
-            consequuntur quaerat unde vel. Eos sequi ipsa beatae perferendis
-            iure aspernatur suscipit? Tempora non corrupti, hic eius dignissimos
-            id fugit nisi iusto pariatur? Aliquid reprehenderit voluptate
-            pariatur earum doloremque ullam, voluptatibus unde, atque quo
-            deleniti odit vero nisi quia quisquam voluptatem alias!
-          </p>
-          <div class="inspect__main--idea--social">
-            <a href="#" class="inspect__main--idea--social--icon">
-              <svg>
-                <use xlink:href="assets/sprite.svg#icon-favorite_outline"></use>
-              </svg>
-              <p>1</p>
-            </a>
-            <a href="#" class="inspect__main--idea--social--icon">
-              <svg>
-                <use
-                  xlink:href="assets/sprite.svg#icon-chat_bubble_outline"
-                ></use>
-              </svg>
-              <p>1</p>
-            </a>
-            <a href="#" class="inspect__main--idea--social--icon">
-              <svg><use xlink:href="assets/sprite.svg#icon-share"></use></svg>
-            </a>
-          </div>
-          <div class="inspect__main--idea--comments">
-            <div class="inspect__main--idea--comments--comment">
-              <p class="inspect__main--idea--comments--comment--header">
-                @emir
-              </p>
-              <p class="inspect__main--idea--comments--comment--text">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Architecto aliquid, quisquam alias iusto excepturi voluptate
-                facere iure cum tempora tenetur corporis illo consequuntur,
-                adipisci tempore.
+      </section>
+      <section class="inspect__main inspect__section">
+        <div class="idea-container">
+          <div class="idea idea--inspected" id="1">
+            <div class="idea__content">
+              <a href="#" class="idea__author">Furkan Esen</a>
+              <p class="idea__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam,
+                deleniti et fuga corrupti deserunt numquam!
               </p>
             </div>
-            <div class="inspect__main--idea--comments--comment">
-              <p class="inspect__main--idea--comments--comment--header">
-                @yunan
-              </p>
-              <p class="inspect__main--idea--comments--comment--text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Delectus fugiat ducimus quibusdam tempore similique! Ipsum
-                perspiciatis vel saepe eum obcaecati accusantium aliquam
-                distinctio. Voluptates aliquam unde amet illo ipsa asperiores,
-                voluptatum velit magnam voluptas esse numquam sint doloremque
-                obcaecati impedit fugit assumenda maiores rem. Perspiciatis at
-                voluptatem iste quia ipsam, non assumenda earum qui autem in
-                aliquam, laboriosam odio repudiandae facere vitae deserunt
-                officia facilis sequi quidem nobis officiis ab incidunt
-                aspernatur dolore. Vel, laborum.
-              </p>
+
+            <div class="idea__interactions">
+              <a
+                class="idea__like-btn idea__btn"
+                aria-label="Bu fikri beğenmek/beğenini kaldırmak için tıkla."
+                data-url="/like-idea/1"
+              >
+                <svg class="idea__interaction-icon">
+                  <use
+                    xlink:href="assets/sprite.svg#icon-favorite_outline"
+                  ></use>
+                </svg>
+                <p class="idea__like-count idea__counter">10</p>
+              </a>
+              <a
+                href="/inspect-idea/1"
+                class="idea__comment-btn idea__btn"
+                aria-label="Bu fikre bir yorum bırakmak için tıkla."
+              >
+                <svg class="idea__interaction-icon">
+                  <use
+                    xlink:href="assets/sprite.svg#icon-chat_bubble_outline"
+                  ></use>
+                </svg>
+                <p class="idea__comment-count idea__counter">10</p>
+              </a>
+              <a
+                href="#"
+                class="idea__share-btn idea__btn"
+                aria-label="Bu fikri diğer arkadaşlarınla paylaşmak için tıkla."
+              >
+                <svg class="idea__interaction-icon">
+                  <use xlink:href="assets/sprite.svg#icon-share"></use>
+                </svg>
+              </a>
             </div>
-            <div class="inspect__main--idea--comments--comment">
-              <p class="inspect__main--idea--comments--comment--header">
-                @furkan
-              </p>
-              <p class="inspect__main--idea--comments--comment--text">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex
-                sunt fuga fugit explicabo rem saepe sint sequi nihil ducimus
-                architecto. Quas nisi neque distinctio cupiditate praesentium?
-                Enim dolorem molestiae consectetur sed pariatur, quidem sapiente
-                tenetur harum. Facilis adipisci recusandae error nesciunt odit
-                veniam officia vitae, ab quibusdam illo itaque, perspiciatis
-                blanditiis sequi omnis cupiditate magni, sed quos ratione eum
-                in. Maxime temporibus, non, perspiciatis velit sint alias
-                praesentium esse ratione aperiam explicabo ea necessitatibus,
-                officiis quia culpa voluptatem. Veniam molestiae aperiam nihil
-                deserunt! Velit soluta libero earum sequi saepe fuga consequatur
-                eos unde eligendi sint. Id, excepturi sit corrupti recusandae
-                veritatis porro natus fugit unde repellendus exercitationem at
-                error tempore molestiae ipsam et laboriosam, vitae fuga
-                explicabo voluptas aspernatur vero ea eaque. Nemo iure soluta ab
-                tempora tenetur unde enim provident vitae ex doloremque
-                praesentium minima accusantium numquam impedit delectus
-                explicabo recusandae id mollitia, voluptatibus ut dolor
-                perspiciatis. Alias, velit ducimus odit, a quisquam veniam
-                reiciendis optio quia architecto voluptas tempora! Fugit saepe
-                perspiciatis reiciendis doloribus. Libero deleniti quam tenetur
-                laudantium eum? Corporis, aut? Impedit labore nihil aspernatur
-                earum ipsum molestias libero deleniti suscipit rem, doloribus et
-                ab culpa illo aliquid laudantium, expedita nam temporibus
-                asperiores voluptates ipsam unde autem.
-              </p>
+            <menu class="idea__administration-menu">
+              <a
+                href="#"
+                aria-label="Fikrini düzenlemek için tıkla."
+                class="idea__edit-btn"
+                data-id="1"
+              >
+                <svg class="idea__administration-icon">
+                  <use xlink:href="assets/sprite.svg#icon-create"></use>
+                </svg>
+              </a>
+            </menu>
+          </div>
+
+          <div class="idea-comments">
+            <div class="idea--comment idea">
+              <div class="idea__content">
+                <a href="#" class="idea__author">FurkanEsen</a>
+                <p class="idea__text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+                  dolor ex vel, accusantium in necessitatibus quae nobis est
+                  tempora natus, minus dignissimos illum quasi dicta alias
+                  explicabo optio beatae corporis rem maiores, aspernatur id
+                  iure? Eum, repellendus id optio dicta, officia mollitia
+                  expedita ab, et aut libero commodi quod? Distinctio provident
+                  earum libero. Sequi eaque, voluptates tenetur ea odit non
+                  nihil pariatur, adipisci sed harum dolorem recusandae qui
+                  reprehenderit explicabo autem. Quia veritatis, aspernatur
+                  aliquam commodi accusamus enim? Facilis obcaecati non quam
+                  consequuntur cum natus error ipsum, amet optio, sed aspernatur
+                  distinctio officiis eum. Nulla ipsam neque praesentium
+                  provident sed.
+                </p>
+              </div>
+
+              <div class="idea__interactions">
+                <a
+                  href="/like-comment/1/1"
+                  class="idea__like-btn idea__btn"
+                  aria-label="Bu yorumu beğenmek için tıkla."
+                >
+                  <svg class="idea__interaction-icon">
+                    <use xlink:href="assets/sprite.svg#icon-add"></use>
+                  </svg>
+
+                  <p class="idea__like-count idea__counter">55</p>
+                </a>
+                <a
+                  href="/dislike-comment/{{ idea.id }}/{{ comment.id }}"
+                  class="idea__comment-btn idea__btn"
+                  aria-label="Bu yorumu beğenmemek için tıkla."
+                >
+                  <svg class="idea__interaction-icon">
+                    <use xlink:href="assets/sprite.svg#icon-remove"></use>
+                  </svg>
+
+                  <p class="idea__like-count idea__counter">55</p>
+                </a>
+              </div>
+            </div>
+            <div class="idea--comment idea">
+              <div class="idea__content">
+                <a href="#" class="idea__author">FurkanEsen</a>
+                <p class="idea__text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+                  dolor ex vel, accusantium in necessitatibus quae nobis est
+                  tempora natus, minus dignissimos illum quasi dicta alias
+                  explicabo optio beatae corporis rem maiores, aspernatur id
+                  iure? Eum, repellendus id optio dicta, officia mollitia
+                  expedita ab, et aut libero commodi quod? Distinctio provident
+                  earum libero. Sequi eaque, voluptates tenetur ea odit non
+                  nihil pariatur, adipisci sed harum dolorem recusandae qui
+                  reprehenderit explicabo autem. Quia veritatis, aspernatur
+                  aliquam commodi accusamus enim? Facilis obcaecati non quam
+                  consequuntur cum natus error ipsum, amet optio, sed aspernatur
+                  distinctio officiis eum. Nulla ipsam neque praesentium
+                  provident sed.
+                </p>
+              </div>
+
+              <div class="idea__interactions">
+                <a
+                  href="/like-comment/1/1"
+                  class="idea__like-btn idea__btn"
+                  aria-label="Bu yorumu beğenmek için tıkla."
+                >
+                  <svg class="idea__interaction-icon">
+                    <use xlink:href="assets/sprite.svg#icon-add"></use>
+                  </svg>
+
+                  <p class="idea__like-count idea__counter">55</p>
+                </a>
+                <a
+                  href="/dislike-comment/{{ idea.id }}/{{ comment.id }}"
+                  class="idea__comment-btn idea__btn"
+                  aria-label="Bu yorumu beğenmemek için tıkla."
+                >
+                  <svg class="idea__interaction-icon">
+                    <use xlink:href="assets/sprite.svg#icon-remove"></use>
+                  </svg>
+
+                  <p class="idea__like-count idea__counter">55</p>
+                </a>
+              </div>
+            </div>
+            <div class="idea--comment idea">
+              <div class="idea__content">
+                <a href="#" class="idea__author">FurkanEsen</a>
+                <p class="idea__text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+                  dolor ex vel, accusantium in necessitatibus quae nobis est
+                  tempora natus, minus dignissimos illum quasi dicta alias
+                  explicabo optio beatae corporis rem maiores, aspernatur id
+                  iure? Eum, repellendus id optio dicta, officia mollitia
+                  expedita ab, et aut libero commodi quod? Distinctio provident
+                  earum libero. Sequi eaque, voluptates tenetur ea odit non
+                  nihil pariatur, adipisci sed harum dolorem recusandae qui
+                  reprehenderit explicabo autem. Quia veritatis, aspernatur
+                  aliquam commodi accusamus enim? Facilis obcaecati non quam
+                  consequuntur cum natus error ipsum, amet optio, sed aspernatur
+                  distinctio officiis eum. Nulla ipsam neque praesentium
+                  provident sed.
+                </p>
+              </div>
+
+              <div class="idea__interactions">
+                <a
+                  href="/like-comment/1/1"
+                  class="idea__like-btn idea__btn"
+                  aria-label="Bu yorumu beğenmek için tıkla."
+                >
+                  <svg class="idea__interaction-icon">
+                    <use xlink:href="assets/sprite.svg#icon-add"></use>
+                  </svg>
+
+                  <p class="idea__like-count idea__counter">55</p>
+                </a>
+                <a
+                  href="/dislike-comment/{{ idea.id }}/{{ comment.id }}"
+                  class="idea__comment-btn idea__btn"
+                  aria-label="Bu yorumu beğenmemek için tıkla."
+                >
+                  <svg class="idea__interaction-icon">
+                    <use xlink:href="assets/sprite.svg#icon-remove"></use>
+                  </svg>
+
+                  <p class="idea__like-count idea__counter">55</p>
+                </a>
+              </div>
+            </div>
+            <div class="idea--comment idea">
+              <div class="idea__content">
+                <a href="#" class="idea__author">FurkanEsen</a>
+                <p class="idea__text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+                  dolor ex vel, accusantium in necessitatibus quae nobis est
+                  tempora natus, minus dignissimos illum quasi dicta alias
+                  explicabo optio beatae corporis rem maiores, aspernatur id
+                  iure? Eum, repellendus id optio dicta, officia mollitia
+                  expedita ab, et aut libero commodi quod? Distinctio provident
+                  earum libero. Sequi eaque, voluptates tenetur ea odit non
+                  nihil pariatur, adipisci sed harum dolorem recusandae qui
+                  reprehenderit explicabo autem. Quia veritatis, aspernatur
+                  aliquam commodi accusamus enim? Facilis obcaecati non quam
+                  consequuntur cum natus error ipsum, amet optio, sed aspernatur
+                  distinctio officiis eum. Nulla ipsam neque praesentium
+                  provident sed.
+                </p>
+              </div>
+
+              <div class="idea__interactions">
+                <a
+                  href="/like-comment/1/1"
+                  class="idea__like-btn idea__btn"
+                  aria-label="Bu yorumu beğenmek için tıkla."
+                >
+                  <svg class="idea__interaction-icon">
+                    <use xlink:href="assets/sprite.svg#icon-add"></use>
+                  </svg>
+
+                  <p class="idea__like-count idea__counter">55</p>
+                </a>
+                <a
+                  href="/dislike-comment/{{ idea.id }}/{{ comment.id }}"
+                  class="idea__comment-btn idea__btn"
+                  aria-label="Bu yorumu beğenmemek için tıkla."
+                >
+                  <svg class="idea__interaction-icon">
+                    <use xlink:href="assets/sprite.svg#icon-remove"></use>
+                  </svg>
+
+                  <p class="idea__like-count idea__counter">55</p>
+                </a>
+              </div>
+            </div>
+            <div class="idea--comment idea">
+              <div class="idea__content">
+                <a href="#" class="idea__author">FurkanEsen</a>
+                <p class="idea__text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+                  dolor ex vel, accusantium in necessitatibus quae nobis est
+                  tempora natus, minus dignissimos illum quasi dicta alias
+                  explicabo optio beatae corporis rem maiores, aspernatur id
+                  iure? Eum, repellendus id optio dicta, officia mollitia
+                  expedita ab, et aut libero commodi quod? Distinctio provident
+                  earum libero. Sequi eaque, voluptates tenetur ea odit non
+                  nihil pariatur, adipisci sed harum dolorem recusandae qui
+                  reprehenderit explicabo autem. Quia veritatis, aspernatur
+                  aliquam commodi accusamus enim? Facilis obcaecati non quam
+                  consequuntur cum natus error ipsum, amet optio, sed aspernatur
+                  distinctio officiis eum. Nulla ipsam neque praesentium
+                  provident sed.
+                </p>
+              </div>
+
+              <div class="idea__interactions">
+                <a
+                  href="/like-comment/1/1"
+                  class="idea__like-btn idea__btn"
+                  aria-label="Bu yorumu beğenmek için tıkla."
+                >
+                  <svg class="idea__interaction-icon">
+                    <use xlink:href="assets/sprite.svg#icon-add"></use>
+                  </svg>
+
+                  <p class="idea__like-count idea__counter">55</p>
+                </a>
+                <a
+                  href="/dislike-comment/{{ idea.id }}/{{ comment.id }}"
+                  class="idea__comment-btn idea__btn"
+                  aria-label="Bu yorumu beğenmemek için tıkla."
+                >
+                  <svg class="idea__interaction-icon">
+                    <use xlink:href="assets/sprite.svg#icon-remove"></use>
+                  </svg>
+
+                  <p class="idea__like-count idea__counter">55</p>
+                </a>
+              </div>
+            </div>
+            <div class="idea--comment idea">
+              <div class="idea__content">
+                <a href="#" class="idea__author">FurkanEsen</a>
+                <p class="idea__text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+                  dolor ex vel, accusantium in necessitatibus quae nobis est
+                  tempora natus, minus dignissimos illum quasi dicta alias
+                  explicabo optio beatae corporis rem maiores, aspernatur id
+                  iure? Eum, repellendus id optio dicta, officia mollitia
+                  expedita ab, et aut libero commodi quod? Distinctio provident
+                  earum libero. Sequi eaque, voluptates tenetur ea odit non
+                  nihil pariatur, adipisci sed harum dolorem recusandae qui
+                  reprehenderit explicabo autem. Quia veritatis, aspernatur
+                  aliquam commodi accusamus enim? Facilis obcaecati non quam
+                  consequuntur cum natus error ipsum, amet optio, sed aspernatur
+                  distinctio officiis eum. Nulla ipsam neque praesentium
+                  provident sed.
+                </p>
+              </div>
+
+              <div class="idea__interactions">
+                <a
+                  href="/like-comment/1/1"
+                  class="idea__like-btn idea__btn"
+                  aria-label="Bu yorumu beğenmek için tıkla."
+                >
+                  <svg class="idea__interaction-icon">
+                    <use xlink:href="assets/sprite.svg#icon-add"></use>
+                  </svg>
+
+                  <p class="idea__like-count idea__counter">55</p>
+                </a>
+                <a
+                  href="/dislike-comment/{{ idea.id }}/{{ comment.id }}"
+                  class="idea__comment-btn idea__btn"
+                  aria-label="Bu yorumu beğenmemek için tıkla."
+                >
+                  <svg class="idea__interaction-icon">
+                    <use xlink:href="assets/sprite.svg#icon-remove"></use>
+                  </svg>
+
+                  <p class="idea__like-count idea__counter">55</p>
+                </a>
+              </div>
+            </div>
+            <div class="idea--comment idea">
+              <div class="idea__content">
+                <a href="#" class="idea__author">FurkanEsen</a>
+                <p class="idea__text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+                  dolor ex vel, accusantium in necessitatibus quae nobis est
+                  tempora natus, minus dignissimos illum quasi dicta alias
+                  explicabo optio beatae corporis rem maiores, aspernatur id
+                  iure? Eum, repellendus id optio dicta, officia mollitia
+                  expedita ab, et aut libero commodi quod? Distinctio provident
+                  earum libero. Sequi eaque, voluptates tenetur ea odit non
+                  nihil pariatur, adipisci sed harum dolorem recusandae qui
+                  reprehenderit explicabo autem. Quia veritatis, aspernatur
+                  aliquam commodi accusamus enim? Facilis obcaecati non quam
+                  consequuntur cum natus error ipsum, amet optio, sed aspernatur
+                  distinctio officiis eum. Nulla ipsam neque praesentium
+                  provident sed.
+                </p>
+              </div>
+
+              <div class="idea__interactions">
+                <a
+                  href="/like-comment/1/1"
+                  class="idea__like-btn idea__btn"
+                  aria-label="Bu yorumu beğenmek için tıkla."
+                >
+                  <svg class="idea__interaction-icon">
+                    <use xlink:href="assets/sprite.svg#icon-add"></use>
+                  </svg>
+
+                  <p class="idea__like-count idea__counter">55</p>
+                </a>
+                <a
+                  href="/dislike-comment/{{ idea.id }}/{{ comment.id }}"
+                  class="idea__comment-btn idea__btn"
+                  aria-label="Bu yorumu beğenmemek için tıkla."
+                >
+                  <svg class="idea__interaction-icon">
+                    <use xlink:href="assets/sprite.svg#icon-remove"></use>
+                  </svg>
+
+                  <p class="idea__like-count idea__counter">55</p>
+                </a>
+              </div>
+            </div>
+            <div class="idea--comment idea">
+              <div class="idea__content">
+                <a href="#" class="idea__author">FurkanEsen</a>
+                <p class="idea__text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+                  dolor ex vel, accusantium in necessitatibus quae nobis est
+                  tempora natus, minus dignissimos illum quasi dicta alias
+                  explicabo optio beatae corporis rem maiores, aspernatur id
+                  iure? Eum, repellendus id optio dicta, officia mollitia
+                  expedita ab, et aut libero commodi quod? Distinctio provident
+                  earum libero. Sequi eaque, voluptates tenetur ea odit non
+                  nihil pariatur, adipisci sed harum dolorem recusandae qui
+                  reprehenderit explicabo autem. Quia veritatis, aspernatur
+                  aliquam commodi accusamus enim? Facilis obcaecati non quam
+                  consequuntur cum natus error ipsum, amet optio, sed aspernatur
+                  distinctio officiis eum. Nulla ipsam neque praesentium
+                  provident sed.
+                </p>
+              </div>
+
+              <div class="idea__interactions">
+                <a
+                  href="/like-comment/1/1"
+                  class="idea__like-btn idea__btn"
+                  aria-label="Bu yorumu beğenmek için tıkla."
+                >
+                  <svg class="idea__interaction-icon">
+                    <use xlink:href="assets/sprite.svg#icon-add"></use>
+                  </svg>
+
+                  <p class="idea__like-count idea__counter">55</p>
+                </a>
+                <a
+                  href="/dislike-comment/{{ idea.id }}/{{ comment.id }}"
+                  class="idea__comment-btn idea__btn"
+                  aria-label="Bu yorumu beğenmemek için tıkla."
+                >
+                  <svg class="idea__interaction-icon">
+                    <use xlink:href="assets/sprite.svg#icon-remove"></use>
+                  </svg>
+
+                  <p class="idea__like-count idea__counter">55</p>
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="inspect__footer inspect__section">
-        <p class="inspect__footer--header">
-          Beğenileceğini düşündüğümüz metinler:
-        </p>
-        <div class="inspect__footer--topics">
-          <a href="#" class="inspect__footer--topics--topic">#123</a>
-          <a href="#" class="inspect__footer--topics--topic">#456</a>
-          <a href="#" class="inspect__footer--topics--topic">#789</a>
+
+        <div class="send-comment">
+          <form method="post" class="send-comment__form">
+            <input
+              type="text"
+              name="comment-content"
+              id="comment-content"
+              class="send-comment__textbox"
+              placeholder="Yorum ekle..."
+              required
+              minlength="10"
+              maxlength="1000"
+            />
+            <input
+              type="submit"
+              value="Paylaş"
+              class="send-comment__btn"
+              data-url="/send-comment/{{idea.id}}"
+            />
+          </form>
         </div>
-      </div>
-    </section>
+      </section>
+      <aside class="suggestions">
+        <h3 class="heading-tertiary">
+          Beğenebileceğini düşündüğümüz metinler:
+        </h3>
+        <ul class="suggestions__list">
+          <li class="suggestions__list-items">
+            <a href="" class="suggestions__link">#123</a>
+          </li>
+          <li class="suggestions__list-items">
+            <a href="" class="suggestions__link">#456</a>
+          </li>
+          <li class="suggestions__list-items">
+            <a href="" class="suggestions__link">#789</a>
+          </li>
+        </ul>
+      </aside>
+    </main>
 
     <footer class="footer">
       <nav class="footer__nav footer__nav--main">

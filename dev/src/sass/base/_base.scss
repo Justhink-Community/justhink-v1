@@ -59,3 +59,21 @@ abbr {
   background-color: map-get($colours, "primary");
   color: map-get($colours, "light");
 }
+
+::-webkit-scrollbar {
+  width: 1.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: lighten(map-get($colours, "primary-light"), 65%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: lighten(map-get($colours, "primary-light"), 5%);
+  border-radius: 10px;
+  transition: background 0.15s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: lighten(map-get($colours, "primary-light"), 8%);
+}
