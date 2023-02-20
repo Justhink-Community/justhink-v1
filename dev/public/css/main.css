@@ -166,6 +166,74 @@ abbr {
   transition: all 0.4s ease;
 }
 
+.publish-idea-btn {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  right: 2rem;
+  bottom: 7rem;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  color: #f5f5f5;
+  padding: 1.5rem;
+  background-color: #4d1a5f;
+  border-radius: 50%;
+}
+.publish-idea-btn:hover {
+  background-color: #5a2a76;
+}
+.publish-idea-svg-add {
+  display: none;
+  font-size: 7rem;
+}
+.publish-idea-temp-div {
+  height: 70px;
+  width: 70px;
+}
+.publish-idea-container {
+  padding: 4rem;
+  border-radius: 1.1rem;
+  position: fixed;
+  right: 8rem;
+  bottom: 12rem;
+  background-color: #6b3f84;
+  color: #eee;
+}
+.publish-idea-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.publish-idea__input-label {
+  color: #efeefe;
+}
+.publish-idea__textarea {
+  padding: 0.5rem;
+  background: none;
+  outline: none;
+  color: #eee;
+  font: inherit;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #6b3f84;
+}
+.publish-idea__textarea::placeholder {
+  color: #ccc;
+}
+.publish-idea-submit {
+  background-color: #5a2a76;
+  color: #eee;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 3.3px;
+  transition: background-color 0.15s ease;
+  font: inherit;
+}
+.publish-idea-submit:hover {
+  background-color: #7a5290;
+}
+
 .summary {
   height: 100%;
   background-image: linear-gradient(to bottom right, #5a2a76, #400556);

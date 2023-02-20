@@ -75,3 +75,86 @@
     }
   }
 }
+
+.publish-idea {
+  &-btn {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    right: 2rem;
+    bottom: 7rem;
+    // font-size: map-get($font-sizes, "lg");
+    // font-size: 7rem;
+    cursor: pointer;
+    outline: none;
+    border: none;
+
+    color: #f5f5f5;
+    padding: 1.5rem;
+    background-color: #4d1a5f;
+    border-radius: 50%;
+
+    &:hover {
+      background-color: #5a2a76;
+    }
+  }
+
+  &-svg-add {
+    display: none;
+    font-size: 7rem;
+  }
+
+  &-temp-div {
+    height: 70px;
+    width: 70px;
+  }
+
+  &-container {
+    padding: 4rem;
+    border-radius: 1.1rem;
+    position: fixed;
+    right: 8rem;
+    bottom: 12rem;
+    background-color: #6b3f84;
+    color: #eee;
+  }
+
+  &-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+
+  &__input-label {
+    color: #efeefe;
+  }
+
+  &__textarea {
+    padding: 0.5rem;
+    background: none;
+    outline: none;
+    color: #eee;
+    font: inherit;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #6b3f84;
+
+    &::placeholder {
+      color: #ccc;
+    }
+  }
+
+  &-submit {
+    background-color: #5a2a76;
+    color: #eee;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 3.3px;
+    transition: background-color 0.15s ease;
+    font: inherit;
+
+    &:hover {
+      background-color: #7a5290;
+    }
+  }
+}
