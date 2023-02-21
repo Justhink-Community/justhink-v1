@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Justhink</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/icons.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__start">
+        <a
+          href="index.html"
+          class="hamburger-btn"
+          aria-label="Justhink web sitesinin menüsünü görüntülemek için tıkla."
+        >
+          <span class="header__hamburger-menu"></span>
+        </a>
+        <h1 class="header__logo">
+          <a
+            href="#"
+            aria-label="Justhink sitesinin anasayfasına gitmek için tıkla."
+          >
+            <img src="assets/logo.webp" alt="Justhink Logo" />
+          </a>
+        </h1>
+      </div>
+      <div class="header__center">
+        <form action="search" method="get">
+          <div class="header__search-box">
+            <a
+              href="#"
+              class="header__search-btn"
+              aria-label="İstediğiniz bir şeyi aratın"
+            >
+              <svg class="header__search-icon">
+                <use xlink:href="assets/sprite.svg#icon-search"></use>
+              </svg>
+            </a>
+            <input
+              class="header__search-input"
+              type="text"
+              placeholder="Dilediğiniz şeyi arayın."
+            />
+          </div>
+        </form>
+      </div>
+      <div class="header__end">
+        <a href="/login" class="btn btn--primary">Giriş Yap</a>
+      </div>
+    </header>
+
+    <main class="landing">
+      <section class="section-hero">
+        <div class="section-hero__start">
+          <h2 class="section-hero__start-heading">
+            Günlük<br />inovasyon dozu
+          </h2>
+          <p class="section-hero__start-topic">Günün konusu: jusTHINK'e ne eklenmeli (vol 1)</p>          
+          <p class="section-hero__start-topic__name"></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <nav class="footer__nav footer__nav--main">
+        <a href="/home" class="footer__link">Anasayfa</a>
+        <a href="/about" class="footer__link">Hakkımızda</a>
+        <a href="/dashboard" class="footer__link">Medya</a>
+      </nav>
+
+      <nav class="footer__nav footer__nav--icons">
+        <a href="mailto:noreply@justhink.net" class="footer__link">
+          <svg class="footer__icon">
+            <use xlink:href="assets/sprite.svg#icon-email"></use>
+          </svg>
+        </a>
+        <a
+          href="https://www.instagram.com/justhinkofficial/"
+          class="footer__link"
+          target="_blank"
+        >
+          <svg class="footer__icon">
+            <use xlink:href="assets/sprite.svg#icon-instagram"></use>
+          </svg>
+        </a>
+        <a
+          href="https://www.linkedin.com/company/justhink"
+          class="footer__link"
+          target="_blank"
+        >
+          <svg class="footer__icon">
+            <use xlink:href="assets/sprite.svg#icon-linkedin"></use>
+          </svg>
+        </a>
+        <a
+          href="https://www.youtube.com/@jsthink"
+          class="footer__link"
+          target="_blank"
+        >
+          <svg class="footer__icon">
+            <use xlink:href="assets/sprite.svg#icon-youtube"></use>
+          </svg>
+        </a>
+      </nav>
+    </footer>
+  </body>
+</html>

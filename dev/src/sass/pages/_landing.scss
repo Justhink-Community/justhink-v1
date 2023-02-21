@@ -1,0 +1,34 @@
+.landing {
+  background-image: linear-gradient(
+    to bottom right,
+    map-get($colours, danger),
+    map-get($colours, primary)
+  );
+  background-size: cover;
+  height: 100%;
+  padding-inline: 14rem;
+  display: flex;
+  justify-content: center;
+}
+
+.section-hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  &__start {
+    &-heading {
+        font-size: map-get($font-sizes, xxxxl);
+        color: map-get($colours, light);    
+    }
+
+    &-topic{
+        font-size: map-get($font-sizes, xl);
+        color: map-get($colours, light);
+
+        // &__name{
+
+        // }
+    }
+  }
+}

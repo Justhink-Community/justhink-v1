@@ -585,6 +585,28 @@ body {
   color: #4e1c60;
 }
 
+.landing {
+  background-image: linear-gradient(to bottom right, #d9534f, #4e1c60);
+  background-size: cover;
+  height: 100%;
+  padding-inline: 14rem;
+  display: flex;
+  justify-content: center;
+}
+
+.section-hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.section-hero__start-heading {
+  color: #fafafa;
+}
+.section-hero__start-topic {
+  font-size: 2.4rem;
+  color: #fafafa;
+}
+
 .ranking {
   background-color: #f0f0f0;
   border-radius: 1.1rem;
