@@ -83,8 +83,6 @@
     z-index: 1;
     right: 2rem;
     bottom: 7rem;
-    // font-size: map-get($font-sizes, "lg");
-    // font-size: 7rem;
     cursor: pointer;
     outline: none;
     border: none;
@@ -139,8 +137,8 @@
     border-radius: 3px;
     background-color: #6b3f84;
 
-    &::placeholder {
-      color: #ccc;
+    &::-webkit-input-placeholder {
+      color: #fff;
     }
   }
 
