@@ -1,0 +1,72 @@
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-about {
+  max-width: 110rem;
+  padding: 20rem 0;
+  // background-image: url(https://justhink.net/static/logos/thinker_logo.svg);
+  //trasparency artır çünkü evet
+  background-image: linear-gradient(
+      rgba(227, 227, 227, 0.9),
+      rgba(227, 227, 227, 0.9)
+    ),
+    url(https://justhink.net/static/logos/thinker_logo.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 50%;
+
+  &-heading {
+    opacity: 1;
+    text-align: center;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    margin-bottom: 8rem;
+
+    transition: all 0.25s;
+    //Color
+
+    background-image: linear-gradient(to right, #c74b55, #552878);
+    color: transparent;
+    -webkit-background-clip: text;
+
+    &-animate:hover {
+      font-size: 4rem;
+      //When font-size becomes 4 rem height becomes 6px bigger
+      margin-bottom: 7.4rem;
+    }
+  }
+
+  &__content {
+    opacity: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 6rem;
+    max-width: 114rem;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  &__text {
+    &-heading {
+      font-size: 1.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      color: #666;
+    }
+
+    &-paragraph {
+      font-size: 1.6rem;
+      color: #666;
+
+      &:not(:last-child) {
+        margin-bottom: 3rem;
+      }
+    }
+  }
+}
