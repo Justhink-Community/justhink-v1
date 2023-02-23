@@ -1,0 +1,101 @@
+.idea {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  align-items: center;
+  position: relative;
+  padding: map-get($spacings, "base") calc(map-get($spacings, "sm") - 0.4rem);
+  gap: calc(map-get($spacings, "sm") - 0.4rem);
+
+  &--comment {
+    padding-top: 0;
+  }
+
+  &__content {
+    margin-top: calc(map-get($spacings, "sm") + 0.1rem);
+  }
+
+  &__author {
+    color: map-get($colours, "primary-dark");
+    font-size: calc(map-get($spacings, "sm") - 0.4rem);
+    font-weight: 600;
+    margin-bottom: map-get($spacings, "xs");
+  }
+
+  &__text {
+    font-size: calc(map-get($spacings, "semi-sm") + 0.3rem);
+    color: map-get($colours, "grey-dark-1");
+    font-weight: 400;
+    hyphens: auto;
+  }
+
+  &__interactions {
+    display: flex;
+    align-items: center;
+    gap: calc(map-get($spacings, "semi-sm") + 0.3rem);
+    position: relative;
+  }
+
+  &:not(:last-child) &__interactions::after {
+    content: "";
+    position: absolute;
+    bottom: calc((map-get($spacings, "sm") + 0.1rem) * -1);
+    left: 0;
+    height: 0.2rem;
+  }
+
+  &:not(&--comment) &__interactions::after {
+    width: 100%;
+    background-color: map-get($colours, "primary");
+  }
+
+  &--comment &__interactions::after {
+    width: 50%;
+    background-color: map-get($colours, "dark");
+  }
+
+  &__btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    gap: calc(map-get($spacings, "xs") - 0.2rem);
+  }
+
+  &__interaction-icon {
+    color: map-get($colours, "primary-dark");
+    font-size: map-get($spacings, "semi-lg");
+    transition: all 0.2s ease;
+
+    &:hover {
+      color: map-get($colours, "primary-light");
+    }
+  }
+
+  &__counter {
+    font-size: 2rem;
+    color: map-get($colours, "primary-dark");
+  }
+
+  &__administration-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: map-get($spacings, "xs");
+    display: flex;
+    gap: map-get($spacings, "xs");
+    z-index: 1;
+
+    & a {
+      cursor: pointer;
+    }
+  }
+
+  &__administration-icon {
+    color: map-get($colours, "primary-dark");
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: map-get($colours, "primary-light");
+    }
+  }
+}
