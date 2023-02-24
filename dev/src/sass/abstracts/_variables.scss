@@ -1,6 +1,7 @@
 // Path: sass\abstracts\_variables.scss
 
 $colours: (
+  "primary-soft": #b35159,
   "primary-light": #5a2a76,
   "primary-dark": #400556,
   "primary": #4e1c60,
@@ -59,8 +60,12 @@ $shadows: (
 );
 
 $breakpoints: (
+  "md-desktop": 100em,
+  // 1600 px,
   "desktop": 81.25em,
-  // 13000 px,
+  // 1300 px,
+  "tablet": 65.625em,
+  // 1050 px,
   "mobile": 40.625em,
   // 650 px
   "sm-mobile": 18.75em,

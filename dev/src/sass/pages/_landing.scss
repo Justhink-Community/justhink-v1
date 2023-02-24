@@ -7,21 +7,60 @@
   background-size: cover;
   height: 100%;
   padding-inline: 14rem;
+  padding-block: 7rem;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @include respond(md-desktop) {
+    padding-inline: 10rem;
+    padding-block: 5rem;
+  }
+
+  @include respond(desktop) {
+    padding-inline: 5rem;
+    padding-block: 3rem;
+  }
+
+  @include respond(tablet) {
+    padding-inline: 2rem;
+    padding-block: 2rem;
+  }
+
+  @include respond(mobile) {
+    padding-inline: 1rem;
+    padding-block: 1rem;
+  }
+
+  @include respond(sm-mobile) {
+    padding-inline: 0rem;
+    padding-block: 2rem;
+  }
 }
 
 .section-hero {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+
+  @include respond(tablet) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: min(5rem, 10vmax);
+  }
 
   &__start {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
+
+    @include respond(tablet) {
+      align-items: center;
+      text-align: center;
+    }
 
     &-heading {
       font-size: map-get($font-sizes, xxxxl);
@@ -37,7 +76,19 @@
         font-size: map-get($font-sizes, base);
         color: map-get($colours, light);
         width: 60%;
+        margin-block-end: 2rem;
+        margin-block-start: 1.4rem;
       }
+    }
+  }
+
+  &__image {
+    @include respond(md-desktop) {
+      max-width: 25%;
+    }
+
+    @include respond(mobile) {
+      display: none;
     }
   }
 }

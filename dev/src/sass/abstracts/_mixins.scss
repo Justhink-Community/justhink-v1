@@ -18,6 +18,7 @@
 
 /* MEDIA QUERY MANAGER
 
+1600px: md-desktop = 100em
 1300px: desktop = 81.25em
 650px: mobile = 40.625em
 300px: sm-mobile = 18.75em
@@ -38,6 +39,14 @@
     }
   } @else if($device == xs-mobile) {
     @media only screen and (max-width: map-get($breakpoints, "xs-mobile")) {
+      @content;
+    }
+  } @else if($device == md-desktop) {
+    @media only screen and (max-width: map-get($breakpoints, "md-desktop")) {
+      @content;
+    }
+  } @else if($device == tablet) {
+    @media only screen and (max-width: map-get($breakpoints, "tablet")) {
       @content;
     }
   }

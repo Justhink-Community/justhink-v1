@@ -32,7 +32,7 @@
     &:visited,
     & {
       background-color: map-get($colours, "light");
-      color: map-get($colours, "primary");
+      color: map-get($colours, "primary-soft");
     }
 
     &:not(:is(.btn--animated)) {

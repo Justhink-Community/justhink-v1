@@ -20,19 +20,32 @@
   <body>
     <header class="header">
       <div class="header__start">
-        <a
-          href="index.html"
-          class="hamburger-btn"
-          aria-label="Justhink web sitesinin menüsünü görüntülemek için tıkla."
-        >
+        <button>
+          class="header__hamburger-btn" aria-label="Justhink web sitesinin
+          menüsünü görüntülemek için tıkla." aria-controls="menu"
+          aria-expanded="false" >
           <span class="header__hamburger-menu"></span>
-        </a>
+        </button>
         <h1 class="header__logo">
           <a
             href="#"
             aria-label="Justhink sitesinin anasayfasına gitmek için tıkla."
           >
-            <img src="assets/logo.webp" alt="Justhink Logo" />
+            <picture class="header__logo-img">
+              <source
+                srcset="
+                  assets/logo-mobile.webp    1x,
+                  assets/logo-mobile-2x.webp 2x
+                "
+                src="assets/logo.webp"
+                media="(max-width: 40.625em)"
+              />
+              <img
+                srcset="assets/logo.webp 1x, assets/logo-2x.webp 2x"
+                src="assets/logo.webp"
+                alt="Justhink Logo"
+              />
+            </picture>
           </a>
         </h1>
       </div>
@@ -60,8 +73,7 @@
         <a href="/login" class="btn btn--primary">Giriş Yap</a>
       </div>
     </header>
-
-    <main class="main">
+    <main class="main about">
       <div class="section-about">
         <h2 class="section-about-heading section-about-heading-animate">
           Bizi yakından tanımaya başlayın

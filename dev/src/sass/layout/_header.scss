@@ -31,6 +31,33 @@
     }
   }
 
+  &__hamburger-btn:hover &__hamburger-menu {
+    &::before {
+      transform: translateY(-0.15rem);
+    }
+
+    &::after {
+      transform: translateY(0.15rem);
+    }
+  }
+
+  &__hamburger-btn:is(:active, :focus) &__hamburger-menu {
+    background-color: transparent;
+
+    &::before,
+    &::after {
+      top: 0;
+    }
+
+    &::before {
+      transform: rotate(135deg);
+    }
+
+    &::after {
+      transform: rotate(-135deg);
+    }
+  }
+
   &__hamburger-menu {
     position: relative;
 
@@ -49,7 +76,7 @@
       content: "";
       position: absolute;
       left: 0;
-      transition: all 0.2s ease;
+      transition: all 0.3s;
     }
 
     &::before {
@@ -58,16 +85,6 @@
 
     &::after {
       bottom: -1.3rem;
-    }
-
-    &:hover {
-      &::before {
-        transform: translateY(-0.15rem);
-      }
-
-      &::after {
-        transform: translateY(0.15rem);
-      }
     }
   }
 

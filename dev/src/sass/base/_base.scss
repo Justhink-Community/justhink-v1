@@ -55,6 +55,12 @@ abbr {
   text-decoration: none;
 }
 
+button {
+  display: block;
+  border: none;
+  background-color: transparent;
+}
+
 ::selection {
   background-color: map-get($colours, "primary");
   color: map-get($colours, "light");

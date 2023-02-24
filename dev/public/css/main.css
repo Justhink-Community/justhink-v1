@@ -25,6 +25,7 @@ Justhink
 */
 /* MEDIA QUERY MANAGER
 
+1600px: md-desktop = 100em
 1300px: desktop = 81.25em
 650px: mobile = 40.625em
 300px: sm-mobile = 18.75em
@@ -88,6 +89,12 @@ abbr {
   text-decoration: none;
 }
 
+button {
+  display: block;
+  border: none;
+  background-color: transparent;
+}
+
 ::selection {
   background-color: #4e1c60;
   color: #fafafa;
@@ -139,7 +146,7 @@ abbr {
 }
 .btn--secondary:link, .btn--secondary:visited, .btn--secondary, .btn--secondary:is(.btn--animate)::after {
   background-color: #fafafa;
-  color: #4e1c60;
+  color: #b35159;
 }
 .btn--secondary:not(:is(.btn--animated)):hover, .btn--secondary:not(:is(.btn--animated)):hover:is(.btn--animate)::after {
   background-color: #f0f0f0;
@@ -448,6 +455,24 @@ body {
     display: none;
   }
 }
+.header__hamburger-btn:hover .header__hamburger-menu::before {
+  transform: translateY(-0.15rem);
+}
+.header__hamburger-btn:hover .header__hamburger-menu::after {
+  transform: translateY(0.15rem);
+}
+.header__hamburger-btn:is(:active, :focus) .header__hamburger-menu {
+  background-color: transparent;
+}
+.header__hamburger-btn:is(:active, :focus) .header__hamburger-menu::before, .header__hamburger-btn:is(:active, :focus) .header__hamburger-menu::after {
+  top: 0;
+}
+.header__hamburger-btn:is(:active, :focus) .header__hamburger-menu::before {
+  transform: rotate(135deg);
+}
+.header__hamburger-btn:is(:active, :focus) .header__hamburger-menu::after {
+  transform: rotate(-135deg);
+}
 .header__hamburger-menu {
   position: relative;
 }
@@ -462,19 +487,13 @@ body {
   content: "";
   position: absolute;
   left: 0;
-  transition: all 0.2s ease;
+  transition: all 0.3s;
 }
 .header__hamburger-menu::before {
   top: -1.3rem;
 }
 .header__hamburger-menu::after {
   bottom: -1.3rem;
-}
-.header__hamburger-menu:hover::before {
-  transform: translateY(-0.15rem);
-}
-.header__hamburger-menu:hover::after {
-  transform: translateY(0.15rem);
 }
 .header__search-box {
   width: clamp(60rem, 45vw, 80rem);
@@ -590,21 +609,67 @@ body {
   background-size: cover;
   height: 100%;
   padding-inline: 14rem;
+  padding-block: 7rem;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media only screen and (max-width: 100em) {
+  .landing {
+    padding-inline: 10rem;
+    padding-block: 5rem;
+  }
+}
+@media only screen and (max-width: 81.25em) {
+  .landing {
+    padding-inline: 5rem;
+    padding-block: 3rem;
+  }
+}
+@media only screen and (max-width: 65.625em) {
+  .landing {
+    padding-inline: 2rem;
+    padding-block: 2rem;
+  }
+}
+@media only screen and (max-width: 40.625em) {
+  .landing {
+    padding-inline: 1rem;
+    padding-block: 1rem;
+  }
+}
+@media only screen and (max-width: 18.75em) {
+  .landing {
+    padding-inline: 0rem;
+    padding-block: 2rem;
+  }
 }
 
 .section-hero {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+}
+@media only screen and (max-width: 65.625em) {
+  .section-hero {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: min(5rem, 10vmax);
+  }
 }
 .section-hero__start {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 1rem;
+}
+@media only screen and (max-width: 65.625em) {
+  .section-hero__start {
+    align-items: center;
+    text-align: center;
+  }
 }
 .section-hero__start-heading {
   font-size: 8.6rem;
@@ -619,9 +684,21 @@ body {
   font-size: 1.6rem;
   color: #fafafa;
   width: 60%;
+  margin-block-end: 2rem;
+  margin-block-start: 1.4rem;
+}
+@media only screen and (max-width: 100em) {
+  .section-hero__image {
+    max-width: 25%;
+  }
+}
+@media only screen and (max-width: 40.625em) {
+  .section-hero__image {
+    display: none;
+  }
 }
 
-.main {
+.main.about {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -629,7 +706,7 @@ body {
 
 .section-about {
   max-width: 110rem;
-  padding: 20rem 0;
+  padding: 20rem 3rem;
   background-image: linear-gradient(rgba(227, 227, 227, 0.9), rgba(227, 227, 227, 0.9)), url(https://justhink.net/static/logos/thinker_logo.svg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -647,10 +724,7 @@ body {
   background-image: linear-gradient(to right, #c74b55, #552878);
   color: transparent;
   -webkit-background-clip: text;
-}
-.section-about-heading-animate:hover {
-  font-size: 4rem;
-  margin-bottom: 7.4rem;
+  background-clip: text;
 }
 .section-about__content {
   opacity: 1;
@@ -671,6 +745,7 @@ body {
 .section-about__text-paragraph {
   font-size: 1.6rem;
   color: #666;
+  line-height: 1.5;
 }
 .section-about__text-paragraph:not(:last-child) {
   margin-bottom: 3rem;
