@@ -72,6 +72,11 @@ $breakpoints: (
   // 300 px
   "xs-mobile": 12.5em,
   // 200 px
+  "landscape":
+    (
+      min-width: 40.625em,
+      max-height: 31.25em,
+    ),
 );
 
 $grid: (

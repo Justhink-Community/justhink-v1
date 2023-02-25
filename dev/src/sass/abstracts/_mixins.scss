@@ -49,5 +49,14 @@
     @media only screen and (max-width: map-get($breakpoints, "tablet")) {
       @content;
     }
+  } @else if($device == landscape) {
+    @media only screen and (min-width: map-get(map-get($breakpoints, "landscape"), "min-width")) and (max-height: map-get(map-get($breakpoints, "landscape"), "max-height")) {
+      @content;
+    }
+  } @else if($device == landscape-and-mobile) {
+    @media only screen and (min-width: map-get(map-get($breakpoints, "landscape"), "min-width")) and (max-height: map-get(map-get($breakpoints, "landscape"), "max-height")),
+      only screen and (max-width: map-get($breakpoints, "mobile")) {
+      @content;
+    }
   }
 }

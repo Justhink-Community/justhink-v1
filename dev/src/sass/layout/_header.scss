@@ -130,9 +130,9 @@
     }
   }
 
-  &__logo-img {
+  &__logo a {
     @include respond(mobile) {
-      max-width: 75%;
+      max-width: 55%;
       float: right;
     }
 

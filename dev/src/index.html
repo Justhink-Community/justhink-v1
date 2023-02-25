@@ -16,13 +16,16 @@
 
     <link rel="stylesheet" href="css/icons.css" />
     <link rel="stylesheet" href="css/main.css" />
+
+    <script src="scripts/script.js" defer></script>
   </head>
   <body>
     <header class="header">
       <div class="header__start">
         <button
           class="header__hamburger-btn"
-          aria-label="Justhink web sitesinin menüsünü görüntülemek için tıkla."
+          aria-label="Justhink web sitesinin
+          menüsünü görüntülemek için tıkla."
           aria-controls="menu"
           aria-expanded="false"
         >
@@ -33,7 +36,21 @@
             href="#"
             aria-label="Justhink sitesinin anasayfasına gitmek için tıkla."
           >
-            <img src="assets/logo.webp" alt="Justhink Logo" />
+            <picture class="header__logo-img">
+              <source
+                srcset="
+                  assets/logo-mobile.webp    1x,
+                  assets/logo-mobile-2x.webp 2x
+                "
+                src="assets/logo.webp"
+                media="(max-width: 40.625em)"
+              />
+              <img
+                srcset="assets/logo.webp 1x, assets/logo-2x.webp 2x"
+                src="assets/logo.webp"
+                alt="Justhink Logo"
+              />
+            </picture>
           </a>
         </h1>
       </div>
@@ -63,54 +80,48 @@
     </header>
 
     <main class="main">
-      <!-- <div class="btn btn--secondary btn--animate" style="margin: 5rem">
-        Kayıt Ol
-      </div> -->
-
       <div class="publish-idea">
-        <a href="#" class="publish-idea-btn">
-          <!-- <svg class="publish-idea-svg-add">
-            <use xlink:href="assets/sprite.svg#icon-add"></use>
-          </svg> -->
-
-          <div class="publish-idea-temp-div">
-            <p
-              style="
-                height: 7rem;
-                font-size: 10rem;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-              "
-            >
-              +
-            </p>
-          </div>
-        </a>
-      </div>
-
-      <div class="publish-idea-container">
-        <form action="" class="publish-idea-form">
-          <label for="idea-content" class="publish-idea__input-label"
-            >Fikrini aşağıya yazabilirsin.</label
+        <div class="publish-idea__control">
+          <a
+            href="#"
+            class="publish-idea__btn"
+            aria-controls="publish-idea-container"
+            aria-expanded="false"
           >
+            <span class="publish-idea__icon"></span>
+          </a>
+        </div>
 
-          <textarea
-            name="idea-content"
-            id="idea-content"
-            class="publish-idea__textarea"
-            cols="50"
-            rows="6"
-            placeholder="Bence, xxx konusunda almamız gereken tutum böyle..."
-            minlength="20"
-            maxlength="6000000"
-            style="resize: none"
-          ></textarea>
+        <div class="publish-idea__container" id="publish-idea-container">
+          <section class="summary summary--topic-info publish-idea__topic-info">
+            <div class="summary__hashtags-container">#teknoloji #akademik</div>
+            <p class="summary__topic">GDO</p>
+            <div class="summary__statistics-container">
+              <span class="summary__statistics">toplam yorum: 0</span>
+              <span class="summary__statistics">toplam fikir: 12</span>
+            </div>
+          </section>
+          <form action="" class="publish-idea__form" method="post">
+            <label for="idea-content" class="publish-idea__input-label"
+              >Fikrini aşağıya yazabilirsin.</label
+            >
 
-          <button type="submit" class="btn btn-form publish-idea-submit">
-            Fikri Paylaş
-          </button>
-        </form>
+            <textarea
+              name="idea-content"
+              id="idea-content"
+              class="publish-idea__textarea"
+              cols="50"
+              rows="6"
+              placeholder="Bence, xxx konusunda almamız gereken tutum böyle..."
+              minlength="20"
+              maxlength="6000000"
+            ></textarea>
+
+            <button type="submit" class="btn btn-form publish-idea__submit">
+              Fikri Paylaş
+            </button>
+          </form>
+        </div>
       </div>
     </main>
 

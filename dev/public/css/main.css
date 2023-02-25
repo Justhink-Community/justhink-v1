@@ -173,74 +173,6 @@ button {
   transition: all 0.4s ease;
 }
 
-.publish-idea-btn {
-  display: block;
-  position: absolute;
-  z-index: 1;
-  right: 2rem;
-  bottom: 7rem;
-  cursor: pointer;
-  outline: none;
-  border: none;
-  color: #f5f5f5;
-  padding: 2rem;
-  background-color: #4d1a5f;
-  border-radius: 50%;
-}
-.publish-idea-btn:hover {
-  background-color: #5a2a76;
-}
-.publish-idea-svg-add {
-  display: none;
-  font-size: 7rem;
-}
-.publish-idea-temp-div {
-  height: 70px;
-  width: 70px;
-}
-.publish-idea-container {
-  padding: 4rem;
-  border-radius: 1.1rem;
-  position: fixed;
-  right: 8rem;
-  bottom: 12rem;
-  background-color: #6b3f84;
-  color: #eee;
-}
-.publish-idea-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.6rem;
-}
-.publish-idea__input-label {
-  color: #efeefe;
-}
-.publish-idea__textarea {
-  padding: 0.5rem;
-  background: none;
-  outline: none;
-  color: #eee;
-  font: inherit;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  background-color: #6b3f84;
-}
-.publish-idea__textarea::-webkit-input-placeholder {
-  color: #fff;
-}
-.publish-idea-submit {
-  background-color: #5a2a76;
-  color: #eee;
-  border: none;
-  padding: 1rem 2rem;
-  border-radius: 3.3px;
-  transition: background-color 0.15s ease;
-  font: inherit;
-}
-.publish-idea-submit:hover {
-  background-color: #7a5290;
-}
-
 .summary {
   height: 100%;
   background-image: linear-gradient(to bottom right, #5a2a76, #400556);
@@ -259,7 +191,6 @@ button {
   font-weight: 400;
   font-size: 1.6rem;
   margin-bottom: 1.5rem;
-  color: #b3b3b3;
 }
 .summary__topic {
   color: #fafafa;
@@ -274,6 +205,24 @@ button {
   flex-direction: column;
   gap: 0.5rem;
   margin-top: 2.5rem;
+}
+.summary--topic-info {
+  background-image: unset;
+  height: min-content;
+}
+.summary--topic-info .summary__statistics-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  gap: 2rem;
+}
+.summary--topic-info .summary__statistics {
+  font-size: 1.6rem;
+}
+.summary--topic-info .summary__hashtags-container {
+  margin-bottom: 1rem;
 }
 @media only screen and (max-width: 81.25em) {
   .summary {
@@ -387,6 +336,156 @@ button {
 }
 .idea__administration-icon:hover {
   color: #5a2a76;
+}
+
+.publish-idea__btn {
+  position: absolute;
+  z-index: 1;
+  right: 2rem;
+  bottom: 7rem;
+  cursor: pointer;
+  color: #f5f5f5;
+  padding: 4.5rem 3.2rem;
+  background-color: #4d1a5f;
+  border-radius: 50%;
+}
+@media only screen and (max-width: 40.625em) {
+  .publish-idea__btn {
+    bottom: 10rem;
+  }
+}
+@media only screen and (max-width: 18.75em) {
+  .publish-idea__btn {
+    bottom: 7rem;
+  }
+}
+.publish-idea__btn:hover {
+  background-color: #5a2a76;
+}
+.publish-idea__btn span {
+  position: relative;
+  display: inline-block;
+  width: 4.5rem;
+  height: 0.7rem;
+}
+.publish-idea__btn span::after, .publish-idea__btn span::before {
+  display: inline-block;
+  width: 4.5rem;
+  height: 0.7rem;
+  background-color: #fafafa;
+  border-radius: 0.32rem;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 0.25s ease;
+}
+@media only screen and (min-width: 40.625em) and (max-height: 31.25em), only screen and (max-width: 40.625em) {
+  .publish-idea__btn span::after, .publish-idea__btn span::before {
+    transition: unset;
+  }
+}
+.publish-idea__btn span::after {
+  transform: rotate(90deg);
+}
+@media only screen and (min-width: 40.625em) and (max-height: 31.25em), only screen and (max-width: 40.625em) {
+  .publish-idea__btn[aria-expanded=true] {
+    z-index: 51;
+    top: 0;
+    right: 0;
+    bottom: auto;
+    background-color: transparent;
+  }
+}
+.publish-idea__control:has(a[aria-expanded=false]) + .publish-idea__container {
+  visibility: hidden;
+  opacity: 0;
+}
+.publish-idea__control:has(a[aria-expanded=true]) span::after {
+  transform: rotate(45deg);
+}
+.publish-idea__control:has(a[aria-expanded=true]) span::before {
+  transform: rotate(-45deg);
+}
+.publish-idea__container {
+  visibility: visible;
+  opacity: 1;
+  padding: 4rem;
+  border-radius: 1.1rem;
+  position: fixed;
+  right: 8rem;
+  bottom: 12rem;
+  background: #6b3f84;
+  color: #eee;
+  transition: all 0.25s ease;
+}
+@media only screen and (min-width: 40.625em) and (max-height: 31.25em), only screen and (max-width: 40.625em) {
+  .publish-idea__container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100dvw;
+    height: 100dvh;
+    border-radius: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: min(20rem, 10%);
+    padding: 0;
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), #6b3f84;
+  }
+}
+.publish-idea__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+@media only screen and (min-width: 40.625em) and (max-height: 31.25em), only screen and (max-width: 40.625em) {
+  .publish-idea__form {
+    width: min(90%, 60rem);
+  }
+}
+.publish-idea__input-label {
+  color: #efeefe;
+}
+.publish-idea__textarea {
+  padding: 0.5rem;
+  color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: transparent;
+  resize: none;
+}
+@media only screen and (max-width: 40.625em) {
+  .publish-idea__textarea {
+    height: min(18vh, 30rem);
+  }
+}
+.publish-idea__textarea::-webkit-input-placeholder {
+  color: #ddd;
+}
+.publish-idea__submit {
+  background-color: #5a2a76;
+  color: #eee;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 3.3px;
+  transition: background-color 0.15s ease;
+  font: inherit;
+}
+.publish-idea__submit:hover {
+  background-color: #7a5290;
+}
+.publish-idea__topic-info {
+  display: none;
+}
+@media only screen and (max-width: 40.625em) {
+  .publish-idea__topic-info {
+    display: block;
+    text-align: center;
+  }
 }
 
 body {
@@ -529,13 +628,13 @@ body {
   transform: scaleX(-1);
 }
 @media only screen and (max-width: 40.625em) {
-  .header__logo-img {
-    max-width: 75%;
+  .header__logo a {
+    max-width: 55%;
     float: right;
   }
 }
 @media only screen and (max-width: 18.75em) {
-  .header__logo-img {
+  .header__logo a {
     max-width: 65%;
   }
 }

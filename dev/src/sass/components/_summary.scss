@@ -21,7 +21,6 @@
     font-weight: 400;
     font-size: map-get($font-sizes, "base");
     margin-bottom: map-get($spacings, "semi-sm");
-    color: map-get($colours, "grey-light-1");
   }
 
   &__topic {
@@ -39,6 +38,28 @@
       gap: 0.5rem;
       margin-top: calc(map-get($spacings, "sm") + 0.1rem);
     }
+  }
+
+  &--topic-info {
+    background-image: unset;
+    height: min-content;
+  }
+
+  &--topic-info &__statistics-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    gap: 2rem;
+  }
+
+  &--topic-info &__statistics {
+    font-size: 1.6rem;
+  }
+
+  &--topic-info &__hashtags-container {
+    margin-bottom: 1rem;
   }
 
   @include respond(desktop) {
