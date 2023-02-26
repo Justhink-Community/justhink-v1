@@ -61,6 +61,11 @@ button {
   background-color: transparent;
 }
 
+ul,
+ol {
+  list-style: none;
+}
+
 ::selection {
   background-color: map-get($colours, "primary");
   color: map-get($colours, "light");

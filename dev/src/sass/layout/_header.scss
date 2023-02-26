@@ -2,7 +2,7 @@
 
 .header {
   height: map-get($sizes, "navbar-height");
-  padding-inline: map-get($spacings, "md");
+  padding-inline: map-get($spacings, "upper-md");
   background-color: map-get($colours, "light");
   display: flex;
   align-items: center;

@@ -4,7 +4,7 @@ Project: Justhink
 Author:  Justhink Software Development Team
 Version: 1.0
 
-This Copyright Legal Text (the "Agreement") is made and entered into on 2.12.2023 by Justhink company, (hereinafter referred to as "Justhink" or the "Company"), and Furkan Esen, Emir Ayaz, Ferhat Ege Orhan, Halit Hamza Şeker, Mert Kozanoğlu, Oğulcan Öztürk, Ahmet Çağlar, (hereinafter referred to as the "Creators").
+This Copyright Legal Text (the "Agreement") is made and entered into on 12.2.2023 by Justhink company, (hereinafter referred to as "Justhink" or the "Company"), and Furkan Esen, Emir Ayaz, Ferhat Ege Orhan, Halit Hamza Şeker, Mert Kozanoğlu, Oğulcan Öztürk, Ahmet Çağlar, İhsan Çarkcı (hereinafter referred to as the "Creators").
 
 The purpose of this Agreement is to protect the proprietary rights of Justhink in the software that has been created by the Creators (the "Software"). The Software is a valuable, confidential, and proprietary asset of Justhink and is protected by copyright law.
 
@@ -18,7 +18,7 @@ Justhink shall have the right to terminate this Agreement at any time if the Cre
 
 IN WITNESS WHEREOF, the parties have executed this Agreement as of the date first written above.
 
-Furkan Esen, Emir Ayaz, Ferhat Ege Orhan, Halit Hamza Şeker, Mert Kozanoğlu, Oğulcan Öztürk, Ahmet Çağlar
+Furkan Esen, Emir Ayaz, Ferhat Ege Orhan, Halit Hamza Şeker, Mert Kozanoğlu, Oğulcan Öztürk, Ahmet Çağlar, İhsan Çarkcı
 
 Justhink
 
@@ -93,6 +93,11 @@ button {
   display: block;
   border: none;
   background-color: transparent;
+}
+
+ul,
+ol {
+  list-style: none;
 }
 
 ::selection {
@@ -175,18 +180,18 @@ button {
 
 .summary {
   height: 100%;
-  background-image: linear-gradient(to bottom right, #5a2a76, #400556);
+  background-image: linear-gradient(to bottom right, #5c346b, #400556);
   border-radius: 1.1rem;
   padding: 10rem 3.5rem;
   display: flex;
   flex-direction: column;
   width: clamp(30rem, 25vw, 40rem);
+  color: #eee;
 }
 .summary__hashtags-container {
   position: relative;
   right: 0;
   bottom: 0;
-  color: #eee;
   opacity: 0.8;
   font-weight: 400;
   font-size: 1.6rem;
@@ -195,6 +200,7 @@ button {
 .summary__topic {
   color: #fafafa;
   font-size: 3.6rem;
+  letter-spacing: 0.11rem;
 }
 .summary__statistics {
   color: rgba(250, 250, 250, 0.5);
@@ -210,7 +216,7 @@ button {
   background-image: unset;
   height: min-content;
 }
-.summary--topic-info .summary__statistics-container {
+.summary--topic-info .summary__statistics-container, .summary--index .summary__statistics-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -223,6 +229,80 @@ button {
 }
 .summary--topic-info .summary__hashtags-container {
   margin-bottom: 1rem;
+}
+.summary--index {
+  position: relative;
+  width: 100%;
+  padding: unset;
+  align-items: center;
+  justify-content: center;
+}
+.summary--index .summary__hashtags-container {
+  position: absolute;
+  margin-bottom: 0;
+  bottom: 2rem;
+  right: 2rem;
+  font-size: 2.4rem;
+}
+.summary--index .summary__topic {
+  font-size: 5rem;
+}
+.summary--index .summary__statistics-container {
+  gap: 3rem;
+  margin-top: 2.4rem;
+}
+.summary--index .summary__statistics {
+  font-size: 3rem;
+}
+.summary--index .summary__navigation {
+  margin-top: min(5.8rem, 10vmax);
+  text-align: center;
+}
+.summary--index .summary__navigation-list {
+  display: flex;
+  gap: min(13rem, 20vmax);
+}
+.summary--index .summary__navigation-icon {
+  font-size: 7.6rem;
+  background-color: rgba(34, 34, 34, 0.1);
+  border-radius: 50%;
+  padding: 1.3rem;
+}
+.summary--index .summary__navigation-label {
+  font-size: 2rem;
+}
+.summary--index .summary__navigation-middle {
+  display: flex;
+  gap: 1.7rem;
+  background-color: rgba(148, 137, 143, 0.3);
+  border-radius: 100vmax;
+}
+.summary--index .summary__navigation-middle .summary__navigation-icon {
+  background-color: transparent;
+  padding: 1.4rem;
+}
+.summary--index .summary__navigation-link[aria-current=page] .summary__navigation-icon {
+  color: #4e1c60;
+  background-color: #fafafa;
+}
+.summary--index .summary__navigation-middle .summary__navigation-item:has(.summary__navigation-link[aria-current=page]) {
+  position: relative;
+  isolation: isolate;
+}
+.summary--index .summary__navigation-middle .summary__navigation-item:has(.summary__navigation-link[aria-current=page])::after {
+  content: "";
+  position: absolute;
+  left: -1.8rem;
+  top: -1.6rem;
+  width: max(11.2rem, 100%);
+  height: max(11.2rem, 100%);
+  background-color: #fafafa;
+  border-radius: 50%;
+  z-index: -1;
+}
+.summary--index .summary__navigation-middle .summary__navigation-item:has(.summary__navigation-link[aria-current=page]) .summary__navigation-icon {
+  background-color: transparent;
+  padding: 0.5rem;
 }
 @media only screen and (max-width: 81.25em) {
   .summary {
@@ -523,9 +603,17 @@ body {
   }
 }
 
+.grid-main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(30rem, 36rem) 1fr;
+  padding-block: 2.5rem 0;
+  padding-inline: 4rem;
+}
+
 .header {
   height: clamp(10rem, 10vh, 11.7rem);
-  padding-inline: 3.2rem;
+  padding-inline: 4rem;
   background-color: #fafafa;
   display: flex;
   align-items: center;
