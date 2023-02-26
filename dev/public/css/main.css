@@ -264,7 +264,7 @@ ol {
 }
 .summary--index .summary__navigation-icon {
   font-size: 7.6rem;
-  background-color: rgba(34, 34, 34, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   padding: 1.3rem;
 }
