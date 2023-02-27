@@ -40,10 +40,18 @@ body {
   }
 }
 
+.grid-col-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4.5rem;
+  padding-inline: map-get($spacings, "upper-md");
+  padding-block: 1rem 2.5rem;
+}
+
 .grid-main {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: minmax(30rem, 36rem) 1fr;
-  padding-block: 2.5rem 0;
+  padding-block: 2.5rem;
   padding-inline: map-get($spacings, "upper-md");
 }

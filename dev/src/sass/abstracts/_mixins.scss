@@ -16,6 +16,30 @@
   }
 }
 
+@mixin create-seperator($direction) {
+  position: relative;
+
+  &:nth-of-type(even)::after,
+  &:nth-of-type(n + 3)::before {
+    content: "";
+    background-color: map-get($colours, "primary");
+  }
+
+  &:nth-of-type(even)::after {
+    @include abs-center(vertical);
+    left: -2.15rem; // Some weird math went on here. :)
+    height: 50%;
+    width: 0.2rem;
+  }
+
+  &:nth-of-type(n + 3)::before {
+    @include abs-center(horizontal);
+    top: -2.15rem; // Some weird math went on here too. :)
+    width: 75%;
+    height: 0.2rem;
+  }
+}
+
 /* MEDIA QUERY MANAGER
 
 1600px: md-desktop = 100em
