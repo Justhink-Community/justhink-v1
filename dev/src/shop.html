@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Justhink &ndash; Market</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/icons.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <script src="scripts/script.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__start">
+        <button
+          class="header__hamburger-btn"
+          aria-label="Justhink web sitesinin
+          menüsünü görüntülemek için tıkla."
+          aria-controls="menu"
+          aria-expanded="false"
+        >
+          <span class="header__hamburger-menu"></span>
+        </button>
+        <h1 class="header__logo">
+          <a
+            href="#"
+            aria-label="Justhink sitesinin anasayfasına gitmek için tıkla."
+          >
+            <picture class="header__logo-img">
+              <source
+                srcset="
+                  assets/logo-mobile.webp    1x,
+                  assets/logo-mobile-2x.webp 2x
+                "
+                src="assets/logo.webp"
+                media="(max-width: 40.625em)"
+              />
+              <img
+                srcset="assets/logo.webp 1x, assets/logo-2x.webp 2x"
+                src="assets/logo.webp"
+                alt="Justhink Logo"
+              />
+            </picture>
+          </a>
+        </h1>
+      </div>
+      <div class="header__center">
+        <form action="search" method="get">
+          <div class="header__search-box">
+            <a
+              href="#"
+              class="header__search-btn"
+              aria-label="İstediğiniz bir şeyi aratın"
+            >
+              <svg class="header__search-icon">
+                <use xlink:href="assets/sprite.svg#icon-search"></use>
+              </svg>
+            </a>
+            <input
+              class="header__search-input"
+              type="text"
+              placeholder="Dilediğiniz şeyi arayın."
+            />
+          </div>
+        </form>
+      </div>
+      <div class="header__end">
+        <a href="/login" class="btn btn--primary">Giriş Yap</a>
+      </div>
+    </header>
+
+    <main class="main shop-main">
+      <div class="shop-wrapper">
+        <div class="shop-heading-section">
+          <h1 class="shop-heading">Justhink Marketi</h1>
+          <p class="shop-heading-description">
+            Justhink'te aktif olarak ve diğer insanlarla konuşarak kazandığın
+            puanları burada harcayabilirsin!
+          </p>
+          <div class="shop-category-selector">
+            <a class="shop-category-selector-button" href="#themes">Temalar</a>
+            <a class="shop-category-selector-button" href="#icons">İkonlar</a>
+          </div>
+        </div>
+
+        <div class="shop-items-section">
+          <div class="shop-items-categories"></div>
+
+          <div class="shop-products">
+            <div class="shop-product">
+              <img
+                class="shop-product-image"
+                src="https://i.ibb.co/HGsHfkv/justhink-net-2.webp"
+                alt="Thinker Theme"
+              />
+
+              <div class="shop-product__content">
+                <h4 class="shop-product__content-title">Thinker Tema</h4>
+                <p class="shop-product__content-description">
+                  Thinker Tema, insanları mutlu edecek bir düşünce temasıdır.
+                </p>
+                <div class="shop-product-fee">
+                  <span class="shop-product-price"
+                    >Ücret: <span>0 puan</span></span
+                  >
+                  <a class="btn btn--primary shop-product-button" href="#"
+                    >Aktif</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="shop-product">
+              <img
+                class="shop-product-image"
+                src="https://i.ibb.co/TkmN2kX/justhink-net.webp"
+                alt="Forest Theme"
+              />
+
+              <div class="shop-product__content">
+                <h4 class="shop-product__content-title">Oceon Tema</h4>
+                <p class="shop-product__content-description">
+                  Ocean Tema, insanları mutlu edecek bir okyanus temasıdır.
+                </p>
+                <div class="shop-product-fee">
+                  <span class="shop-product-price"
+                    >Ücret: <span>100 puan</span></span
+                  >
+                  <a class="btn btn--primary shop-product-button" href="#"
+                    >Kullan</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="shop-product">
+              <img
+                class="shop-product-image"
+                src="https://i.ibb.co/0DpwCm4/justhink-net-1.webp"
+                alt="Forest Theme"
+              />
+
+              <div class="shop-product__content">
+                <h4 class="shop-product__content-title">Forest Tema</h4>
+                <p class="shop-product__content-description">
+                  Forest Tema, insanları mutlu edecek bir orman temasıdır.
+                </p>
+                <div class="shop-product-fee">
+                  <span class="shop-product-price"
+                    >Ücret: <span>100 puan</span></span
+                  >
+                  <a
+                    class="btn btn--primary shop-product-button-active"
+                    href="#"
+                    >Satın Al</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="shop-product">
+              <img
+                class="shop-product-image"
+                src="https://i.ibb.co/HFpXTHz/justhink-net-dashboard.webp"
+                alt="Sand Theme"
+              />
+
+              <div class="shop-product__content">
+                <h4 class="shop-product__content-title">Sand Tema</h4>
+                <p class="shop-product__content-description">
+                  Sand Tema, insanları mutlu edecek bir kum temasıdır
+                </p>
+                <div class="shop-product-fee">
+                  <span class="shop-product-price"
+                    >Ücret: <span>100 puan</span></span
+                  >
+                  <a
+                    class="btn btn--primary shop-product-button-active"
+                    href="#"
+                    >Satın Al</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="shop-items-categories"></div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer shop-footer">
+      <nav class="footer__nav footer__nav--main">
+        <a href="/home" class="footer__link">Anasayfa</a>
+        <a href="/about" class="footer__link">Hakkımızda</a>
+        <a href="/dashboard" class="footer__link">Medya</a>
+      </nav>
+
+      <nav class="footer__nav footer__nav--icons">
+        <a href="mailto:iletisim@justhink.net" class="footer__link">
+          <svg class="footer__icon">
+            <use xlink:href="assets/sprite.svg#icon-email"></use>
+          </svg>
+        </a>
+        <a
+          href="https://www.instagram.com/justhinkofficial/"
+          class="footer__link"
+          target="_blank"
+        >
+          <svg class="footer__icon">
+            <use xlink:href="assets/sprite.svg#icon-instagram"></use>
+          </svg>
+        </a>
+        <a
+          href="https://www.linkedin.com/company/justhink"
+          class="footer__link"
+          target="_blank"
+        >
+          <svg class="footer__icon">
+            <use xlink:href="assets/sprite.svg#icon-linkedin"></use>
+          </svg>
+        </a>
+        <a
+          href="https://www.youtube.com/@jsthink"
+          class="footer__link"
+          target="_blank"
+        >
+          <svg class="footer__icon">
+            <use xlink:href="assets/sprite.svg#icon-youtube"></use>
+          </svg>
+        </a>
+      </nav>
+    </footer>
+  </body>
+</html>
