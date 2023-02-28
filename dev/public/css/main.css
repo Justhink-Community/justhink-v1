@@ -197,6 +197,13 @@ ol {
   font-size: 1.6rem;
   margin-bottom: 1.5rem;
 }
+.summary__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+  gap: 1rem;
+}
 .summary__topic {
   color: #fafafa;
   font-size: 3.6rem;
@@ -211,6 +218,15 @@ ol {
   flex-direction: column;
   gap: 0.5rem;
   margin-top: 2.5rem;
+}
+.summary__remaining-time {
+  color: rgba(250, 250, 250, 0.5);
+  font-size: 1.8rem;
+  color: rgba(250, 250, 250, 0.5);
+  font-size: 1.8rem;
+  position: absolute;
+  left: 2rem;
+  bottom: 2rem;
 }
 .summary--topic-info {
   background-image: unset;

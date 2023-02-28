@@ -23,6 +23,14 @@
     margin-bottom: map-get($spacings, "semi-sm");
   }
 
+  &__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+
   &__topic {
     color: map-get($colours, light);
     font-size: map-get($font-sizes, xxxl);
@@ -39,6 +47,18 @@
       gap: 0.5rem;
       margin-top: calc(map-get($spacings, "sm") + 0.1rem);
     }
+  }
+
+  &__remaining-time {
+    color: rgba(map-get($colours, "light"), 0.5);
+    font-size: 1.8rem;
+
+    color: rgba(map-get($colours, "light"), 0.5);
+    font-size: 1.8rem;
+    position: absolute;
+    left: 2rem;
+    bottom: 2rem;
+    // margin-top: calc(map-get($spacings, "xs") + 0.1rem);
   }
 
   &--topic-info {
