@@ -54,4 +54,9 @@ body {
   grid-template-rows: minmax(30rem, 36rem) 1fr;
   padding-block: 2.5rem;
   padding-inline: map-get($spacings, "upper-md");
+
+  @include respond(tablet) {
+    padding: 0;
+    grid-template-rows: auto 1fr;
+  }
 }

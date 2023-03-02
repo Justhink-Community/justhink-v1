@@ -1,11 +1,9 @@
 .footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
   z-index: 2;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 2.5rem;
 
   height: map-get($sizes, "footer-height");
   background-color: map-get($colours, "light");
@@ -17,6 +15,12 @@
     height: auto;
 
     padding-block: map-get($spacings, "semi-sm");
+  }
+
+  @include orientation(portrait) {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
   }
 
   &__nav {

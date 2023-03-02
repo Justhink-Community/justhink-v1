@@ -52,13 +52,17 @@
   &__remaining-time {
     color: rgba(map-get($colours, "light"), 0.5);
     font-size: 1.8rem;
-
-    color: rgba(map-get($colours, "light"), 0.5);
-    font-size: 1.8rem;
     position: absolute;
     left: 2rem;
     bottom: 2rem;
-    // margin-top: calc(map-get($spacings, "xs") + 0.1rem);
+
+    @include respond(md-desktop) {
+      position: static;
+    }
+
+    @include respond(mobile) {
+      font-size: 1.6rem;
+    }
   }
 
   &--topic-info {
@@ -90,6 +94,14 @@
     padding: unset;
     align-items: center;
     justify-content: center;
+
+    @include respond(tablet) {
+      border-radius: unset;
+    }
+
+    @include respond(mobile) {
+      padding: 3.2rem 1.6rem !important;
+    }
   }
 
   &--index &__hashtags-container {
@@ -98,28 +110,86 @@
     bottom: 2rem;
     right: 2rem;
     font-size: 2.4rem;
+
+    @include respond(md-desktop) {
+      display: none;
+    }
   }
 
   &--index &__topic {
     font-size: 5rem;
+
+    @include respond(mobile) {
+      font-size: 4.2rem;
+    }
+
+    @include respond(sm-mobile) {
+      font-size: 3.2rem;
+    }
   }
 
   &--index &__statistics-container {
     gap: 3rem;
     margin-top: 2.4rem;
+
+    @include respond(mobile) {
+      margin-top: 1.6rem;
+    }
+
+    @include respond(sm-mobile) {
+      gap: 2rem;
+      margin-top: 1rem;
+    }
   }
 
   &--index &__statistics {
     font-size: 3rem;
+
+    @include respond(mobile) {
+      font-size: 2.2rem;
+    }
+
+    @include respond(sm-mobile) {
+      font-size: 2rem;
+    }
   }
 
   &--index &__navigation {
     margin-top: min(5.8rem, 10vmax);
     text-align: center;
 
+    @include respond(mobile) {
+      width: 100%;
+      margin-top: min(4rem, 10vmax);
+    }
+
     &-list {
       display: flex;
       gap: min(13rem, 20vmax);
+
+      @include respond(tablet-portrait) {
+        gap: min(8rem, 10vmax);
+      }
+
+      @include respond(mobile) {
+        gap: unset;
+        justify-content: space-around;
+        width: 100%;
+      }
+
+      @include respond(sm-mobile) {
+        justify-content: center;
+      }
+    }
+
+    &-item:not(:nth-child(2)) {
+      @include respond(sm-mobile) {
+        display: none;
+      }
+    }
+
+    .summary__navigation-middle > * {
+      display: block;
     }
 
     &-icon {
@@ -127,10 +197,15 @@
       background-color: rgba(#000, 0.1);
       border-radius: 50%;
       padding: 1.3rem;
+
+      @include respond(mobile) {
+        font-size: 6.4rem;
+        padding: 1rem;
+      }
     }
 
     &-label {
-      font-size: 2rem;
+      font-size: 1.8rem;
     }
 
     &-middle {
@@ -138,11 +213,19 @@
       gap: 1.7rem;
       background-color: rgba(148, 137, 143, 0.3);
       border-radius: 100vmax;
+
+      @include respond(mobile) {
+        gap: 1.2rem;
+      }
     }
 
     &-middle .summary__navigation-icon {
       background-color: transparent;
       padding: 1.4rem;
+
+      @include respond(mobile) {
+        padding: 1rem;
+      }
     }
 
     &-link[aria-current="page"] .summary__navigation-icon {
@@ -157,18 +240,36 @@
       position: relative;
       isolation: isolate;
 
-      &::after {
-        content: "";
-        position: absolute;
-        left: -1.8rem;
-        top: -1.6rem;
+      background-color: map-get($colours, "light");
+      border-radius: 50%;
+      box-shadow: 0 0 0 1.6rem map-get($colours, "light");
 
-        width: max(11.2rem, 100%);
-        height: max(11.2rem, 100%);
-        background-color: map-get($colours, "light");
-        border-radius: 50%;
-        z-index: -1;
+      @include respond(mobile) {
+        box-shadow: 0 0 0 1.2rem map-get($colours, "light");
       }
+
+      // Old way, do not delete.
+
+      // &::after {
+      //   content: "";
+      //   position: absolute;
+      //   left: -1.8rem;
+      //   top: -1.6rem;
+
+      //   width: max(11.2rem, 100%);
+      //   height: max(11.2rem, 100%);
+      //   background-color: map-get($colours, "light");
+      //   border-radius: 50%;
+      //   z-index: -1;
+
+      //   @include respond(mobile) {
+      //     left: -1.1rem;
+      //     top: -0.9rem;
+
+      //     width: max(7rem, 7vmax);
+      //     height: max(7rem, 7vmax);
+      //   }
+      // }
 
       & .summary__navigation-icon {
         background-color: transparent;

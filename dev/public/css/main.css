@@ -27,6 +27,8 @@ Justhink
 
 1600px: md-desktop = 100em
 1300px: desktop = 81.25em
+1050px: tablet = 65.625em
+750px: portrait tablet = 46.875em
 650px: mobile = 40.625em
 300px: sm-mobile = 18.75em
 */
@@ -222,11 +224,19 @@ ol {
 .summary__remaining-time {
   color: rgba(250, 250, 250, 0.5);
   font-size: 1.8rem;
-  color: rgba(250, 250, 250, 0.5);
-  font-size: 1.8rem;
   position: absolute;
   left: 2rem;
   bottom: 2rem;
+}
+@media only screen and (max-width: 100em) {
+  .summary__remaining-time {
+    position: static;
+  }
+}
+@media only screen and (max-width: 40.625em) {
+  .summary__remaining-time {
+    font-size: 1.6rem;
+  }
 }
 .summary--topic-info {
   background-image: unset;
@@ -253,6 +263,16 @@ ol {
   align-items: center;
   justify-content: center;
 }
+@media only screen and (max-width: 65.625em) {
+  .summary--index {
+    border-radius: unset;
+  }
+}
+@media only screen and (max-width: 40.625em) {
+  .summary--index {
+    padding: 3.2rem 1.6rem !important;
+  }
+}
 .summary--index .summary__hashtags-container {
   position: absolute;
   margin-bottom: 0;
@@ -260,23 +280,90 @@ ol {
   right: 2rem;
   font-size: 2.4rem;
 }
+@media only screen and (max-width: 100em) {
+  .summary--index .summary__hashtags-container {
+    display: none;
+  }
+}
 .summary--index .summary__topic {
   font-size: 5rem;
+}
+@media only screen and (max-width: 40.625em) {
+  .summary--index .summary__topic {
+    font-size: 4.2rem;
+  }
+}
+@media only screen and (max-width: 18.75em) {
+  .summary--index .summary__topic {
+    font-size: 3.2rem;
+  }
 }
 .summary--index .summary__statistics-container {
   gap: 3rem;
   margin-top: 2.4rem;
 }
+@media only screen and (max-width: 40.625em) {
+  .summary--index .summary__statistics-container {
+    margin-top: 1.6rem;
+  }
+}
+@media only screen and (max-width: 18.75em) {
+  .summary--index .summary__statistics-container {
+    gap: 2rem;
+    margin-top: 1rem;
+  }
+}
 .summary--index .summary__statistics {
   font-size: 3rem;
+}
+@media only screen and (max-width: 40.625em) {
+  .summary--index .summary__statistics {
+    font-size: 2.2rem;
+  }
+}
+@media only screen and (max-width: 18.75em) {
+  .summary--index .summary__statistics {
+    font-size: 2rem;
+  }
 }
 .summary--index .summary__navigation {
   margin-top: min(5.8rem, 10vmax);
   text-align: center;
 }
+@media only screen and (max-width: 40.625em) {
+  .summary--index .summary__navigation {
+    width: 100%;
+    margin-top: min(4rem, 10vmax);
+  }
+}
 .summary--index .summary__navigation-list {
   display: flex;
   gap: min(13rem, 20vmax);
+}
+@media only screen and (max-width: 46.875em) {
+  .summary--index .summary__navigation-list {
+    gap: min(8rem, 10vmax);
+  }
+}
+@media only screen and (max-width: 40.625em) {
+  .summary--index .summary__navigation-list {
+    gap: unset;
+    justify-content: space-around;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 18.75em) {
+  .summary--index .summary__navigation-list {
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 18.75em) {
+  .summary--index .summary__navigation-item:not(:nth-child(2)) {
+    display: none;
+  }
+}
+.summary--index .summary__navigation .summary__navigation-middle > * {
+  display: block;
 }
 .summary--index .summary__navigation-icon {
   font-size: 7.6rem;
@@ -284,8 +371,14 @@ ol {
   border-radius: 50%;
   padding: 1.3rem;
 }
+@media only screen and (max-width: 40.625em) {
+  .summary--index .summary__navigation-icon {
+    font-size: 6.4rem;
+    padding: 1rem;
+  }
+}
 .summary--index .summary__navigation-label {
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 .summary--index .summary__navigation-middle {
   display: flex;
@@ -293,9 +386,19 @@ ol {
   background-color: rgba(148, 137, 143, 0.3);
   border-radius: 100vmax;
 }
+@media only screen and (max-width: 40.625em) {
+  .summary--index .summary__navigation-middle {
+    gap: 1.2rem;
+  }
+}
 .summary--index .summary__navigation-middle .summary__navigation-icon {
   background-color: transparent;
   padding: 1.4rem;
+}
+@media only screen and (max-width: 40.625em) {
+  .summary--index .summary__navigation-middle .summary__navigation-icon {
+    padding: 1rem;
+  }
 }
 .summary--index .summary__navigation-link[aria-current=page] .summary__navigation-icon {
   color: #4e1c60;
@@ -304,17 +407,14 @@ ol {
 .summary--index .summary__navigation-middle .summary__navigation-item:has(.summary__navigation-link[aria-current=page]) {
   position: relative;
   isolation: isolate;
-}
-.summary--index .summary__navigation-middle .summary__navigation-item:has(.summary__navigation-link[aria-current=page])::after {
-  content: "";
-  position: absolute;
-  left: -1.8rem;
-  top: -1.6rem;
-  width: max(11.2rem, 100%);
-  height: max(11.2rem, 100%);
   background-color: #fafafa;
   border-radius: 50%;
-  z-index: -1;
+  box-shadow: 0 0 0 1.6rem #fafafa;
+}
+@media only screen and (max-width: 40.625em) {
+  .summary--index .summary__navigation-middle .summary__navigation-item:has(.summary__navigation-link[aria-current=page]) {
+    box-shadow: 0 0 0 1.2rem #fafafa;
+  }
 }
 .summary--index .summary__navigation-middle .summary__navigation-item:has(.summary__navigation-link[aria-current=page]) .summary__navigation-icon {
   background-color: transparent;
@@ -489,6 +589,7 @@ ol {
 @media only screen and (max-width: 40.625em) {
   .publish-idea__btn {
     bottom: 10rem;
+    padding: 4rem 2.8rem;
   }
 }
 @media only screen and (max-width: 18.75em) {
@@ -675,6 +776,12 @@ body {
   padding-block: 2.5rem;
   padding-inline: 4rem;
 }
+@media only screen and (max-width: 65.625em) {
+  .grid-main {
+    padding: 0;
+    grid-template-rows: auto 1fr;
+  }
+}
 
 .header {
   height: clamp(10rem, 10vh, 11.7rem);
@@ -793,13 +900,11 @@ body {
 }
 
 .footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
   z-index: 2;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 2.5rem;
   height: clamp(4.25rem, 5vh, 5rem);
   background-color: #fafafa;
   padding-inline: 3rem;
@@ -810,6 +915,13 @@ body {
     gap: 1.2rem;
     height: auto;
     padding-block: 1.5rem;
+  }
+}
+@media only screen and (orientation: portrait) {
+  .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
   }
 }
 .footer__nav {
