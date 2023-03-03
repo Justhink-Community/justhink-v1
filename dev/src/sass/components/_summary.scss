@@ -188,6 +188,14 @@
       }
     }
 
+    &-item:not(:has(.summary__navigation-item)) {
+      transition: all 0.25s ease;
+
+      &:is(:hover, :focus, :active, :focus-within, :focus-visible) {
+        transform: translateY(-0.5rem);
+      }
+    }
+
     .summary__navigation-middle > * {
       display: block;
     }

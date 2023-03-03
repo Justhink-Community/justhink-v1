@@ -138,6 +138,7 @@
     padding: 4.5rem 3.2rem;
     background-color: #4d1a5f;
     border-radius: 50%;
+    box-shadow: map-get($shadows, "default");
 
     @include respond(mobile) {
       bottom: 10rem;
