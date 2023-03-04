@@ -1,11 +1,10 @@
 .footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+  position: relative;
   z-index: 2;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 2.5rem;
 
   height: map-get($sizes, "footer-height");
   background-color: map-get($colours, "light");
@@ -17,6 +16,18 @@
     height: auto;
 
     padding-block: map-get($spacings, "semi-sm");
+  }
+
+  @include orientation(portrait) {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+  @media only screen and (min-width: map-get($breakpoints, "tablet")) {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
   }
 
   &__nav {

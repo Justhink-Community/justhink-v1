@@ -131,6 +131,8 @@
   }
 
   &__logo a {
+    transition: all 0.25s ease;
+
     @include respond(mobile) {
       max-width: 55%;
       float: right;
@@ -138,6 +140,10 @@
 
     @include respond(sm-mobile) {
       max-width: 65%;
+    }
+
+    &:hover {
+      transform: translateY(-0.25rem);
     }
   }
 }
