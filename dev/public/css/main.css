@@ -1266,6 +1266,41 @@ body {
   }
 }
 
+.wrapper {
+  display: grid;
+  grid-template-columns: 3fr 1fr 2fr;
+  column-gap: 3rem;
+  padding-block: 3rem;
+}
+.wrapper-center {
+  display: grid;
+  grid-template-rows: 1fr 1.5fr 1fr;
+  row-gap: 3rem;
+}
+.wrapper-center__user-copyright {
+  background-color: #f0f0f0;
+  color: #222;
+  border-radius: 1.1rem;
+  text-align: center;
+}
+.wrapper-center__user-copyright__author {
+  font-weight: 500;
+  font-style: italic;
+}
+.wrapper-center__countdown {
+  background-color: #f0f0f0;
+  color: #222;
+  border-radius: 1.1rem;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.wrapper-center__countdown-menu__btn {
+  font-size: 6rem;
+  color: #4e1c60;
+}
+
 main.login {
   display: flex;
   align-items: center;
@@ -1484,4 +1519,10 @@ main.login {
   flex-direction: column;
   align-items: center;
   gap: 3.5rem;
+@media only screen and (max-width: 700px) {
+  .grid-col-2 {
+    grid-template-columns: 1fr;
+    padding-inline: 0;
+    gap: 2.5rem;
+  }
 }

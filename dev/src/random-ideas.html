@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Justhink &ndash; Anasayfa</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/icons.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <script src="scripts/script.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__start">
+        <button
+          class="header__hamburger-btn"
+          aria-label="Justhink web sitesinin
+          menüsünü görüntülemek için tıkla."
+          aria-controls="menu"
+          aria-expanded="false"
+        >
+          <span class="header__hamburger-menu"></span>
+        </button>
+        <h1 class="header__logo">
+          <a
+            href="#"
+            aria-label="Justhink sitesinin anasayfasına gitmek için tıkla."
+          >
+            <picture class="header__logo-img">
+              <source
+                srcset="
+                  assets/logo-mobile.webp    1x,
+                  assets/logo-mobile-2x.webp 2x
+                "
+                src="assets/logo.webp"
+                media="(max-width: 40.625em)"
+              />
+              <img
+                srcset="assets/logo.webp 1x, assets/logo-2x.webp 2x"
+                src="assets/logo.webp"
+                alt="Justhink Logo"
+              />
+            </picture>
+          </a>
+        </h1>
+      </div>
+      <div class="header__center">
+        <form action="search" method="get">
+          <div class="header__search-box">
+            <a
+              href="#"
+              class="header__search-btn"
+              aria-label="İstediğiniz bir şeyi aratın"
+            >
+              <svg class="header__search-icon">
+                <use xlink:href="assets/sprite.svg#icon-search"></use>
+              </svg>
+            </a>
+            <input
+              class="header__search-input"
+              type="text"
+              placeholder="Dilediğiniz şeyi arayın."
+            />
+          </div>
+        </form>
+      </div>
+      <div class="header__end">
+        <a href="/login" class="btn btn--primary">Giriş Yap</a>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="publish-idea">
+        <div class="publish-idea__control">
+          <a
+            href="#"
+            class="publish-idea__btn"
+            aria-controls="publish-idea-container"
+            aria-expanded="false"
+          >
+            <span class="publish-idea__icon"></span>
+          </a>
+        </div>
+
+        <div class="publish-idea__container" id="publish-idea-container">
+          <section class="summary summary--topic-info publish-idea__topic-info">
+            <div class="summary__hashtags-container">#teknoloji #akademik</div>
+            <p class="summary__topic">GDO</p>
+            <div class="summary__statistics-container">
+              <span class="summary__statistics">toplam yorum: 0</span>
+              <span class="summary__statistics">toplam fikir: 12</span>
+            </div>
+          </section>
+          <form action="" class="publish-idea__form" method="post">
+            <label for="idea-content" class="publish-idea__input-label"
+              >Fikrini aşağıya yazabilirsin.</label
+            >
+
+            <textarea
+              name="idea-content"
+              id="idea-content"
+              class="publish-idea__textarea"
+              cols="50"
+              rows="6"
+              placeholder="Bence, xxx konusunda almamız gereken tutum böyle..."
+              minlength="20"
+              maxlength="6000000"
+            ></textarea>
+
+            <button type="submit" class="btn btn-form publish-idea__submit">
+              Fikri Paylaş
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="grid-main">
+        <section class="summary summary--index">
+          <header class="summary__header">
+            <p class="summary__topic">Sanatçı: The Weeknd</p>
+            <p class="summary__remaining-time" data-target="2023.3.28 22:00">
+              Konunun bitimine 5 saat 12 dakika kaldı.
+            </p>
+          </header>
+          <div class="summary__statistics-container">
+            <span class="summary__statistics">toplam yorum: 0</span>
+            <span class="summary__statistics">toplam fikir: 12</span>
+          </div>
+          <div class="summary__hashtags-container">#haftanıneseri</div>
+
+          <nav class="summary__navigation">
+            <ul class="summary__navigation-list">
+              <li class="summary__navigation-item">
+                <a href="#" class="summary__navigation-link">
+                  <svg class="summary__navigation-icon">
+                    <use xlink:href="assets/sprite.svg#icon-shuffle"></use>
+                  </svg>
+                  <p class="summary__navigation-label">rastgele</p>
+                </a>
+              </li>
+              <li class="summary__navigation-item">
+                <ul class="summary__navigation-middle">
+                  <li class="summary__navigation-item">
+                    <a href="#" class="summary__navigation-link">
+                      <svg class="summary__navigation-icon">
+                        <use
+                          xlink:href="assets/sprite.svg#icon-how_to_vote"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="summary__navigation-item">
+                    <a
+                      href="#"
+                      class="summary__navigation-link"
+                      aria-current="page"
+                    >
+                      <svg class="summary__navigation-icon">
+                        <use xlink:href="assets/sprite.svg#icon-home"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="summary__navigation-item">
+                    <a href="#" class="summary__navigation-link">
+                      <svg class="summary__navigation-icon">
+                        <use xlink:href="assets/sprite.svg#icon-create"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="summary__navigation-item">
+                <a href="#" class="summary__navigation-link">
+                  <svg class="summary__navigation-icon">
+                    <use xlink:href="assets/sprite.svg#icon-emoji_events"></use>
+                  </svg>
+                  <p class="summary__navigation-label">sıralama</p>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </section>
+        <section class="wrapper">
+          <div class="idea idea--index wrapper-start" id="1">
+            <div class="idea__content">
+              <a href="#" class="idea__author">Furkan Esen:</a>
+              <p class="idea__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam,
+                deleniti et fuga corrupti deserunt numquam! Lorem ipsum dolor
+                sit amet consectetur adipisicing elit. Magnam, deleniti et fuga
+                corrupti deserunt numquam! Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Magnam, deleniti et fuga corrupti
+                deserunt numquam! Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Magnam, deleniti et fuga corrupti deserunt
+                numquam!
+              </p>
+            </div>
+
+            <div class="idea__interactions">
+              <a
+                class="idea__like-btn idea__btn"
+                aria-label="Bu fikri beğenmek/beğenini kaldırmak için tıkla."
+                data-url="/like-idea/1"
+              >
+                <svg class="idea__interaction-icon">
+                  <use
+                    xlink:href="assets/sprite.svg#icon-favorite_outline"
+                  ></use>
+                </svg>
+                <p class="idea__like-count idea__counter">10</p>
+              </a>
+              <a
+                href="/inspect-idea/1"
+                class="idea__comment-btn idea__btn"
+                aria-label="Bu fikre bir yorum bırakmak için tıkla."
+              >
+                <svg class="idea__interaction-icon">
+                  <use
+                    xlink:href="assets/sprite.svg#icon-chat_bubble_outline"
+                  ></use>
+                </svg>
+                <p class="idea__comment-count idea__counter">10</p>
+              </a>
+              <a
+                href="#"
+                class="idea__share-btn idea__btn"
+                aria-label="Bu fikri diğer arkadaşlarınla paylaşmak için tıkla."
+              >
+                <svg class="idea__interaction-icon">
+                  <use xlink:href="assets/sprite.svg#icon-share"></use>
+                </svg>
+              </a>
+            </div>
+            <menu class="idea__administration-menu">
+              <a
+                href="#"
+                aria-label="Fikrini düzenlemek için tıkla."
+                class="idea__edit-btn"
+                data-id="1"
+              >
+                <svg class="idea__administration-icon">
+                  <use xlink:href="assets/sprite.svg#icon-create"></use>
+                </svg>
+              </a>
+            </menu>
+          </div>
+          <div class="wrapper-center">
+            <div class="wrapper-center__user-copyright">
+              Bugünkü konunun geliştirilmesinde katkıda bulunan
+              <span class="wrapper-center__user-copyright__author"
+                >Justhink'e</span
+              >
+              teşekkür ederiz.
+            </div>
+            <div class="wrapper-center__countdown">
+              <p class="wrapper-center__countdown-text">
+                Rastgele metin gösteriliyor. Yeni içeriğe son: 77 saniye
+              </p>
+              <menu class="wrapper-center__countdown-menu">
+                <svg class="wrapper-center__countdown-menu__btn">
+                  <use Xlink:href="assets/sprite.svg#icon-skip_previous"></use>
+                </svg>
+                <svg class="wrapper-center__countdown-menu__btn">
+                  <use
+                    Xlink:href="assets/sprite.svg#icon-pause_circle_filled"
+                  ></use>
+                </svg>
+                <svg class="wrapper-center__countdown-menu__btn">
+                  <use Xlink:href="assets/sprite.svg#icon-skip_next"></use>
+                </svg>
+              </menu>
+            </div>
+          </div>
+          <div class="wrapper-end">
+            <aside class="suggestions">
+              <h3 class="heading-tertiary">
+                Beğenebileceğini düşündüğümüz metinler:
+              </h3>
+              <ul class="suggestions__list">
+                <li class="suggestions__list-items">
+                  <a href="" class="suggestions__link">#123</a>
+                </li>
+                <li class="suggestions__list-items">
+                  <a href="" class="suggestions__link">#456</a>
+                </li>
+                <li class="suggestions__list-items">
+                  <a href="" class="suggestions__link">#789</a>
+                </li>
+              </ul>
+            </aside>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <nav class="footer__nav footer__nav--main">
+        <a href="/home" class="footer__link">Anasayfa</a>
+        <a href="/about" class="footer__link">Hakkımızda</a>
+        <a href="/dashboard" class="footer__link">Medya</a>
+      </nav>
+
+      <nav class="footer__nav footer__nav--icons">
+        <a href="mailto:iletisim@justhink.net" class="footer__link">
+          <svg class="footer__icon">
+            <use xlink:href="assets/sprite.svg#icon-email"></use>
+          </svg>
+        </a>
+        <a
+          href="https://www.instagram.com/justhinkofficial/"
+          class="footer__link"
+          target="_blank"
+        >
+          <svg class="footer__icon">
+            <use xlink:href="assets/sprite.svg#icon-instagram"></use>
+          </svg>
+        </a>
+        <a
+          href="https://www.linkedin.com/company/justhink"
+          class="footer__link"
+          target="_blank"
+        >
+          <svg class="footer__icon">
+            <use xlink:href="assets/sprite.svg#icon-linkedin"></use>
+          </svg>
+        </a>
+        <a
+          href="https://www.youtube.com/@jsthink"
+          class="footer__link"
+          target="_blank"
+        >
+          <svg class="footer__icon">
+            <use xlink:href="assets/sprite.svg#icon-youtube"></use>
+          </svg>
+        </a>
+      </nav>
+    </footer>
+  </body>
+</html>
