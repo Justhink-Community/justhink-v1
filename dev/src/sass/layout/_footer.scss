@@ -16,16 +16,13 @@
     height: auto;
 
     padding-block: map-get($spacings, "semi-sm");
-  }
-
-  @include orientation(portrait) {
-    position: fixed;
+    position: sticky;
     bottom: 0;
     width: 100%;
   }
 
-  @media only screen and (min-width: map-get($breakpoints, "tablet")) {
-    position: fixed;
+  @include orientation(landscape) {
+    position: sticky;
     bottom: 0;
     width: 100%;
   }

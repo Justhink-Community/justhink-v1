@@ -38,6 +38,13 @@
     width: 75%;
     height: 0.2rem;
   }
+
+  @include respond(tablet) {
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
 }
 
 /* MEDIA QUERY MANAGER

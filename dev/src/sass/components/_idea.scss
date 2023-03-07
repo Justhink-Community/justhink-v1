@@ -7,17 +7,30 @@
   gap: calc(map-get($spacings, "sm") - 0.4rem);
   background-color: map-get($colours, "grey-light-4");
 
+  @include respond(tablet) {
+    padding: 1rem 2rem;
+  }
+
   &--index {
     grid-template-columns: auto 1fr;
-    gap: min(4.8rem, 10vw);
-    align-items: start;
     border-radius: map-get($border-radius, "lg");
 
     @include create-seperator(both);
   }
 
   &--index &__content {
+    margin-left: min(3rem, 10vw);
     grid-column: 2;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    @include respond(tablet) {
+      grid-column: 1 / -1;
+      margin-left: unset;
+    }
   }
 
   &--index &__interactions {
@@ -25,6 +38,12 @@
     grid-row: 1 / -1;
     flex-direction: column;
     align-items: flex-start;
+
+    @include respond(tablet) {
+      grid-column: 1 / -1;
+      grid-row: 2;
+      flex-direction: row;
+    }
   }
 
   &--index &__btn {
@@ -89,11 +108,15 @@
 
   &__interaction-icon {
     color: map-get($colours, "primary-dark");
-    font-size: map-get($spacings, "semi-lg");
+    font-size: 4.5rem;
     transition: all 0.2s ease;
 
     &:hover {
       color: map-get($colours, "primary-light");
+    }
+
+    @include respond(tablet) {
+      font-size: 4rem;
     }
   }
 

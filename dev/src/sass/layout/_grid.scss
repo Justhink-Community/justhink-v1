@@ -45,7 +45,13 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 4.5rem;
   padding-inline: map-get($spacings, "upper-md");
-  padding-block: 1rem 2.5rem;
+  padding-block: 3.5rem 1rem;
+
+  @include respond(tablet) {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding-inline: min(4rem, 4vw);
+  }
 }
 
 .grid-main {
