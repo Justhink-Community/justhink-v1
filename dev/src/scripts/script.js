@@ -2,12 +2,32 @@
 
 class App {
   _remainingTopicTime = document.querySelector(".summary__remaining-time");
-  _topicRefreshDate = new Date(this._remainingTopicTime.dataset.target);
   _publishIdeaBtn = document.querySelector(".publish-idea__btn");
+  _themesBtn = document.querySelector(".shop-category-selector-button--themes");
+  _iconsBtn = document.querySelector(".shop-category-selector-button--icons");
 
   constructor() {
-    this._publishIdeaBtn.addEventListener("click", this._togglePublishIdea);
-    App.setTimerInterval(this._updateRemainingTime, 60, this);
+    if (this._publishIdeaBtn)
+      this._publishIdeaBtn.addEventListener("click", this._togglePublishIdea);
+
+    if (this._remainingTopicTime && this._remainingTopicTime?.dataset?.target) {
+      this._topicRefreshDate = new Date(
+        this._remainingTopicTime.dataset.target
+      );
+
+      App.setTimerInterval(this._updateRemainingTime, 60, this);
+    }
+
+    if (this._themesBtn && this._iconsBtn) {
+      this._themesBtn.addEventListener("click", this._changeTab.bind(this));
+      this._iconsBtn.addEventListener("click", this._changeTab.bind(this));
+    }
+  }
+
+  // Changing between tabs in market page
+  _changeTab(e) {
+    this._themesBtn.classList.toggle("active");
+    this._iconsBtn.classList.toggle("active");
   }
 
   // Making publish idea interface pop up.

@@ -179,6 +179,11 @@ ol {
   z-index: -1;
   transition: all 0.4s ease;
 }
+.btn--small {
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+  border-radius: 0.64rem;
+}
 
 .summary {
   height: 100%;
@@ -1469,10 +1474,11 @@ main.login {
 }
 .shop-heading-section::after {
   content: "";
+  display: block;
   position: absolute;
   bottom: -1.25rem;
   left: 50%;
-  width: 99vw;
+  width: 100%;
   height: 0.1rem;
   transform: translateX(-50%);
   background-color: #ccc;
@@ -1497,53 +1503,59 @@ main.login {
   color: #3d0046;
   font-weight: 600;
   text-decoration: none;
+  border-bottom: transparent 0.15rem solid;
+  transition: all 0.2s ease;
 }
-.shop-category-selector-button:active {
+.shop-category-selector-button:is(:hover, :active, :focus, .active) {
   border-bottom: currentColor 0.15rem solid;
 }
+.shop-category-selector:has(:hover) > *:not(:hover) {
+  border-bottom-color: transparent;
+}
 .shop-items-section {
-  display: grid;
-  grid-template-columns: 1fr 5fr 1fr;
   margin-top: 4.8rem;
-  width: 95vw;
-  gap: 3.2rem;
   position: relative;
+  display: block;
 }
-.shop-products {
+.shop-items-section > *:not(:target) {
+  display: none;
+}
+.shop-themes {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 1.6rem;
-  row-gap: 4.8rem;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.6rem;
+  margin: 0 auto;
 }
-.shop-product {
+.shop-theme {
   background-color: hsl(0deg, 0%, 85%);
   text-align: left;
   border-radius: 0.3rem;
   overflow: hidden;
 }
-.shop-product__content {
+.shop-theme__content {
   padding: 0.8rem 1.2rem;
   text-align: left;
 }
-.shop-product__content-title {
+.shop-theme__content-title {
   font-size: 2.4rem;
   font-weight: 600;
 }
-.shop-product-image {
+.shop-theme-image {
   max-width: 100%;
 }
-.shop-product-fee {
+.shop-theme-fee {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.shop-product-price {
+.shop-theme-price {
   font-size: 1.5rem;
   font-weight: 500;
 }
-.shop-product-price span {
+.shop-theme-price span {
   font-weight: 400;
 }
+
 .shop-main {
   height: auto;
   position: relative;

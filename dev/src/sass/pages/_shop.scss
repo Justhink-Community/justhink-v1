@@ -8,10 +8,11 @@
 
     &::after {
       content: "";
+      display: block;
       position: absolute;
       bottom: -1.25rem;
       left: 50%;
-      width: 99vw;
+      width: 100%;
       height: 0.1rem;
       transform: translateX(-50%);
       background-color: #ccc;
@@ -41,34 +42,37 @@
       color: #3d0046;
       font-weight: 600;
       text-decoration: none;
+      border-bottom: transparent 0.15rem solid;
+      transition: all 0.2s ease;
 
-      &:active {
+      &:is(:hover, :active, :focus, .active) {
         border-bottom: currentColor 0.15rem solid;
       }
+    }
+
+    &:has(:hover) > *:not(:hover) {
+      border-bottom-color: transparent;
     }
   }
 
   &-items-section {
-    display: grid;
-    grid-template-columns: 1fr 5fr 1fr;
     margin-top: 4.8rem;
-    width: 95vw;
-    gap: 3.2rem;
     position: relative;
+    display: block;
+
+    & > *:not(:target) {
+      display: none;
+    }
   }
 
-  &-items-categories {
-    // background-color: #74316f;
-  }
-
-  &-products {
+  &-themes {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 1.6rem;
-    row-gap: 4.8rem;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.6rem;
+    margin: 0 auto;
   }
 
-  &-product {
+  &-theme {
     background-color: hsl(0, 0%, 85%);
     text-align: left;
     border-radius: 0.3rem;
@@ -81,10 +85,6 @@
       &-title {
         font-size: 2.4rem;
         font-weight: 600;
-      }
-
-      &-description {
-        //Empty
       }
     }
 
@@ -105,9 +105,6 @@
       & span {
         font-weight: 400;
       }
-    }
-
-    &-button {
     }
   }
 }

@@ -74,4 +74,10 @@
       }
     }
   }
+
+  &--small {
+    padding: 1rem 2rem;
+    font-size: map-get($font-sizes, "sm");
+    border-radius: map-get($border-radius, "base");
+  }
 }
