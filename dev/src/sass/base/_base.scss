@@ -15,7 +15,7 @@ html {
   color-scheme: light;
   caret-color: map-get($colours, "primary-light");
 
-  @include respond(desktop) {
+  @include respond(md-desktop) {
     font-size: 56.25%; // 1rem = 9px
   }
 

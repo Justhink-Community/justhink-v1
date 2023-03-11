@@ -51,7 +51,7 @@ html {
   color-scheme: light;
   caret-color: #5a2a76;
 }
-@media only screen and (max-width: 90em) {
+@media only screen and (max-width: 100em) {
   html {
     font-size: 56.25%;
   }
