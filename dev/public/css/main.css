@@ -769,6 +769,46 @@ ol {
   }
 }
 
+.delete-account-popup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding-top: 3rem;
+  border-radius: 10px;
+  background-color: #f0f0f0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.delete-account-popup h3 {
+  font-size: 4rem;
+  font-weight: 500;
+}
+.delete-account-popup p {
+  font-size: 2.5rem;
+  color: #424242;
+  text-align: center;
+}
+.delete-account-popup nav {
+  display: flex;
+}
+.delete-account-popup-button {
+  padding: 3.7rem 12rem;
+  background-color: #d9d9d9;
+}
+.delete-account-popup-button:hover {
+  background-color: #b7b7b7;
+}
+.delete-account-popup-button-yes {
+  border-radius: 0px 0px 0px 10px;
+  background-color: #c9c9c9;
+}
+.delete-account-popup-button-no {
+  border-radius: 0px 0px 10px 0px;
+}
+
 body {
   display: grid;
   grid-template-rows: auto 1fr auto;
