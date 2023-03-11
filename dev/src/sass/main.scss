@@ -26,6 +26,7 @@ Justhink
 @import "abstracts/variables";
 @import "abstracts/functions";
 @import "abstracts/mixins";
+@import "abstracts/extends";
 
 @import "base/base";
 @import "base/typography";
@@ -54,6 +55,7 @@ Justhink
 @import "pages/login";
 @import "pages/shop";
 @import "pages/topic-suggestions";
+@import "pages/edit-profile";
 
 @import "themes/thinker";
 @import "themes/dark";
