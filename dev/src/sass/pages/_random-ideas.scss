@@ -1,39 +1,61 @@
 .wrapper {
   display: grid;
-  grid-template-columns: 3fr 1fr 2fr;
-  column-gap: 3rem;
+  grid-template-columns: 3fr 1.25fr 2fr;
+  gap: 4.5rem;
   padding-block: 3rem;
 
   &-center {
     display: grid;
-    grid-template-rows: 1fr 1.5fr 1fr;
-    row-gap: 3rem;
+    align-items: start;
+
+    grid-template-rows: 1fr 2fr;
+    row-gap: clamp(0.8rem, 2vh, 3rem);
+
+    @include respond(desktop) {
+      row-gap: 1rem;
+      align-items: center;
+    }
 
     &__user-copyright {
       background-color: map-get($colours, grey-light-4);
       color: map-get($colours, dark);
       border-radius: map-get($border-radius, lg);
       text-align: center;
+      padding: clamp(0.6rem, 1.4vh, 1.8rem) clamp(0.4rem, 1vh, 1.2rem);
 
-      &__author{
+      &__author {
         font-weight: map-get($font-weights, medium);
         font-style: italic;
       }
     }
 
-    &__countdown{
-        background-color: map-get($colours, grey-light-4);
-        color: map-get($colours, dark);
-        border-radius: map-get($border-radius, lg);
-        text-align: center;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
+    &__countdown {
+      background-color: map-get($colours, grey-light-4);
+      color: map-get($colours, dark);
+      border-radius: map-get($border-radius, lg);
+      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      gap: 0.5rem;
+      padding: clamp(0.8rem, 1.2vh, 1.6rem) clamp(0.4rem, 1vh, 1.2rem);
 
-        &-menu__btn{
-            font-size: 6rem;
-            color: map-get($colours, primary);
+      &-menu__btn {
+        font-size: 6rem;
+        color: map-get($colours, primary);
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        &:hover {
+          color: lighten(map-get($colours, primary), 10%);
         }
+      }
     }
+  }
+
+  @include respond(desktop) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1.25fr 2fr;
+    padding-inline: min(4rem, 4vw);
   }
 }

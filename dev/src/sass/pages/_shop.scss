@@ -60,8 +60,14 @@
     position: relative;
     display: block;
 
-    & > *:not(:target) {
-      display: none;
+    & > * {
+      &:not(:target) + *[data-default] {
+        display: grid;
+      }
+
+      &:not(:target) {
+        display: none;
+      }
     }
   }
 

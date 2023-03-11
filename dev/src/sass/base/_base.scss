@@ -13,6 +13,7 @@ html {
   font-size: 62.5%; // 1rem = 10px
   box-sizing: border-box;
   color-scheme: light;
+  caret-color: map-get($colours, "primary-light");
 
   @include respond(desktop) {
     font-size: 56.25%; // 1rem = 9px
@@ -64,6 +65,14 @@ button {
 ul,
 ol {
   list-style: none;
+}
+
+textarea,
+input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  resize: none;
 }
 
 ::selection {

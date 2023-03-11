@@ -1,0 +1,1 @@
+export const UPDATE_REMAINING_TIME_SECONDS = 60;

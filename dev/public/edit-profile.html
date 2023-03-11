@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Justhink &ndash; Profilini Düzenle</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/icons.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <script src="scripts/script.js" type="module" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__start">
+        <button
+          class="header__hamburger-btn"
+          aria-label="Justhink web sitesinin
+          menüsünü görüntülemek için tıkla."
+          aria-controls="menu"
+          aria-expanded="false"
+        >
+          <span class="header__hamburger-menu"></span>
+        </button>
+        <h1 class="header__logo">
+          <a
+            href="#"
+            aria-label="Justhink sitesinin anasayfasına gitmek için tıkla."
+          >
+            <picture class="header__logo-img">
+              <source
+                srcset="
+                  assets/logo-mobile.webp    1x,
+                  assets/logo-mobile-2x.webp 2x
+                "
+                src="assets/logo.webp"
+                media="(max-width: 40.625em)"
+              />
+              <img
+                srcset="assets/logo.webp 1x, assets/logo-2x.webp 2x"
+                src="assets/logo.webp"
+                alt="Justhink Logo"
+              />
+            </picture>
+          </a>
+        </h1>
+      </div>
+      <div class="header__center">
+        <form action="search" method="get">
+          <div class="header__search-box">
+            <a
+              href="#"
+              class="header__search-btn"
+              aria-label="İstediğiniz bir şeyi aratın"
+            >
+              <svg class="header__search-icon">
+                <use xlink:href="assets/sprite.svg#icon-search"></use>
+              </svg>
+            </a>
+            <input
+              class="header__search-input"
+              type="text"
+              placeholder="Dilediğiniz şeyi arayın."
+            />
+          </div>
+        </form>
+      </div>
+      <div class="header__end">
+        <a href="/login" class="btn btn--primary">Giriş Yap</a>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="grid-main grid-main--ignore-first">
+        <div class="edit-profile grid-col-3 grid-col-3--equal">
+          <nav class="edit-profile__navigation">
+            <ul class="edit-profile__tabs">
+              <li class="edit-profile__tabs-item">
+                <a href="#" class="edit-profile__tabs-link" aria-current="true">
+                  <svg class="edit-profile__tabs-icon">
+                    <use xlink:href="assets/sprite.svg#icon-settings"></use>
+                  </svg>
+                  <span class="edit-profile__tabs-text">Hesap ayarları</span>
+                </a>
+              </li>
+              <li class="edit-profile__tabs-item">
+                <a href="#" class="edit-profile__tabs-link">
+                  <svg class="edit-profile__tabs-icon">
+                    <use
+                      xlink:href="assets/sprite.svg#icon-notifications"
+                    ></use>
+                  </svg>
+                  <span class="edit-profile__tabs-text"
+                    >E-Posta bildirimleri</span
+                  >
+                </a>
+              </li>
+              <li class="edit-profile__tabs-item">
+                <a href="#" class="edit-profile__tabs-link">
+                  <svg class="edit-profile__tabs-icon">
+                    <use xlink:href="assets/sprite.svg#icon-vpn_key"></use>
+                  </svg>
+                  <span class="edit-profile__tabs-text">Şifre değiştir</span>
+                </a>
+              </li>
+              <li class="edit-profile__tabs-item">
+                <a href="#" class="edit-profile__tabs-link">
+                  <svg class="edit-profile__tabs-icon">
+                    <use xlink:href="assets/sprite.svg#icon-security"></use>
+                  </svg>
+                  <span class="edit-profile__tabs-text"
+                    >Gizlilik ve verilerin saklanması</span
+                  >
+                </a>
+              </li>
+              <li class="edit-profile__tabs-item">
+                <a href="#" class="edit-profile__tabs-link">
+                  <svg class="edit-profile__tabs-icon">
+                    <use xlink:href="assets/sprite.svg#icon-support"></use>
+                  </svg>
+                  <span class="edit-profile__tabs-text">Yardım</span>
+                </a>
+              </li>
+              <li class="edit-profile__tabs-item">
+                <a href="#" class="edit-profile__tabs-link">
+                  <svg class="edit-profile__tabs-icon">
+                    <use xlink:href="assets/sprite.svg#icon-delete"></use>
+                  </svg>
+                  <span class="edit-profile__tabs-text">Hesabı sil</span>
+                </a>
+              </li>
+            </ul>
+            <p class="edit-profile__signature">jusTHINK 1.0</p>
+          </nav>
+          <section class="edit-profile__overview">Overview</section>
+          <section class="edit-profile__social">
+            <form action="/" method="POST" class="edit-profile__social-form">
+              <div class="edit-profile__social-input-box">
+                <label for="user-bio" class="edit-profile__social-input-label"
+                  >Hakkımda:</label
+                >
+                <div
+                  class="edit-profile__social-bio-container input-length--container"
+                >
+                  <textarea
+                    name="user-bio"
+                    id="user-bio"
+                    cols="50"
+                    rows="10"
+                    maxlength="300"
+                    placeholder="eklemek için tıkla ve yazmaya başla"
+                    class="edit-profile__social-bio input-length"
+                  ></textarea>
+                  <span
+                    class="edit-profile__social-bio-length input-length--counter"
+                    >0/300</span
+                  >
+                </div>
+              </div>
+
+              <div class="edit-profile__social-media">
+                <p class="edit-profile__social-input-label">
+                  Kişisel Hesaplarım:
+                </p>
+
+                <ul class="edit-profile__social-media-links">
+                  <li class="edit-profile__social-media-link">
+                    <div class="edit-profile__social-input-box">
+                      <label
+                        for="social-instagram"
+                        class="edit-profile__social-input-label edit-profile__social-input-label--sub"
+                        >Instagram:</label
+                      >
+                      <div class="edit-profile__social-media-box">
+                        <input
+                          type="url"
+                          id="social-instagram"
+                          name="social-instagram"
+                          placeholder="burada yazı yok"
+                          class="edit-profile__social-input"
+                        />
+                        <div class="edit-profile__social-media-icon-container">
+                          <svg class="edit-profile__social-media-icon">
+                            <use
+                              xlink:href="assets/sprite.svg#icon-instagram"
+                            ></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="edit-profile__social-media-link">
+                    <div class="edit-profile__social-input-box">
+                      <label
+                        for="social-linkedin"
+                        class="edit-profile__social-input-label edit-profile__social-input-label--sub"
+                        >Linkedin:</label
+                      >
+                      <div class="edit-profile__social-media-box">
+                        <input
+                          type="url"
+                          id="social-linkedin"
+                          name="social-linkedin"
+                          placeholder="burada yazı yok"
+                          class="edit-profile__social-input"
+                        />
+                        <div class="edit-profile__social-media-icon-container">
+                          <svg class="edit-profile__social-media-icon">
+                            <use
+                              xlink:href="assets/sprite.svg#icon-linkedin"
+                            ></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="edit-profile__social-media-link">
+                    <div class="edit-profile__social-input-box">
+                      <label
+                        for="social-facebook"
+                        class="edit-profile__social-input-label edit-profile__social-input-label--sub"
+                        >Facebook:</label
+                      >
+                      <div class="edit-profile__social-media-box">
+                        <input
+                          type="url"
+                          id="social-facebook"
+                          name="social-facebook"
+                          placeholder="burada yazı yok"
+                          class="edit-profile__social-input"
+                        />
+                        <div class="edit-profile__social-media-icon-container">
+                          <svg class="edit-profile__social-media-icon">
+                            <use
+                              xlink:href="assets/sprite.svg#icon-facebook"
+                            ></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="edit-profile__social-media-link edit-profile__social-email-link"
+                  >
+                    <div class="edit-profile__social-input-box">
+                      <label
+                        for="social-email"
+                        class="edit-profile__social-input-label edit-profile__social-input-label--sub"
+                        >E-Posta:</label
+                      >
+                      <div class="edit-profile__social-media-box">
+                        <input
+                          type="url"
+                          id="social-email"
+                          name="social-email"
+                          placeholder="edding@gmail.com"
+                          class="edit-profile__social-input"
+                        />
+                        <label
+                          for="switch-mail-visibility"
+                          class="edit-profile__switch"
+                        >
+                          <input
+                            type="checkbox"
+                            class="edit-profile__switch-input"
+                            id="switch-mail-visibility"
+                            name="switch-mail-visibility"
+                            checked
+                          />
+                          <span class="edit-profile__switch-slider">
+                            <span class="edit-profile__switch-slider-inner">
+                              <svg
+                                class="edit-profile__switch-slider-icon edit-profile__switch-slider-icon--true"
+                              >
+                                <use
+                                  xlink:href="assets/sprite.svg#icon-check"
+                                ></use>
+                              </svg>
+                              <svg
+                                class="edit-profile__switch-slider-icon edit-profile__switch-slider-icon--false"
+                              >
+                                <use
+                                  xlink:href="assets/sprite.svg#icon-clear"
+                                ></use>
+                              </svg>
+                            </span>
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <button class="edit-profile__save-btn">Kaydet</button>
+            </form>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <nav class="footer__nav footer__nav--main">
+        <a href="/home" class="footer__link">Anasayfa</a>
+        <a href="/about" class="footer__link">Hakkımızda</a>
+        <a href="/dashboard" class="footer__link">Medya</a>
+      </nav>
+
+      <nav class="footer__nav footer__nav--icons">
+        <a href="mailto:iletisim@justhink.net" class="footer__link">
+          <svg class="footer__icon">
+            <use xlink:href="assets/sprite.svg#icon-email"></use>
+          </svg>
+        </a>
+        <a
+          href="https://www.instagram.com/justhinkofficial/"
+          class="footer__link"
+          target="_blank"
+        >
+          <svg class="footer__icon">
+            <use xlink:href="assets/sprite.svg#icon-instagram"></use>
+          </svg>
+        </a>
+        <a
+          href="https://www.linkedin.com/company/justhink"
+          class="footer__link"
+          target="_blank"
+        >
+          <svg class="footer__icon">
+            <use xlink:href="assets/sprite.svg#icon-linkedin"></use>
+          </svg>
+        </a>
+        <a
+          href="https://www.youtube.com/@jsthink"
+          class="footer__link"
+          target="_blank"
+        >
+          <svg class="footer__icon">
+            <use xlink:href="assets/sprite.svg#icon-youtube"></use>
+          </svg>
+        </a>
+      </nav>
+    </footer>
+  </body>
+</html>

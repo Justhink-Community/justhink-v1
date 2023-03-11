@@ -1,0 +1,5 @@
+// Path: sass\abstracts\_mixins.scss
+
+%full-bleed-height {
+  height: calc(100vh - clamp(10rem, 10vh, 11.7rem) - clamp(4.25rem, 5vh, 5rem));
+}
