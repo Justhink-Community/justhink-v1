@@ -78,6 +78,10 @@
     @media only screen and (max-width: map-get($breakpoints, "md-desktop")) {
       @content;
     }
+  } @else if($device == bg-desktop) {
+    @media only screen and (max-width: map-get($breakpoints, "bg-desktop")) {
+      @content;
+    }
   } @else if($device == tablet) {
     @media only screen and (max-width: map-get($breakpoints, "tablet")) {
       @content;

@@ -35,6 +35,16 @@ Justhink
 .edit-profile {
   height: calc(100vh - clamp(10rem, 10vh, 11.7rem) - clamp(4.25rem, 5vh, 5rem));
 }
+@media only screen and (max-width: 90em) {
+  .edit-profile {
+    height: 100%;
+  }
+}
+@media only screen and (orientation: landscape) {
+  .edit-profile {
+    height: 100%;
+  }
+}
 
 *,
 *::before,
@@ -784,7 +794,7 @@ input {
 
 body {
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: clamp(10rem, 10vh, 11.7rem) 1fr clamp(4.25rem, 5vh, 5rem);
 }
 
 .grid-col-3 {
@@ -1000,6 +1010,7 @@ body {
   .footer {
     position: sticky;
     bottom: 0;
+    left: 0;
     width: 100%;
   }
 }
@@ -1611,6 +1622,13 @@ main.login {
   gap: 3.5rem;
 }
 
+.edit-profile-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .edit-profile {
   align-items: start;
   grid-template-rows: 1fr;
@@ -1668,31 +1686,62 @@ main.login {
   right: 3rem;
   bottom: 1.5rem;
 }
+.edit-profile__overview {
+  padding: 4rem 3rem;
+}
+.edit-profile__overview-form {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  gap: 4.5rem;
+  height: 100%;
+}
+.edit-profile__overview-header {
+  display: flex;
+  align-items: center;
+  gap: 3.5rem;
+}
+.edit-profile__overview-user-image {
+  width: min(10rem, 100%);
+  height: min(10rem, 100%);
+  aspect-ratio: 1/1;
+}
+.edit-profile__overview-user-image-container {
+  background-color: #e3e3e3;
+  border-radius: 100vmax;
+  display: grid;
+  place-items: center;
+  width: 17.5rem;
+  height: 17.5rem;
+  aspect-ratio: 1/1;
+  transition: all 0.25s ease;
+}
+.edit-profile__overview-user-basic-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: min(2.8rem, 3.5vw);
+}
+.edit-profile__overview-main {
+  display: flex;
+  flex-direction: column;
+  gap: min(2.5rem, 3.5vw);
+}
+.edit-profile__overview-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin-top: auto;
+}
 .edit-profile__social {
   padding: 4rem 3rem;
 }
-.edit-profile__social-input-box {
+.edit-profile__social-form {
+  height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
 }
-.edit-profile__social-input-label {
-  color: #686868;
-  font-size: 1.8rem;
-  font-weight: 500;
-  letter-spacing: 0.65px;
-}
-.edit-profile__social-input-label--sub {
-  font-weight: 400;
-}
-.edit-profile__social-input {
-  background-color: #e3e3e3;
-  color: #686868;
-  font-size: 1.8rem;
-  font-weight: 500;
-  padding: 1rem;
-  border-radius: 0.32rem;
-  transition: all 0.25s ease;
+.edit-profile__social-bio {
+  width: 100%;
 }
 .edit-profile__social-bio-container {
   background-color: #f2f1f1;
@@ -1736,19 +1785,43 @@ main.login {
   font-size: 2.4rem;
   color: #fafafa;
 }
-.edit-profile__social-media-box .edit-profile__social-input:not(:placeholder-shown):invalid {
+.edit-profile__input {
+  background-color: #e3e3e3;
+  color: #686868;
+  font-size: 1.8rem;
+  font-weight: 500;
+  padding: 1rem;
+  border-radius: 0.32rem;
+  transition: all 0.25s ease;
+}
+.edit-profile__input-label {
+  color: #686868;
+  font-size: 1.8rem;
+  font-weight: 500;
+  letter-spacing: 0.65px;
+}
+.edit-profile__input-label--sub {
+  font-weight: 400;
+}
+.edit-profile__input-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.edit-profile__input[type=url]:not(:placeholder-shown):invalid {
   background-color: #f4d9d9;
 }
-.edit-profile__social-media-box .edit-profile__social-input:not(:placeholder-shown):invalid + .edit-profile__social-media-icon-container {
+.edit-profile__input[type=url]:not(:placeholder-shown):invalid + .edit-profile__social-media-icon-container {
   background-color: #a42727;
 }
-.edit-profile__social-media-box .edit-profile__social-input:not(:placeholder-shown):valid {
+.edit-profile__input[type=url]:not(:placeholder-shown):valid {
   background-color: #e0edd4;
 }
-.edit-profile__social-media-box .edit-profile__social-input:not(:placeholder-shown):valid + .edit-profile__social-media-icon-container {
+.edit-profile__input[type=url]:not(:placeholder-shown):valid + .edit-profile__social-media-icon-container {
   background-color: #8bb269;
 }
 .edit-profile__save-btn {
+  margin-top: auto;
   background-color: #9f89b0;
   color: #fafafa;
   font-weight: 600;
@@ -1762,9 +1835,19 @@ main.login {
 .edit-profile__save-btn:hover {
   background-color: #866a9c;
 }
+.edit-profile__switch {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .edit-profile__switch input {
   opacity: 0;
   display: none;
+}
+.edit-profile__switch-text {
+  color: #686868;
+  font-size: 1.8rem;
+  letter-spacing: 0.65px;
 }
 .edit-profile__switch-slider {
   display: block;

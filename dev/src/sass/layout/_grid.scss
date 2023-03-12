@@ -1,10 +1,18 @@
 body {
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: map-get($sizes, "navbar-height") 1fr map-get(
+      $sizes,
+      "footer-height"
+    );
 }
 
 .grid-col-3 {
   display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 3fr 1fr;
+  padding: map-get($spacings, "md");
+  grid-template-rows: 100%;
+  gap: calc(map-get($spacings, "md") + 0.3rem);
 
   &--adapt {
     height: max(
@@ -25,12 +33,6 @@ body {
       }
     }
   }
-
-  align-items: center;
-  grid-template-columns: 1fr 3fr 1fr;
-  padding: map-get($spacings, "md");
-  grid-template-rows: 100%;
-  gap: calc(map-get($spacings, "md") + 0.3rem);
 
   &--equal {
     padding-inline: unset;

@@ -79,13 +79,13 @@
       </div>
     </header>
 
-    <main class="main">
+    <main class="main edit-profile-main">
       <div class="grid-main grid-main--ignore-first">
         <div class="edit-profile grid-col-3 grid-col-3--equal">
           <nav class="edit-profile__navigation">
             <ul class="edit-profile__tabs">
               <li class="edit-profile__tabs-item">
-                <a href="#" class="edit-profile__tabs-link" aria-current="true">
+                <a href="#account-settings" class="edit-profile__tabs-link" aria-current="true">
                   <svg class="edit-profile__tabs-icon">
                     <use xlink:href="assets/sprite.svg#icon-settings"></use>
                   </svg>
@@ -93,7 +93,7 @@
                 </a>
               </li>
               <li class="edit-profile__tabs-item">
-                <a href="#" class="edit-profile__tabs-link">
+                <a href="#email-notifications" class="edit-profile__tabs-link">
                   <svg class="edit-profile__tabs-icon">
                     <use
                       xlink:href="assets/sprite.svg#icon-notifications"
@@ -105,7 +105,7 @@
                 </a>
               </li>
               <li class="edit-profile__tabs-item">
-                <a href="#" class="edit-profile__tabs-link">
+                <a href="#change-password" class="edit-profile__tabs-link">
                   <svg class="edit-profile__tabs-icon">
                     <use xlink:href="assets/sprite.svg#icon-vpn_key"></use>
                   </svg>
@@ -113,7 +113,7 @@
                 </a>
               </li>
               <li class="edit-profile__tabs-item">
-                <a href="#" class="edit-profile__tabs-link">
+                <a href="#privacy-data" class="edit-profile__tabs-link">
                   <svg class="edit-profile__tabs-icon">
                     <use xlink:href="assets/sprite.svg#icon-security"></use>
                   </svg>
@@ -123,7 +123,7 @@
                 </a>
               </li>
               <li class="edit-profile__tabs-item">
-                <a href="#" class="edit-profile__tabs-link">
+                <a href="#support" class="edit-profile__tabs-link">
                   <svg class="edit-profile__tabs-icon">
                     <use xlink:href="assets/sprite.svg#icon-support"></use>
                   </svg>
@@ -131,7 +131,7 @@
                 </a>
               </li>
               <li class="edit-profile__tabs-item">
-                <a href="#" class="edit-profile__tabs-link">
+                <a href="#delete-account" class="edit-profile__tabs-link">
                   <svg class="edit-profile__tabs-icon">
                     <use xlink:href="assets/sprite.svg#icon-delete"></use>
                   </svg>
@@ -141,11 +141,163 @@
             </ul>
             <p class="edit-profile__signature">jusTHINK 1.0</p>
           </nav>
-          <section class="edit-profile__overview">Overview</section>
+          <section class="edit-profile__overview">
+            <form action="/" method="POST" class="edit-profile__overview-form">
+              <header class="edit-profile__overview-header">
+                <div class="edit-profile__overview-user-image-container">
+                  <img
+                    src="./assets/user-icons/user-icon-1.png"
+                    alt="User Icon 1"
+                    class="edit-profile__overview-user-image"
+                  />
+                </div>
+
+                <div class="edit-profile__overview-user-basic-info">
+                  <div class="edit-profile__input-box">
+                    <label
+                      for="overview-username"
+                      class="edit-profile__input-label edit-profile__input-label--sub"
+                      >Kullanıcı adı:</label
+                    >
+                    <input
+                      type="text"
+                      id="overview-username"
+                      name="overview-username"
+                      placeholder="burada yazı yok"
+                      class="edit-profile__input"
+                    />
+                  </div>
+                  <div class="edit-profile__input-box">
+                    <label
+                      for="overview-fullname"
+                      class="edit-profile__input-label edit-profile__input-label--sub"
+                      >İsim:</label
+                    >
+                    <input
+                      type="text"
+                      id="overview-fullname"
+                      name="overview-fullname"
+                      placeholder="eklemek için tıkla"
+                      class="edit-profile__input"
+                    />
+                  </div>
+                </div>
+              </header>
+              <div class="edit-profile__overview-main">
+                <div class="edit-profile__input-box">
+                  <label
+                    for="overview-birthdate"
+                    class="edit-profile__input-label edit-profile__input-label--sub"
+                    >Doğum Tarihi:</label
+                  >
+                  <input
+                    type="date"
+                    id="overview-birthdate"
+                    name="overview-birthdate"
+                    placeholder="eklemek için tıkla"
+                    class="edit-profile__input"
+                  />
+                </div>
+
+                <div class="edit-profile__input-box">
+                  <label
+                    for="overview-birthdate"
+                    class="edit-profile__input-label edit-profile__input-label--sub"
+                    >Şehir/Ülke:</label
+                  >
+                  <input
+                    type="text"
+                    id="overview-birthdate"
+                    name="overview-birthdate"
+                    placeholder="eklemek için tıkla"
+                    class="edit-profile__input"
+                  />
+                </div>
+
+                <div class="edit-profile__input-box">
+                  <label
+                    for="overview-phonenumber"
+                    class="edit-profile__input-label edit-profile__input-label--sub"
+                    >Telefon Numarası:</label
+                  >
+                  <input
+                    type="tel"
+                    id="overview-phonenumber"
+                    name="overview-phonenumber"
+                    placeholder="eklemek için tıkla"
+                    class="edit-profile__input"
+                  />
+                </div>
+
+                <footer class="edit-profile__overview-footer">
+                  <label
+                    for="switch-sensitivecontent-visibility"
+                    class="edit-profile__switch"
+                  >
+                    <p class="edit-profile__switch-text">
+                      Hassas içeriğe izin ver
+                    </p>
+                    <input
+                      type="checkbox"
+                      class="edit-profile__switch-input"
+                      id="switch-sensitivecontent-visibility"
+                      name="switch-sensitivecontent-visibility"
+                      checked
+                    />
+                    <span class="edit-profile__switch-slider">
+                      <span class="edit-profile__switch-slider-inner">
+                        <svg
+                          class="edit-profile__switch-slider-icon edit-profile__switch-slider-icon--true"
+                        >
+                          <use xlink:href="assets/sprite.svg#icon-check"></use>
+                        </svg>
+                        <svg
+                          class="edit-profile__switch-slider-icon edit-profile__switch-slider-icon--false"
+                        >
+                          <use xlink:href="assets/sprite.svg#icon-clear"></use>
+                        </svg>
+                      </span>
+                    </span>
+                  </label>
+                  <label
+                    for="switch-socialmedia-visibility"
+                    class="edit-profile__switch"
+                  >
+                    <p class="edit-profile__switch-text">
+                      Profilimde sosyal hesaplarımı göster
+                    </p>
+                    <input
+                      type="checkbox"
+                      class="edit-profile__switch-input"
+                      id="switch-socialmedia-visibility"
+                      name="switch-socialmedia-visibility"
+                      checked
+                    />
+                    <span class="edit-profile__switch-slider">
+                      <span class="edit-profile__switch-slider-inner">
+                        <svg
+                          class="edit-profile__switch-slider-icon edit-profile__switch-slider-icon--true"
+                        >
+                          <use xlink:href="assets/sprite.svg#icon-check"></use>
+                        </svg>
+                        <svg
+                          class="edit-profile__switch-slider-icon edit-profile__switch-slider-icon--false"
+                        >
+                          <use xlink:href="assets/sprite.svg#icon-clear"></use>
+                        </svg>
+                      </span>
+                    </span>
+                  </label>
+                </footer>
+              </div>
+
+              <button class="edit-profile__save-btn">Kaydet</button>
+            </form>
+          </section>
           <section class="edit-profile__social">
             <form action="/" method="POST" class="edit-profile__social-form">
-              <div class="edit-profile__social-input-box">
-                <label for="user-bio" class="edit-profile__social-input-label"
+              <div class="edit-profile__input-box">
+                <label for="user-bio" class="edit-profile__input-label"
                   >Hakkımda:</label
                 >
                 <div
@@ -168,16 +320,14 @@
               </div>
 
               <div class="edit-profile__social-media">
-                <p class="edit-profile__social-input-label">
-                  Kişisel Hesaplarım:
-                </p>
+                <p class="edit-profile__input-label">Kişisel Hesaplarım:</p>
 
                 <ul class="edit-profile__social-media-links">
                   <li class="edit-profile__social-media-link">
-                    <div class="edit-profile__social-input-box">
+                    <div class="edit-profile__input-box">
                       <label
                         for="social-instagram"
-                        class="edit-profile__social-input-label edit-profile__social-input-label--sub"
+                        class="edit-profile__input-label edit-profile__input-label--sub"
                         >Instagram:</label
                       >
                       <div class="edit-profile__social-media-box">
@@ -186,7 +336,7 @@
                           id="social-instagram"
                           name="social-instagram"
                           placeholder="burada yazı yok"
-                          class="edit-profile__social-input"
+                          class="edit-profile__input"
                         />
                         <div class="edit-profile__social-media-icon-container">
                           <svg class="edit-profile__social-media-icon">
@@ -199,10 +349,10 @@
                     </div>
                   </li>
                   <li class="edit-profile__social-media-link">
-                    <div class="edit-profile__social-input-box">
+                    <div class="edit-profile__input-box">
                       <label
                         for="social-linkedin"
-                        class="edit-profile__social-input-label edit-profile__social-input-label--sub"
+                        class="edit-profile__input-label edit-profile__input-label--sub"
                         >Linkedin:</label
                       >
                       <div class="edit-profile__social-media-box">
@@ -211,7 +361,7 @@
                           id="social-linkedin"
                           name="social-linkedin"
                           placeholder="burada yazı yok"
-                          class="edit-profile__social-input"
+                          class="edit-profile__input"
                         />
                         <div class="edit-profile__social-media-icon-container">
                           <svg class="edit-profile__social-media-icon">
@@ -224,10 +374,10 @@
                     </div>
                   </li>
                   <li class="edit-profile__social-media-link">
-                    <div class="edit-profile__social-input-box">
+                    <div class="edit-profile__input-box">
                       <label
                         for="social-facebook"
-                        class="edit-profile__social-input-label edit-profile__social-input-label--sub"
+                        class="edit-profile__input-label edit-profile__input-label--sub"
                         >Facebook:</label
                       >
                       <div class="edit-profile__social-media-box">
@@ -236,7 +386,7 @@
                           id="social-facebook"
                           name="social-facebook"
                           placeholder="burada yazı yok"
-                          class="edit-profile__social-input"
+                          class="edit-profile__input"
                         />
                         <div class="edit-profile__social-media-icon-container">
                           <svg class="edit-profile__social-media-icon">
@@ -251,10 +401,10 @@
                   <li
                     class="edit-profile__social-media-link edit-profile__social-email-link"
                   >
-                    <div class="edit-profile__social-input-box">
+                    <div class="edit-profile__input-box">
                       <label
                         for="social-email"
-                        class="edit-profile__social-input-label edit-profile__social-input-label--sub"
+                        class="edit-profile__input-label edit-profile__input-label--sub"
                         >E-Posta:</label
                       >
                       <div class="edit-profile__social-media-box">
@@ -263,7 +413,7 @@
                           id="social-email"
                           name="social-email"
                           placeholder="edding@gmail.com"
-                          class="edit-profile__social-input"
+                          class="edit-profile__input"
                         />
                         <label
                           for="switch-mail-visibility"
