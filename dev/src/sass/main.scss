@@ -27,6 +27,7 @@ Justhink
 @import "abstracts/functions";
 @import "abstracts/mixins";
 @import "abstracts/extends";
+@import "abstracts/helpers";
 
 @import "base/base";
 @import "base/typography";
@@ -36,6 +37,7 @@ Justhink
 @import "components/suggestions";
 @import "components/idea";
 @import "components/popup";
+@import "components/tooltip";
 
 @import "layout/grid";
 @import "layout/forms";

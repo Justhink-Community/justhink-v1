@@ -70,6 +70,8 @@ body {
   &--ignore-first {
     grid-template-rows: 1fr;
     padding-block: unset;
+    height: 100%;
+    width: 100%;
   }
 
   @include respond(tablet) {

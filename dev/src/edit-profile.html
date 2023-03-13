@@ -81,11 +81,11 @@
 
     <main class="main edit-profile-main">
       <div class="grid-main grid-main--ignore-first">
-        <div class="edit-profile grid-col-3 grid-col-3--equal">
+        <div class="edit-profile">
           <nav class="edit-profile__navigation">
             <ul class="edit-profile__tabs">
               <li class="edit-profile__tabs-item">
-                <a href="#account-settings" class="edit-profile__tabs-link" aria-current="true">
+                <a href="#account-settings" class="edit-profile__tabs-link">
                   <svg class="edit-profile__tabs-icon">
                     <use xlink:href="assets/sprite.svg#icon-settings"></use>
                   </svg>
@@ -141,318 +141,618 @@
             </ul>
             <p class="edit-profile__signature">jusTHINK 1.0</p>
           </nav>
-          <section class="edit-profile__overview">
-            <form action="/" method="POST" class="edit-profile__overview-form">
-              <header class="edit-profile__overview-header">
-                <div class="edit-profile__overview-user-image-container">
-                  <img
-                    src="./assets/user-icons/user-icon-1.png"
-                    alt="User Icon 1"
-                    class="edit-profile__overview-user-image"
-                  />
-                </div>
-
-                <div class="edit-profile__overview-user-basic-info">
-                  <div class="edit-profile__input-box">
-                    <label
-                      for="overview-username"
-                      class="edit-profile__input-label edit-profile__input-label--sub"
-                      >Kullanıcı adı:</label
-                    >
-                    <input
-                      type="text"
-                      id="overview-username"
-                      name="overview-username"
-                      placeholder="burada yazı yok"
-                      class="edit-profile__input"
+          <section class="edit-profile__content" id="account-settings">
+            <section class="edit-profile__overview">
+              <a href="#" class="tooltip tooltip--rt">
+                <svg class="tooltip__icon">
+                  <use xlink:href="assets/sprite.svg#icon-help"></use>
+                </svg>
+                <span class="tooltip__content">
+                  <p class="tooltip__content-title">
+                    Kişisel verilerinizi neden istiyoruz?
+                  </p>
+                  <p class="tooltip__content-text">
+                    Doğum tarihinizi kullanıcılarımızın ortalama yaşını öğrenmek
+                    (+ doğum gününüzü kutlayabilmek), şehrinizi “yakınımdaki
+                    fikirleri gör” özelliği geldiğinde kullanabilmek, telefon
+                    numaranızı ise dilerseniz günün konusunu sms yolu ile
+                    iletmek için istiyoruz. Tüm verileriniz şifrelenerek
+                    saklanmaktadır ve verileri anonim olarak
+                    inceleyebilmekteyiz. Detaylı bilgi için KVKK’yı
+                    inceleyebilirsiniz.
+                  </p>
+                </span>
+              </a>
+              <form
+                action="/"
+                method="POST"
+                class="edit-profile__overview-form"
+              >
+                <header class="edit-profile__overview-header">
+                  <div class="edit-profile__overview-user-image-container">
+                    <img
+                      src="./assets/user-icons/user-icon-1.png"
+                      alt="User Icon 1"
+                      class="edit-profile__overview-user-image"
                     />
                   </div>
+
+                  <div class="edit-profile__overview-user-basic-info">
+                    <div class="edit-profile__input-box">
+                      <label
+                        for="overview-username"
+                        class="edit-profile__input-label edit-profile__input-label--sub"
+                        >Kullanıcı adı:</label
+                      >
+                      <input
+                        type="text"
+                        id="overview-username"
+                        name="overview-username"
+                        placeholder="burada yazı yok"
+                        class="edit-profile__input"
+                      />
+                    </div>
+                    <div class="edit-profile__input-box">
+                      <label
+                        for="overview-fullname"
+                        class="edit-profile__input-label edit-profile__input-label--sub"
+                        >İsim:</label
+                      >
+                      <input
+                        type="text"
+                        id="overview-fullname"
+                        name="overview-fullname"
+                        placeholder="eklemek için tıkla"
+                        class="edit-profile__input"
+                      />
+                    </div>
+                  </div>
+                </header>
+                <div class="edit-profile__overview-main">
                   <div class="edit-profile__input-box">
                     <label
-                      for="overview-fullname"
+                      for="overview-birthdate"
                       class="edit-profile__input-label edit-profile__input-label--sub"
-                      >İsim:</label
+                      >Doğum Tarihi:</label
                     >
                     <input
-                      type="text"
-                      id="overview-fullname"
-                      name="overview-fullname"
+                      type="date"
+                      id="overview-birthdate"
+                      name="overview-birthdate"
                       placeholder="eklemek için tıkla"
                       class="edit-profile__input"
                     />
                   </div>
-                </div>
-              </header>
-              <div class="edit-profile__overview-main">
-                <div class="edit-profile__input-box">
-                  <label
-                    for="overview-birthdate"
-                    class="edit-profile__input-label edit-profile__input-label--sub"
-                    >Doğum Tarihi:</label
-                  >
-                  <input
-                    type="date"
-                    id="overview-birthdate"
-                    name="overview-birthdate"
-                    placeholder="eklemek için tıkla"
-                    class="edit-profile__input"
-                  />
-                </div>
 
-                <div class="edit-profile__input-box">
-                  <label
-                    for="overview-birthdate"
-                    class="edit-profile__input-label edit-profile__input-label--sub"
-                    >Şehir/Ülke:</label
-                  >
-                  <input
-                    type="text"
-                    id="overview-birthdate"
-                    name="overview-birthdate"
-                    placeholder="eklemek için tıkla"
-                    class="edit-profile__input"
-                  />
-                </div>
-
-                <div class="edit-profile__input-box">
-                  <label
-                    for="overview-phonenumber"
-                    class="edit-profile__input-label edit-profile__input-label--sub"
-                    >Telefon Numarası:</label
-                  >
-                  <input
-                    type="tel"
-                    id="overview-phonenumber"
-                    name="overview-phonenumber"
-                    placeholder="eklemek için tıkla"
-                    class="edit-profile__input"
-                  />
-                </div>
-
-                <footer class="edit-profile__overview-footer">
-                  <label
-                    for="switch-sensitivecontent-visibility"
-                    class="edit-profile__switch"
-                  >
-                    <p class="edit-profile__switch-text">
-                      Hassas içeriğe izin ver
-                    </p>
+                  <div class="edit-profile__input-box">
+                    <label
+                      for="overview-birthdate"
+                      class="edit-profile__input-label edit-profile__input-label--sub"
+                      >Şehir/Ülke:</label
+                    >
                     <input
-                      type="checkbox"
-                      class="edit-profile__switch-input"
-                      id="switch-sensitivecontent-visibility"
-                      name="switch-sensitivecontent-visibility"
-                      checked
+                      type="text"
+                      id="overview-birthdate"
+                      name="overview-birthdate"
+                      placeholder="eklemek için tıkla"
+                      class="edit-profile__input"
                     />
-                    <span class="edit-profile__switch-slider">
-                      <span class="edit-profile__switch-slider-inner">
-                        <svg
-                          class="edit-profile__switch-slider-icon edit-profile__switch-slider-icon--true"
-                        >
-                          <use xlink:href="assets/sprite.svg#icon-check"></use>
-                        </svg>
-                        <svg
-                          class="edit-profile__switch-slider-icon edit-profile__switch-slider-icon--false"
-                        >
-                          <use xlink:href="assets/sprite.svg#icon-clear"></use>
-                        </svg>
-                      </span>
-                    </span>
-                  </label>
-                  <label
-                    for="switch-socialmedia-visibility"
-                    class="edit-profile__switch"
-                  >
-                    <p class="edit-profile__switch-text">
-                      Profilimde sosyal hesaplarımı göster
-                    </p>
+                  </div>
+
+                  <div class="edit-profile__input-box">
+                    <label
+                      for="overview-phonenumber"
+                      class="edit-profile__input-label edit-profile__input-label--sub"
+                      >Telefon Numarası:</label
+                    >
                     <input
-                      type="checkbox"
-                      class="edit-profile__switch-input"
-                      id="switch-socialmedia-visibility"
-                      name="switch-socialmedia-visibility"
-                      checked
+                      type="tel"
+                      id="overview-phonenumber"
+                      name="overview-phonenumber"
+                      placeholder="eklemek için tıkla"
+                      class="edit-profile__input"
                     />
-                    <span class="edit-profile__switch-slider">
-                      <span class="edit-profile__switch-slider-inner">
-                        <svg
-                          class="edit-profile__switch-slider-icon edit-profile__switch-slider-icon--true"
-                        >
-                          <use xlink:href="assets/sprite.svg#icon-check"></use>
-                        </svg>
-                        <svg
-                          class="edit-profile__switch-slider-icon edit-profile__switch-slider-icon--false"
-                        >
-                          <use xlink:href="assets/sprite.svg#icon-clear"></use>
-                        </svg>
+                  </div>
+
+                  <footer class="edit-profile__overview-footer">
+                    <label
+                      for="switch-sensitivecontent-visibility"
+                      class="edit-profile__switch"
+                    >
+                      <p class="edit-profile__switch-text">
+                        Hassas içeriğe izin ver
+                      </p>
+                      <input
+                        type="checkbox"
+                        class="edit-profile__switch-input"
+                        id="switch-sensitivecontent-visibility"
+                        name="switch-sensitivecontent-visibility"
+                        checked
+                      />
+                      <span class="edit-profile__switch-slider">
+                        <span class="edit-profile__switch-slider-inner">
+                          <svg
+                            class="edit-profile__switch-slider-icon edit-profile__switch-slider-icon--true"
+                          >
+                            <use
+                              xlink:href="assets/sprite.svg#icon-check"
+                            ></use>
+                          </svg>
+                          <svg
+                            class="edit-profile__switch-slider-icon edit-profile__switch-slider-icon--false"
+                          >
+                            <use
+                              xlink:href="assets/sprite.svg#icon-clear"
+                            ></use>
+                          </svg>
+                        </span>
                       </span>
-                    </span>
-                  </label>
-                </footer>
-              </div>
-
-              <button class="edit-profile__save-btn">Kaydet</button>
-            </form>
-          </section>
-          <section class="edit-profile__social">
-            <form action="/" method="POST" class="edit-profile__social-form">
-              <div class="edit-profile__input-box">
-                <label for="user-bio" class="edit-profile__input-label"
-                  >Hakkımda:</label
-                >
-                <div
-                  class="edit-profile__social-bio-container input-length--container"
-                >
-                  <textarea
-                    name="user-bio"
-                    id="user-bio"
-                    cols="50"
-                    rows="10"
-                    maxlength="300"
-                    placeholder="eklemek için tıkla ve yazmaya başla"
-                    class="edit-profile__social-bio input-length"
-                  ></textarea>
-                  <span
-                    class="edit-profile__social-bio-length input-length--counter"
-                    >0/300</span
-                  >
+                    </label>
+                    <label
+                      for="switch-socialmedia-visibility"
+                      class="edit-profile__switch"
+                    >
+                      <p class="edit-profile__switch-text">
+                        Profilimde sosyal hesaplarımı göster
+                      </p>
+                      <input
+                        type="checkbox"
+                        class="edit-profile__switch-input"
+                        id="switch-socialmedia-visibility"
+                        name="switch-socialmedia-visibility"
+                        checked
+                      />
+                      <span class="edit-profile__switch-slider">
+                        <span class="edit-profile__switch-slider-inner">
+                          <svg
+                            class="edit-profile__switch-slider-icon edit-profile__switch-slider-icon--true"
+                          >
+                            <use
+                              xlink:href="assets/sprite.svg#icon-check"
+                            ></use>
+                          </svg>
+                          <svg
+                            class="edit-profile__switch-slider-icon edit-profile__switch-slider-icon--false"
+                          >
+                            <use
+                              xlink:href="assets/sprite.svg#icon-clear"
+                            ></use>
+                          </svg>
+                        </span>
+                      </span>
+                    </label>
+                  </footer>
                 </div>
-              </div>
 
-              <div class="edit-profile__social-media">
-                <p class="edit-profile__input-label">Kişisel Hesaplarım:</p>
-
-                <ul class="edit-profile__social-media-links">
-                  <li class="edit-profile__social-media-link">
-                    <div class="edit-profile__input-box">
-                      <label
-                        for="social-instagram"
-                        class="edit-profile__input-label edit-profile__input-label--sub"
-                        >Instagram:</label
-                      >
-                      <div class="edit-profile__social-media-box">
-                        <input
-                          type="url"
-                          id="social-instagram"
-                          name="social-instagram"
-                          placeholder="burada yazı yok"
-                          class="edit-profile__input"
-                        />
-                        <div class="edit-profile__social-media-icon-container">
-                          <svg class="edit-profile__social-media-icon">
-                            <use
-                              xlink:href="assets/sprite.svg#icon-instagram"
-                            ></use>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="edit-profile__social-media-link">
-                    <div class="edit-profile__input-box">
-                      <label
-                        for="social-linkedin"
-                        class="edit-profile__input-label edit-profile__input-label--sub"
-                        >Linkedin:</label
-                      >
-                      <div class="edit-profile__social-media-box">
-                        <input
-                          type="url"
-                          id="social-linkedin"
-                          name="social-linkedin"
-                          placeholder="burada yazı yok"
-                          class="edit-profile__input"
-                        />
-                        <div class="edit-profile__social-media-icon-container">
-                          <svg class="edit-profile__social-media-icon">
-                            <use
-                              xlink:href="assets/sprite.svg#icon-linkedin"
-                            ></use>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="edit-profile__social-media-link">
-                    <div class="edit-profile__input-box">
-                      <label
-                        for="social-facebook"
-                        class="edit-profile__input-label edit-profile__input-label--sub"
-                        >Facebook:</label
-                      >
-                      <div class="edit-profile__social-media-box">
-                        <input
-                          type="url"
-                          id="social-facebook"
-                          name="social-facebook"
-                          placeholder="burada yazı yok"
-                          class="edit-profile__input"
-                        />
-                        <div class="edit-profile__social-media-icon-container">
-                          <svg class="edit-profile__social-media-icon">
-                            <use
-                              xlink:href="assets/sprite.svg#icon-facebook"
-                            ></use>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li
-                    class="edit-profile__social-media-link edit-profile__social-email-link"
+                <button class="edit-profile__save-btn">Kaydet</button>
+              </form>
+            </section>
+            <section class="edit-profile__social">
+              <form action="/" method="POST" class="edit-profile__social-form">
+                <div class="edit-profile__input-box">
+                  <label for="user-bio" class="edit-profile__input-label"
+                    >Hakkımda:</label
                   >
-                    <div class="edit-profile__input-box">
-                      <label
-                        for="social-email"
-                        class="edit-profile__input-label edit-profile__input-label--sub"
-                        >E-Posta:</label
-                      >
-                      <div class="edit-profile__social-media-box">
-                        <input
-                          type="url"
-                          id="social-email"
-                          name="social-email"
-                          placeholder="edding@gmail.com"
-                          class="edit-profile__input"
-                        />
+                  <div
+                    class="edit-profile__social-bio-container input-length--container"
+                  >
+                    <textarea
+                      name="user-bio"
+                      id="user-bio"
+                      cols="50"
+                      rows="10"
+                      maxlength="300"
+                      placeholder="eklemek için tıkla ve yazmaya başla"
+                      class="edit-profile__social-bio input-length"
+                    ></textarea>
+                    <span
+                      class="edit-profile__social-bio-length input-length--counter"
+                      >0/300</span
+                    >
+                  </div>
+                </div>
+
+                <div class="edit-profile__social-media">
+                  <p class="edit-profile__input-label">Kişisel Hesaplarım:</p>
+
+                  <ul class="edit-profile__social-media-links">
+                    <li class="edit-profile__social-media-link">
+                      <div class="edit-profile__input-box">
                         <label
-                          for="switch-mail-visibility"
-                          class="edit-profile__switch"
+                          for="social-instagram"
+                          class="edit-profile__input-label edit-profile__input-label--sub"
+                          >Instagram:</label
                         >
+                        <div class="edit-profile__social-media-box">
                           <input
-                            type="checkbox"
-                            class="edit-profile__switch-input"
-                            id="switch-mail-visibility"
-                            name="switch-mail-visibility"
-                            checked
+                            type="url"
+                            id="social-instagram"
+                            name="social-instagram"
+                            placeholder="burada yazı yok"
+                            class="edit-profile__input"
                           />
-                          <span class="edit-profile__switch-slider">
-                            <span class="edit-profile__switch-slider-inner">
-                              <svg
-                                class="edit-profile__switch-slider-icon edit-profile__switch-slider-icon--true"
-                              >
-                                <use
-                                  xlink:href="assets/sprite.svg#icon-check"
-                                ></use>
-                              </svg>
-                              <svg
-                                class="edit-profile__switch-slider-icon edit-profile__switch-slider-icon--false"
-                              >
-                                <use
-                                  xlink:href="assets/sprite.svg#icon-clear"
-                                ></use>
-                              </svg>
-                            </span>
-                          </span>
-                        </label>
+                          <div
+                            class="edit-profile__social-media-icon-container"
+                          >
+                            <svg class="edit-profile__social-media-icon">
+                              <use
+                                xlink:href="assets/sprite.svg#icon-instagram"
+                              ></use>
+                            </svg>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
+                    </li>
+                    <li class="edit-profile__social-media-link">
+                      <div class="edit-profile__input-box">
+                        <label
+                          for="social-linkedin"
+                          class="edit-profile__input-label edit-profile__input-label--sub"
+                          >Linkedin:</label
+                        >
+                        <div class="edit-profile__social-media-box">
+                          <input
+                            type="url"
+                            id="social-linkedin"
+                            name="social-linkedin"
+                            placeholder="burada yazı yok"
+                            class="edit-profile__input"
+                          />
+                          <div
+                            class="edit-profile__social-media-icon-container"
+                          >
+                            <svg class="edit-profile__social-media-icon">
+                              <use
+                                xlink:href="assets/sprite.svg#icon-linkedin"
+                              ></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="edit-profile__social-media-link">
+                      <div class="edit-profile__input-box">
+                        <label
+                          for="social-facebook"
+                          class="edit-profile__input-label edit-profile__input-label--sub"
+                          >Facebook:</label
+                        >
+                        <div class="edit-profile__social-media-box">
+                          <input
+                            type="url"
+                            id="social-facebook"
+                            name="social-facebook"
+                            placeholder="burada yazı yok"
+                            class="edit-profile__input"
+                          />
+                          <div
+                            class="edit-profile__social-media-icon-container"
+                          >
+                            <svg class="edit-profile__social-media-icon">
+                              <use
+                                xlink:href="assets/sprite.svg#icon-facebook"
+                              ></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li
+                      class="edit-profile__social-media-link edit-profile__social-email-link"
+                    >
+                      <div class="edit-profile__input-box">
+                        <label
+                          for="social-email"
+                          class="edit-profile__input-label edit-profile__input-label--sub"
+                          >E-Posta:</label
+                        >
+                        <div class="edit-profile__social-media-box">
+                          <input
+                            type="url"
+                            id="social-email"
+                            name="social-email"
+                            placeholder="edding@gmail.com"
+                            class="edit-profile__input"
+                          />
+                          <label
+                            for="switch-mail-visibility"
+                            class="edit-profile__switch"
+                          >
+                            <input
+                              type="checkbox"
+                              class="edit-profile__switch-input"
+                              id="switch-mail-visibility"
+                              name="switch-mail-visibility"
+                              checked
+                            />
+                            <span class="edit-profile__switch-slider">
+                              <span class="edit-profile__switch-slider-inner">
+                                <svg
+                                  class="edit-profile__switch-slider-icon edit-profile__switch-slider-icon--true"
+                                >
+                                  <use
+                                    xlink:href="assets/sprite.svg#icon-check"
+                                  ></use>
+                                </svg>
+                                <svg
+                                  class="edit-profile__switch-slider-icon edit-profile__switch-slider-icon--false"
+                                >
+                                  <use
+                                    xlink:href="assets/sprite.svg#icon-clear"
+                                  ></use>
+                                </svg>
+                              </span>
+                            </span>
+                          </label>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
 
-              <button class="edit-profile__save-btn">Kaydet</button>
-            </form>
+                <button class="edit-profile__save-btn">Kaydet</button>
+              </form>
+            </section>
+          </section>
+          <section
+            class="edit-profile__content"
+            id="email-notifications"
+            aria-current="false"
+          >
+            <section class="edit-profile__overview">
+              <form
+                action="/"
+                method="POST"
+                class="edit-profile__overview-form"
+              >
+                <div class="edit-profile__overview-main">
+                  <label
+                    for="switch-dailytopic-sendmail"
+                    class="edit-profile__switch"
+                  >
+                    <p class="edit-profile__switch-text">
+                      Günün konusu email al
+                    </p>
+                    <input
+                      type="checkbox"
+                      class="edit-profile__switch-input"
+                      id="switch-dailytopic-sendmail"
+                      name="switch-dailytopic-sendmail"
+                      checked
+                    />
+                    <span class="edit-profile__switch-slider">
+                      <span class="edit-profile__switch-slider-inner">
+                        <svg
+                          class="edit-profile__switch-slider-icon edit-profile__switch-slider-icon--true"
+                        >
+                          <use xlink:href="assets/sprite.svg#icon-check"></use>
+                        </svg>
+                        <svg
+                          class="edit-profile__switch-slider-icon edit-profile__switch-slider-icon--false"
+                        >
+                          <use xlink:href="assets/sprite.svg#icon-clear"></use>
+                        </svg>
+                      </span>
+                    </span>
+                  </label>
+                  <label
+                    for="switch-updates-sendmail"
+                    class="edit-profile__switch"
+                  >
+                    <p class="edit-profile__switch-text">
+                      Güncellemeleri email al
+                    </p>
+                    <input
+                      type="checkbox"
+                      class="edit-profile__switch-input"
+                      id="switch-updates-sendmail"
+                      name="switch-updates-sendmail"
+                      checked
+                    />
+                    <span class="edit-profile__switch-slider">
+                      <span class="edit-profile__switch-slider-inner">
+                        <svg
+                          class="edit-profile__switch-slider-icon edit-profile__switch-slider-icon--true"
+                        >
+                          <use xlink:href="assets/sprite.svg#icon-check"></use>
+                        </svg>
+                        <svg
+                          class="edit-profile__switch-slider-icon edit-profile__switch-slider-icon--false"
+                        >
+                          <use xlink:href="assets/sprite.svg#icon-clear"></use>
+                        </svg>
+                      </span>
+                    </span>
+                  </label>
+                  <label
+                    for="switch-leaderboard-sendmail"
+                    class="edit-profile__switch"
+                  >
+                    <p class="edit-profile__switch-text">
+                      Liderlik tablosunu email al
+                    </p>
+                    <input
+                      type="checkbox"
+                      class="edit-profile__switch-input"
+                      id="switch-leaderboard-sendmail"
+                      name="switch-leaderboard-sendmail"
+                      checked
+                    />
+                    <span class="edit-profile__switch-slider">
+                      <span class="edit-profile__switch-slider-inner">
+                        <svg
+                          class="edit-profile__switch-slider-icon edit-profile__switch-slider-icon--true"
+                        >
+                          <use xlink:href="assets/sprite.svg#icon-check"></use>
+                        </svg>
+                        <svg
+                          class="edit-profile__switch-slider-icon edit-profile__switch-slider-icon--false"
+                        >
+                          <use xlink:href="assets/sprite.svg#icon-clear"></use>
+                        </svg>
+                      </span>
+                    </span>
+                  </label>
+                </div>
+
+                <button class="edit-profile__save-btn">Kaydet</button>
+              </form>
+            </section>
+          </section>
+          <section
+            class="edit-profile__content"
+            id="change-password"
+            aria-current="false"
+          >
+            <section class="edit-profile__overview">
+              <form
+                action="/"
+                method="POST"
+                class="edit-profile__overview-form"
+              >
+                <div class="edit-profile__overview-main">
+                  <div class="edit-profile__overview-user-basic-info">
+                    <div class="edit-profile__input-box">
+                      <label
+                        for="changepass-oldpass"
+                        class="edit-profile__input-label edit-profile__input-label--sub"
+                        >Eski şifre:</label
+                      >
+                      <input
+                        type="password"
+                        id="changepass-oldpass"
+                        name="changepass-oldpass"
+                        placeholder="********"
+                        class="edit-profile__input"
+                      />
+                    </div>
+                    <div class="edit-profile__input-box">
+                      <label
+                        for="changepass-newpass"
+                        class="edit-profile__input-label edit-profile__input-label--sub"
+                        >Yeni şifre:</label
+                      >
+                      <input
+                        type="password"
+                        id="changepass-newpass"
+                        name="changepass-newpass"
+                        placeholder="********"
+                        pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+                        class="edit-profile__input"
+                      />
+                    </div>
+                    <div class="edit-profile__input-box">
+                      <label
+                        for="changepass-newpass-re"
+                        class="edit-profile__input-label edit-profile__input-label--sub"
+                        >Yeni şifre (tekrar):
+                      </label>
+                      <input type="password" id="changepass-newpass-re"
+                      name="changepass-newpass-re" placeholder="********"
+                      pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+                      " class="edit-profile__input" />
+                    </div>
+                  </div>
+                </div>
+
+                <button class="edit-profile__save-btn">Kaydet</button>
+              </form>
+              <a href="#" class="tooltip tooltip--rt">
+                <svg class="tooltip__icon">
+                  <use xlink:href="assets/sprite.svg#icon-help"></use>
+                </svg>
+                <span class="tooltip__content">
+                  <p class="tooltip__content-title">
+                    Şifrede nelere dikkat edilmeli?
+                  </p>
+                  <p class="tooltip__content-text">
+                    Oluşturduğunuz şifre içerisinde en az bir büyük harf, bir
+                    küçük harf, bir sayı veya bir özel karakter ve en az 8
+                    karakter bulunmalıdır.
+                  </p>
+                </span>
+              </a>
+            </section>
+          </section>
+          <section
+            class="edit-profile__content"
+            id="privacy-data"
+            aria-current="false"
+          >
+            <section class="edit-profile__overview">
+              <form
+                action="/"
+                method="POST"
+                class="edit-profile__overview-form"
+              >
+                <div class="edit-profile__overview-main">
+                  <label
+                    for="switch-showicon-privacy"
+                    class="edit-profile__switch"
+                  >
+                    <p class="edit-profile__switch-text">
+                      Profil ikonumu göster
+                    </p>
+                    <input
+                      type="checkbox"
+                      class="edit-profile__switch-input"
+                      id="switch-showicon-privacy"
+                      name="switch-showicon-privacy"
+                      checked
+                    />
+                    <span class="edit-profile__switch-slider">
+                      <span class="edit-profile__switch-slider-inner">
+                        <svg
+                          class="edit-profile__switch-slider-icon edit-profile__switch-slider-icon--true"
+                        >
+                          <use xlink:href="assets/sprite.svg#icon-check"></use>
+                        </svg>
+                        <svg
+                          class="edit-profile__switch-slider-icon edit-profile__switch-slider-icon--false"
+                        >
+                          <use xlink:href="assets/sprite.svg#icon-clear"></use>
+                        </svg>
+                      </span>
+                    </span>
+                  </label>
+                  <label
+                    for="switch-showusername-privacy"
+                    class="edit-profile__switch"
+                  >
+                    <p class="edit-profile__switch-text">
+                      Kullanıcı adımı göster
+                    </p>
+                    <input
+                      type="checkbox"
+                      class="edit-profile__switch-input"
+                      id="switch-showusername-privacy"
+                      name="switch-showusername-privacy"
+                      checked
+                    />
+                    <span class="edit-profile__switch-slider">
+                      <span class="edit-profile__switch-slider-inner">
+                        <svg
+                          class="edit-profile__switch-slider-icon edit-profile__switch-slider-icon--true"
+                        >
+                          <use xlink:href="assets/sprite.svg#icon-check"></use>
+                        </svg>
+                        <svg
+                          class="edit-profile__switch-slider-icon edit-profile__switch-slider-icon--false"
+                        >
+                          <use xlink:href="assets/sprite.svg#icon-clear"></use>
+                        </svg>
+                      </span>
+                    </span>
+                  </label>
+                </div>
+
+                <a href="#" class="edit-profile__alt-text">
+                  <span>KVKK</span> ve <span>Kullanım Sözleşmesi</span> için
+                  tıkayınız.
+                </a>
+                <button class="edit-profile__save-btn">Kaydet</button>
+              </form>
+            </section>
           </section>
         </div>
       </div>

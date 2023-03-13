@@ -1,6 +1,9 @@
 "use strict";
 
-import { UPDATE_REMAINING_TIME_SECONDS } from "./config.js";
+import {
+  UPDATE_REMAINING_TIME_SECONDS,
+  PASSWORD_VALIDATION_ERROR,
+} from "./config.js";
 
 /**
  * The class which contains all the business logic, presentation logic, application logic, state and HTTP Library
@@ -13,6 +16,8 @@ class App {
   _inputLengthContainers = document.querySelectorAll(
     ".input-length--container"
   );
+  _editProfileTabLinksContainer = document.querySelector(".edit-profile__tabs");
+  _passwordInputs = document.querySelectorAll('input[type="password"]');
 
   /**
    * The constructor function of the App class which makes the basic setup of the project.
@@ -41,11 +46,110 @@ class App {
     this._inputLengthContainers.forEach(
       this._setupInputLengthCounters.bind(this)
     );
+
+    this._fixEditProfileTabs();
+    this._setupEditProfileTabs();
+
+    this._setupPasswordValidations();
+  }
+
+  _setupPasswordValidations() {
+    this._passwordInputs.forEach((passwordInput) => {
+      passwordInput.addEventListener("input", function () {
+        this.setCustomValidity("");
+      });
+
+      passwordInput.addEventListener("invalid", function () {
+        this.setCustomValidity(PASSWORD_VALIDATION_ERROR);
+      });
+    });
+  }
+
+  /**
+   * Does the cruical setup of changing between setting tabs.
+   * @returns undefined
+   * @this {Object} App object
+   */
+  _setupEditProfileTabs() {
+    this._editProfileTabLinksContainer.addEventListener(
+      "click",
+      this._updateEditProfileTabs.bind(this)
+    );
+  }
+
+  /**
+   * Updates the tab and its content (according to the e param.)
+   * @param {PointerEvent} e
+   * @returns undefined
+   * @this {Object} App object
+   */
+  _updateEditProfileTabs(e) {
+    const editProfileItem = e.target.closest(".edit-profile__tabs-item");
+    if (!editProfileItem) return;
+
+    this._resetEditProfileTabs(true);
+
+    const editProfileLink = editProfileItem.querySelector(
+      ".edit-profile__tabs-link"
+    );
+
+    window.history.pushState(null, "", editProfileLink.href);
+    editProfileLink.setAttribute("aria-current", "true");
+
+    const newTabSection = document.querySelector(
+      `.edit-profile__content${editProfileLink.getAttribute("href")}`
+    );
+    newTabSection.setAttribute("aria-current", "true");
+  }
+
+  /**
+   * Resets all the tabs.
+   * @returns undefined
+   * @this {Object} App object
+   */
+  _resetEditProfileTabs(resetContent = false) {
+    this._editProfileTabLinksContainer
+      .querySelectorAll(".edit-profile__tabs-link")
+      .forEach((editProfileLink) =>
+        editProfileLink.setAttribute("aria-current", "false")
+      );
+
+    if (resetContent)
+      document
+        .querySelectorAll(".edit-profile__content")
+        .forEach((editProfileContent) =>
+          editProfileContent.setAttribute("aria-current", "false")
+        );
+  }
+
+  /**
+   * Fixes the problem of active states not showing.
+   * @returns undefined
+   * @this {Object} App object
+   */
+  _fixEditProfileTabs() {
+    this._resetEditProfileTabs(true);
+
+    const tabHash = window.location.hash;
+    let currentTab = this._editProfileTabLinksContainer.querySelector(
+      `.edit-profile__tabs-link[href="${tabHash}"]`
+    );
+
+    if (!currentTab)
+      currentTab = this._editProfileTabLinksContainer.querySelector(
+        ".edit-profile__tabs-link"
+      );
+
+    currentTab.setAttribute("aria-current", "true");
+
+    document
+      .querySelector(`.edit-profile__content${tabHash}`)
+      .setAttribute("aria-current", "true");
   }
 
   /**
    * Does the cruical setup of incrementing the input/textarea counters.
-   * @param {Object} inputLengthContainer
+   * @param {HTMLElement} inputLengthContainer
    * @returns undefined
    * @this {Object} App object
    */
@@ -58,7 +162,7 @@ class App {
 
   /**
    * Updates the textarea/input counters.
-   * @param {Object} inputLengthContainer
+   * @param {HTMLElement} inputLengthContainer
    * @returns undefined
    * @this {Object} App object
    */
@@ -73,7 +177,7 @@ class App {
 
   /**
    * Changes the current active tab between "icons" and "themes" tabs.
-   * @param {Object} e Pointer Event
+   * @param {PointerEvent} e
    * @returns undefined
    * @this {Object} App object
    */
@@ -84,7 +188,7 @@ class App {
 
   /**
    * Toggles the visibility of the publish idea container.
-   * @param {Object} e Pointer Event
+   * @param {PointerEvent} e Pointer Event
    * @returns undefined
    * @this {Object} App object
    */
@@ -115,7 +219,7 @@ class App {
    * @param {Function} callBack The callback function that will get executed in every seconds parameter.
    * @param {Number} seconds The seconds between interval calls.
    * @param {*} preferredThis The preferred this keyword.
-   * @returns
+   * @returns undefined
    */
   static setTimerInterval(callBack, seconds, preferredThis = this) {
     return new Promise(async (resolve) => {
@@ -132,8 +236,8 @@ class App {
 
   /**
    * A function which substracts the two given dates.
-   * @param {Object} firstDate the sooner date object
-   * @param {Object} secondDate the earlier date object
+   * @param {Date | Intl} firstDate the sooner date object
+   * @param {Date | Intl} secondDate the earlier date object
    * @returns {Array} an array that contains differed min and hour
    */
   static substractDates(firstDate, secondDate) {
