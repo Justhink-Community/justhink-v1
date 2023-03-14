@@ -1349,6 +1349,7 @@ body {
 .suggest-topic {
   margin-top: 1rem;
   color: #400556;
+  text-decoration: underline;
 }
 
 .ranking {
@@ -2079,3 +2080,55 @@ main.login {
 .edit-profile input[type=password]:not(:placeholder-shown):valid {
   border-bottom-color: #8bb269;
 }
+
+.summary {
+  font-size: 1.6rem;
+  background-image: linear-gradient(to bottom right, #DB7439, #C83232);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C93432;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #DB7439;
+}
+
+.publish-idea__btn {
+  background-color: #C93432;
+}
+
+.publish-idea__btn:hover {
+  background-color: #d14a47;
+}
+
+.btn--primary:link, .btn--primary:visited, .btn--primary {
+  background-color: #C93432;
+}
+
+.suggest-topic {
+  color: #C93432;
+}
+
+.footer__icon {
+  color: #C93432;
+  fill: #C93432;
+}
+
+.header__hamburger-menu, .header__hamburger-menu::before, .header__hamburger-menu::after {
+  background-color: #C93432;
+}
+
+.footer__link {
+  color: #C93432;
+}
+
+::selection {
+  background-color: #DB7439;
+}
+
+a[aria-current=page] .summary__navigation-icon use {
+  color: #C93432;
+}
+
+/*TODO: change idea component*/
