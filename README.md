@@ -1,7 +1,6 @@
 
 
 
-
 # justhink-v1
 
 Justhink, insanların günlük olarak belirlenen bir konu hakkında fikirlerini paylaşarak sosyalleşmelerini amaçlayan bir platformdur. Bu platform, dijital çağda insanların birbirleriyle bağlantı kurmalarını ve iletişim kurmalarını kolaylaştırmak için tasarlanmıştır.
