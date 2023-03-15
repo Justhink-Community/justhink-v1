@@ -2087,3 +2087,71 @@ main.login {
 .edit-profile input[type=password]:not(:placeholder-shown):valid {
   border-bottom-color: #8bb269;
 }
+
+body.sand .summary {
+  font-size: 1.6rem;
+  background-image: linear-gradient(to bottom right, #DB7439, #C83232);
+}
+body.sand ::-webkit-scrollbar-thumb {
+  background: #C93432;
+}
+body.sand ::-webkit-scrollbar-thumb:hover {
+  background: #DB7439;
+}
+body.sand .publish-idea__btn {
+  background-color: #C93432;
+}
+body.sand .publish-idea__btn:hover {
+  background-color: #d14a47;
+}
+body.sand .btn--primary:link, body.sand .btn--primary:visited, body.sand .btn--primary {
+  background-color: #C93432;
+}
+body.sand .footer__icon {
+  color: #C93432;
+}
+body.sand .suggest-topic {
+  color: #C93432;
+}
+body.sand .header__hamburger-menu, body.sand .header__hamburger-menu::before, body.sand .header__hamburger-menu::after {
+  background-color: #C93432;
+}
+body.sand .footer__link {
+  color: #C93432;
+}
+body.sand ::selection {
+  background-color: #DB7439;
+}
+body.sand a[aria-current=page] .summary__navigation-icon use {
+  color: #C93432;
+}
+body.sand .header__search-icon {
+  color: #C93432;
+}
+body.sand .header__search-box {
+  background: linear-gradient(#fafafa, #fafafa) padding-box, #C93432 border-box;
+}
+body.sand .idea__administration-icon, body.sand .idea__interaction-icon, body.sand .idea__author {
+  color: #C93432;
+}
+body.sand .tooltip__icon {
+  color: #C93432;
+}
+body.sand .tooltip__icon:hover {
+  color: #DB7439;
+}
+body.sand .edit-profile__save-btn {
+  background-color: #d14a47;
+}
+body.sand .send-comment__btn {
+  background-color: #d14a47;
+}
+body.sand .suggestions .heading-tertiary {
+  color: #d14a47;
+}
+body.sand .wrapper-center__countdown-menu__btn {
+  color: #C93432;
+}
+body.sand .shop-category-selector-button {
+  color: #C93432;
+}
