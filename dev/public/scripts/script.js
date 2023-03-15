@@ -3,6 +3,7 @@
 import {
   UPDATE_REMAINING_TIME_SECONDS,
   PASSWORD_VALIDATION_ERROR,
+  WATCH_IDEAS_CONFIG
 } from "./config.js";
 
 /**
@@ -13,16 +14,21 @@ class App {
   _publishIdeaBtn = document.querySelector(".publish-idea__btn");
   _themesBtn = document.querySelector(".shop-category-selector-button--themes");
   _iconsBtn = document.querySelector(".shop-category-selector-button--icons");
+  _editProfileContainer = document.querySelector('.edit-profile-main');
   _inputLengthContainers = document.querySelectorAll(
     ".input-length--container"
   );
   _editProfileTabLinksContainer = document.querySelector(".edit-profile__tabs");
   _passwordInputs = document.querySelectorAll('input[type="password"]');
+  _ideas = document.querySelectorAll('.idea');
 
   /**
    * The constructor function of the App class which makes the basic setup of the project.
    */
   constructor() {
+    this._seenIdeas = [];
+    this._loadingIdeas = false;
+
     if (this._publishIdeaBtn)
       this._publishIdeaBtn.addEventListener("click", this._togglePublishIdea);
 
@@ -47,12 +53,72 @@ class App {
       this._setupInputLengthCounters.bind(this)
     );
 
-    this._fixEditProfileTabs();
-    this._setupEditProfileTabs();
+    if (this._editProfileContainer) {
+      this._fixEditProfileTabs()
+      this._setupEditProfileTabs()
+    }
 
     this._setupPasswordValidations();
+
+    if (this._ideas && this._ideas.length >= 1) 
+    this._watchIdeas();
   }
 
+  /**
+   * A function that sends an AJAX request to back-end services, in order to show/load more ideas.
+   * @returns undefined
+   * @this {Object} App object
+   */
+  _loadIdeas() {
+    // TODO: Back-end request will be sent here, also spinner
+    console.log('More ideas is loading from back-end services...')
+    this._loadingIdeas = true;
+  }
+
+  /**
+   * A function that adds the idea seen by user, to the seenIdeas array.
+   * @param {IntersectionObserverEntry} entry 
+   * @returns undefined
+   * @this {Object} App object
+   */
+  _addSeenIdea(entry) {
+    if (entry.isIntersecting && !this._seenIdeas.includes(entry.target)) {
+      this._seenIdeas.push(entry.target)
+    }
+  }
+
+  /**
+   * A function that manages the ideas that user's seen.
+   * @param {Array} entries 
+   * @param {IntersectionObserver} observer 
+   * @returns undefined
+   * @this {Object} App object
+   */
+  _manageSeenIdea(entries, observer) {
+    entries.forEach(this._addSeenIdea.bind(this))
+
+    if (!this._loadingIdeas && this._seenIdeas.length === this._ideas.length) {
+      this._loadIdeas()
+    } 
+  }
+
+  /**
+   * A function that watches for ideas (waiting them to be seen).
+   * @returns undefined
+   * @this {Object} App object 
+   */
+  _watchIdeas() {
+    const ideasObserver = new IntersectionObserver(this._manageSeenIdea.bind(this), WATCH_IDEAS_CONFIG)
+    this._ideas.forEach((idea) => 
+      ideasObserver.observe(idea)
+    )
+  }
+
+  /**
+   * A function that applies password validation for desired inputs. 
+   * @returns undefined
+   * @this {Object} App object
+   */
   _setupPasswordValidations() {
     this._passwordInputs.forEach((passwordInput) => {
       passwordInput.addEventListener("input", function () {

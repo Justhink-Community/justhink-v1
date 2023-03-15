@@ -4,6 +4,17 @@ body {
       $sizes,
       "footer-height"
     );
+
+  @include respond(mobile) {
+    grid-template-rows: unset;
+  }
+
+  @include respond(sm-mobile) {
+    grid-template-rows: map-get($sizes, "navbar-height") 1fr map-get(
+      $sizes,
+      "footer-height"
+    );
+  }
 }
 
 .grid-col-3 {
