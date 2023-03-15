@@ -2090,55 +2090,55 @@ main.login {
 
 body.sand .summary {
   font-size: 1.6rem;
-  background-image: linear-gradient(to bottom right, #DB7439, #C83232);
+  background-image: linear-gradient(to bottom right, #db7439, #c83232);
 }
 body.sand ::-webkit-scrollbar-thumb {
-  background: #C93432;
+  background: #c93432;
 }
 body.sand ::-webkit-scrollbar-thumb:hover {
-  background: #DB7439;
+  background: #db7439;
 }
 body.sand .publish-idea__btn {
-  background-color: #C93432;
+  background-color: #c93432;
 }
 body.sand .publish-idea__btn:hover {
   background-color: #d14a47;
 }
 body.sand .btn--primary:link, body.sand .btn--primary:visited, body.sand .btn--primary {
-  background-color: #C93432;
+  background-color: #c93432;
 }
 body.sand .footer__icon {
-  color: #C93432;
+  color: #c93432;
 }
 body.sand .suggest-topic {
-  color: #C93432;
+  color: #c93432;
 }
 body.sand .header__hamburger-menu, body.sand .header__hamburger-menu::before, body.sand .header__hamburger-menu::after {
-  background-color: #C93432;
+  background-color: #c93432;
 }
 body.sand .footer__link {
-  color: #C93432;
+  color: #c93432;
 }
 body.sand ::selection {
-  background-color: #DB7439;
+  background-color: #db7439;
 }
 body.sand a[aria-current=page] .summary__navigation-icon use {
-  color: #C93432;
+  color: #c93432;
 }
 body.sand .header__search-icon {
-  color: #C93432;
+  color: #c93432;
 }
 body.sand .header__search-box {
-  background: linear-gradient(#fafafa, #fafafa) padding-box, #C93432 border-box;
+  background: linear-gradient(#fafafa, #fafafa) padding-box, #c93432 border-box;
 }
 body.sand .idea__administration-icon, body.sand .idea__interaction-icon, body.sand .idea__author {
-  color: #C93432;
+  color: #c93432;
 }
 body.sand .tooltip__icon {
-  color: #C93432;
+  color: #c93432;
 }
 body.sand .tooltip__icon:hover {
-  color: #DB7439;
+  color: #db7439;
 }
 body.sand .edit-profile__save-btn {
   background-color: #d14a47;
@@ -2150,8 +2150,86 @@ body.sand .suggestions .heading-tertiary {
   color: #d14a47;
 }
 body.sand .wrapper-center__countdown-menu__btn {
-  color: #C93432;
+  color: #c93432;
 }
 body.sand .shop-category-selector-button {
-  color: #C93432;
+  color: #c93432;
+}
+
+body.forest .summary {
+  font-size: 1.6rem;
+  background-image: linear-gradient(to bottom right, #8da627, #055511);
+}
+body.forest ::-webkit-scrollbar-thumb {
+  background: #0c5912;
+}
+body.forest ::-webkit-scrollbar-thumb:hover {
+  background: #8da627;
+}
+body.forest .publish-idea__btn {
+  background-color: #0c5912;
+}
+body.forest .publish-idea__btn:hover {
+  background-color: #3e771a;
+}
+body.forest .publish-idea__container {
+  background-color: #0c5912;
+}
+body.forest .publish-idea__submit {
+  background-color: #3e771a;
+}
+body.forest .btn--primary:link,
+body.forest .btn--primary:visited,
+body.forest .btn--primary {
+  background-color: #0c5912;
+}
+body.forest .footer__icon {
+  color: #0c5912;
+}
+body.forest .suggest-topic {
+  color: #0c5912;
+}
+body.forest .header__hamburger-menu,
+body.forest .header__hamburger-menu::before,
+body.forest .header__hamburger-menu::after {
+  background-color: #0c5912;
+}
+body.forest .footer__link {
+  color: #0c5912;
+}
+body.forest ::selection {
+  background-color: #8da627;
+}
+body.forest a[aria-current=page] .summary__navigation-icon use {
+  color: #0c5912;
+}
+body.forest .header__search-icon {
+  color: #0c5912;
+}
+body.forest .header__search-box {
+  background: linear-gradient(#fafafa, #fafafa) padding-box, #0c5912 border-box;
+}
+body.forest .idea__administration-icon, body.forest .idea__interaction-icon, body.forest .idea__author {
+  color: #0c5912;
+}
+body.forest .tooltip__icon {
+  color: #0c5912;
+}
+body.forest .tooltip__icon:hover {
+  color: #8da627;
+}
+body.forest .edit-profile__save-btn {
+  background-color: #3e771a;
+}
+body.forest .send-comment__btn {
+  background-color: #3e771a;
+}
+body.forest .suggestions .heading-tertiary {
+  color: #3e771a;
+}
+body.forest .wrapper-center__countdown-menu__btn {
+  color: #0c5912;
+}
+body.forest .shop-category-selector-button {
+  color: #0c5912;
 }
