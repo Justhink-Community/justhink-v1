@@ -884,6 +884,16 @@ body {
   display: grid;
   grid-template-rows: clamp(10rem, 10vh, 11.7rem) 1fr clamp(4.25rem, 5vh, 5rem);
 }
+@media only screen and (max-width: 40.625em) {
+  body {
+    grid-template-rows: unset;
+  }
+}
+@media only screen and (max-width: 18.75em) {
+  body {
+    grid-template-rows: clamp(10rem, 10vh, 11.7rem) 1fr clamp(4.25rem, 5vh, 5rem);
+  }
+}
 
 .grid-col-3 {
   display: grid;
@@ -1303,16 +1313,12 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 3rem 1rem;
-  gap: 5dvw;
+  gap: max(2rem, 2vw);
 }
-@media screen and (orientation: portrait) and (max-width: 46.875em) {
+@media only screen and (max-width: 65.625em) {
   .article-main-container {
     grid-template-columns: 1fr;
-  }
-}
-@media screen and (orientation: portrait) and (max-width: 65.625em) {
-  .article-main-container {
-    padding-inline: 1.5rem;
+    padding: 3rem 6rem;
   }
 }
 .article__content {
@@ -1320,25 +1326,26 @@ body {
   max-height: 30rem;
   overflow-y: scroll;
 }
+.article-interaction-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
 
 .video-container {
-  justify-self: center;
+  justify-self: end;
   height: 100%;
   aspect-ratio: 16/9;
 }
-@media screen and (orientation: portrait) and (max-width: 40.625em) {
+@media only screen and (max-width: 65.625em) {
   .video-container {
-    height: 35dvh;
+    justify-self: center;
+    aspect-ratio: 16/5;
+    width: 100%;
   }
 }
-@media screen and (orientation: portrait) and (max-width: 18.75em) {
+@media only screen and (max-width: 40.625em) {
   .video-container {
-    height: 30dvh;
-  }
-}
-@media screen and (orientation: portrait) and (max-width: 18.75em) and (orientation: landscape) {
-  .video-container {
-    height: 50dvh;
+    aspect-ratio: 16/9;
   }
 }
 .video-iframe {
@@ -1348,7 +1355,8 @@ body {
 
 .suggest-topic {
   margin-top: 1rem;
-  color: #400556;
+  color: #4e1c60;
+  text-decoration: underline;
 }
 
 .ranking {
