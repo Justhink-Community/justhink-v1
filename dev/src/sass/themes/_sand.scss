@@ -1,4 +1,4 @@
-body.sand{
+html.sand{
     .summary {
         font-size: 1.6rem;
         background-image: linear-gradient(
@@ -19,7 +19,7 @@ body.sand{
         }
         &__btn:hover{
             background-color: map-get($colours-sand, primary-light-2);
-        } /* Idk what the colors should be*/
+        } /* Idk what the colors should be */
         &__container{
             background-color: map-get($colours-sand, primary-light-2);
         }

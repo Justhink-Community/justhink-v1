@@ -2088,79 +2088,79 @@ main.login {
   border-bottom-color: #8bb269;
 }
 
-body.sand .summary {
+html.sand .summary {
   font-size: 1.6rem;
   background-image: linear-gradient(to bottom right, #DB7439, #C83232);
 }
-body.sand ::-webkit-scrollbar-thumb {
+html.sand ::-webkit-scrollbar-thumb {
   background: #C93432;
 }
-body.sand ::-webkit-scrollbar-thumb:hover {
+html.sand ::-webkit-scrollbar-thumb:hover {
   background: #DB7439;
 }
-body.sand .publish-idea {
-  /* Idk what the colors should be*/
+html.sand .publish-idea {
+  /* Idk what the colors should be */
 }
-body.sand .publish-idea__btn {
+html.sand .publish-idea__btn {
   background-color: #d14a47;
 }
-body.sand .publish-idea__btn:hover {
+html.sand .publish-idea__btn:hover {
   background-color: #DB7439;
 }
-body.sand .publish-idea__container {
+html.sand .publish-idea__container {
   background-color: #DB7439;
 }
-body.sand .publish-idea__submit {
+html.sand .publish-idea__submit {
   background-color: #d14a47;
 }
-body.sand .btn--primary:link, body.sand .btn--primary:visited, body.sand .btn--primary {
+html.sand .btn--primary:link, html.sand .btn--primary:visited, html.sand .btn--primary {
   background-color: #C93432;
 }
-body.sand .footer__icon {
+html.sand .footer__icon {
   color: #C93432;
 }
-body.sand .suggest-topic {
+html.sand .suggest-topic {
   color: #C93432;
 }
-body.sand .header__hamburger-menu, body.sand .header__hamburger-menu::before, body.sand .header__hamburger-menu::after {
+html.sand .header__hamburger-menu, html.sand .header__hamburger-menu::before, html.sand .header__hamburger-menu::after {
   background-color: #C93432;
 }
-body.sand .footer__link {
+html.sand .footer__link {
   color: #C93432;
 }
-body.sand ::selection {
+html.sand ::selection {
   background-color: #DB7439;
 }
-body.sand a[aria-current=page] .summary__navigation-icon use {
+html.sand a[aria-current=page] .summary__navigation-icon use {
   color: #C93432;
 }
-body.sand .header__search-icon {
+html.sand .header__search-icon {
   color: #C93432;
 }
-body.sand .header__search-box {
+html.sand .header__search-box {
   background: linear-gradient(#fafafa, #fafafa) padding-box, #C93432 border-box;
 }
-body.sand .idea__administration-icon, body.sand .idea__interaction-icon, body.sand .idea__author {
+html.sand .idea__administration-icon, html.sand .idea__interaction-icon, html.sand .idea__author {
   color: #C93432;
 }
-body.sand .tooltip__icon {
+html.sand .tooltip__icon {
   color: #C93432;
 }
-body.sand .tooltip__icon:hover {
+html.sand .tooltip__icon:hover {
   color: #DB7439;
 }
-body.sand .edit-profile__save-btn {
+html.sand .edit-profile__save-btn {
   background-color: #d14a47;
 }
-body.sand .send-comment__btn {
+html.sand .send-comment__btn {
   background-color: #d14a47;
 }
-body.sand .suggestions .heading-tertiary {
+html.sand .suggestions .heading-tertiary {
   color: #d14a47;
 }
-body.sand .wrapper-center__countdown-menu__btn {
+html.sand .wrapper-center__countdown-menu__btn {
   color: #C93432;
 }
-body.sand .shop-category-selector-button {
+html.sand .shop-category-selector-button {
   color: #C93432;
 }
