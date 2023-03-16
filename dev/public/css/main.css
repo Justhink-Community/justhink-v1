@@ -2088,148 +2088,155 @@ main.login {
   border-bottom-color: #8bb269;
 }
 
-body.sand .summary {
+html.sand .summary {
   font-size: 1.6rem;
   background-image: linear-gradient(to bottom right, #db7439, #c83232);
 }
-body.sand ::-webkit-scrollbar-thumb {
+html.sand ::-webkit-scrollbar-thumb {
   background: #c93432;
 }
-body.sand ::-webkit-scrollbar-thumb:hover {
+html.sand ::-webkit-scrollbar-thumb:hover {
   background: #db7439;
 }
-body.sand .publish-idea__btn {
+html.sand .publish-idea__btn {
   background-color: #c93432;
 }
-body.sand .publish-idea__btn:hover {
+html.sand .publish-idea__btn:hover {
   background-color: #d14a47;
 }
-body.sand .btn--primary:link, body.sand .btn--primary:visited, body.sand .btn--primary {
+html.sand .btn--primary:link,
+html.sand .btn--primary:visited,
+html.sand .btn--primary {
   background-color: #c93432;
 }
-body.sand .footer__icon {
+html.sand .footer__icon {
   color: #c93432;
 }
-body.sand .suggest-topic {
+html.sand .suggest-topic {
   color: #c93432;
 }
-body.sand .header__hamburger-menu, body.sand .header__hamburger-menu::before, body.sand .header__hamburger-menu::after {
+html.sand .header__hamburger-menu,
+html.sand .header__hamburger-menu::before,
+html.sand .header__hamburger-menu::after {
   background-color: #c93432;
 }
-body.sand .footer__link {
+html.sand .footer__link {
   color: #c93432;
 }
-body.sand ::selection {
+html.sand ::selection {
   background-color: #db7439;
 }
-body.sand a[aria-current=page] .summary__navigation-icon use {
+html.sand a[aria-current=page] .summary__navigation-icon use {
   color: #c93432;
 }
-body.sand .header__search-icon {
+html.sand .header__search-icon {
   color: #c93432;
 }
-body.sand .header__search-box {
+html.sand .header__search-box {
   background: linear-gradient(#fafafa, #fafafa) padding-box, #c93432 border-box;
 }
-body.sand .idea__administration-icon, body.sand .idea__interaction-icon, body.sand .idea__author {
+html.sand .idea__administration-icon, html.sand .idea__interaction-icon, html.sand .idea__author {
   color: #c93432;
 }
-body.sand .tooltip__icon {
+html.sand .tooltip__icon {
   color: #c93432;
 }
-body.sand .tooltip__icon:hover {
+html.sand .tooltip__icon:hover {
   color: #db7439;
 }
-body.sand .edit-profile__save-btn {
+html.sand .edit-profile__save-btn {
   background-color: #d14a47;
 }
-body.sand .send-comment__btn {
+html.sand .send-comment__btn {
   background-color: #d14a47;
 }
-body.sand .suggestions .heading-tertiary {
+html.sand .suggestions .heading-tertiary {
   color: #d14a47;
 }
-body.sand .wrapper-center__countdown-menu__btn {
+html.sand .wrapper-center__countdown-menu__btn {
   color: #c93432;
 }
-body.sand .shop-category-selector-button {
+html.sand .shop-category-selector-button {
   color: #c93432;
 }
 
-body.forest .summary {
+html.forest .summary {
   font-size: 1.6rem;
   background-image: linear-gradient(to bottom right, #8da627, #055511);
 }
-body.forest ::-webkit-scrollbar-thumb {
+html.forest ::-webkit-scrollbar-thumb {
   background: #0c5912;
 }
-body.forest ::-webkit-scrollbar-thumb:hover {
+html.forest ::-webkit-scrollbar-thumb:hover {
   background: #8da627;
 }
-body.forest .publish-idea__btn {
+html.forest .publish-idea__btn {
   background-color: #0c5912;
 }
-body.forest .publish-idea__btn:hover {
+html.forest .publish-idea__btn:hover {
   background-color: #3e771a;
 }
-body.forest .publish-idea__container {
+html.forest .publish-idea__container {
   background-color: #0c5912;
 }
-body.forest .publish-idea__submit {
+html.forest .publish-idea__submit {
   background-color: #3e771a;
 }
-body.forest .btn--primary:link,
-body.forest .btn--primary:visited,
-body.forest .btn--primary {
+html.forest .btn--primary:link,
+html.forest .btn--primary:visited,
+html.forest .btn--primary {
   background-color: #0c5912;
 }
-body.forest .footer__icon {
+html.forest .footer__icon {
   color: #0c5912;
 }
-body.forest .suggest-topic {
+html.forest .suggest-topic {
   color: #0c5912;
 }
-body.forest .header__hamburger-menu,
-body.forest .header__hamburger-menu::before,
-body.forest .header__hamburger-menu::after {
+html.forest .header__hamburger-menu,
+html.forest .header__hamburger-menu::before,
+html.forest .header__hamburger-menu::after {
   background-color: #0c5912;
 }
-body.forest .footer__link {
+html.forest .footer__link {
   color: #0c5912;
 }
-body.forest ::selection {
+html.forest ::selection {
   background-color: #8da627;
 }
-body.forest a[aria-current=page] .summary__navigation-icon use {
+html.forest a[aria-current=page] .summary__navigation-icon use {
   color: #0c5912;
 }
-body.forest .header__search-icon {
+html.forest .header__search-icon {
   color: #0c5912;
 }
-body.forest .header__search-box {
+html.forest .header__search-box {
   background: linear-gradient(#fafafa, #fafafa) padding-box, #0c5912 border-box;
 }
-body.forest .idea__administration-icon, body.forest .idea__interaction-icon, body.forest .idea__author {
+html.forest .idea__administration-icon, html.forest .idea__interaction-icon, html.forest .idea__author {
   color: #0c5912;
 }
-body.forest .tooltip__icon {
+html.forest .tooltip__icon {
   color: #0c5912;
 }
-body.forest .tooltip__icon:hover {
+html.forest .tooltip__icon:hover {
   color: #8da627;
 }
-body.forest .edit-profile__save-btn {
+html.forest .edit-profile__save-btn {
   background-color: #3e771a;
 }
-body.forest .send-comment__btn {
+html.forest .send-comment__btn {
   background-color: #3e771a;
 }
-body.forest .suggestions .heading-tertiary {
+html.forest .suggestions .heading-tertiary {
   color: #3e771a;
 }
-body.forest .wrapper-center__countdown-menu__btn {
+html.forest .wrapper-center__countdown-menu__btn {
   color: #0c5912;
 }
-body.forest .shop-category-selector-button {
+html.forest .shop-category-selector-button {
   color: #0c5912;
+}
+html.forest .section-about-heading {
+  background-image: linear-gradient(to bottom right, #8da627, #055511);
 }

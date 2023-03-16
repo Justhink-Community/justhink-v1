@@ -1,4 +1,4 @@
-body.forest {
+html.forest {
   .summary {
     font-size: 1.6rem;
     background-image: linear-gradient(
@@ -86,5 +86,23 @@ body.forest {
   }
   .shop-category-selector-button {
     color: map-get($colours-forest, primary);
+  }
+
+  .section-about {
+    // background-image: linear-gradient(
+    //   to bottom right,
+    //   map-get($colours-forest, primary-light-2),
+    //   map-get($colours-forest, primary-dark)
+    // );
+
+    //FİX LATER
+
+    &-heading {
+      background-image: linear-gradient(
+        to bottom right,
+        map-get($colours-forest, primary-light-2),
+        map-get($colours-forest, primary-dark)
+      );
+    }
   }
 }
