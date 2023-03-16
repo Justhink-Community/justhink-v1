@@ -75,7 +75,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: minmax(30rem, 36rem) 1fr;
-  padding-block: 2.5rem;
+  padding-block: 2.5rem 0;
   padding-inline: map-get($spacings, "upper-md");
 
   &--ignore-first {
