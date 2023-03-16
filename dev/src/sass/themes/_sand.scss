@@ -67,8 +67,16 @@ html.sand{
     .tooltip__icon:hover{
         color: map-get($colours-sand, primary-light-2);
     } 
-    .edit-profile__save-btn{
-        background-color: map-get($colours-sand, primary-light);
+    .edit-profile{
+        &__save-btn{
+            background-color: map-get($colours-sand, primary-light);
+        }
+        &__alt-text{
+            color: map-get($colours-sand, primary-dark);
+            span{
+                color: map-get($colours-sand, primary-light-2);
+            }
+        }
     }
     .send-comment__btn{
         background-color: map-get($colours-sand, primary-light);
@@ -81,5 +89,12 @@ html.sand{
     }
     .shop-category-selector-button{
         color: map-get($colours-sand, primary);
+    }
+    .section-about{
+        /*background-image: linear-gradient(map-get($colours-sand, primary-soft), map-get($colours-sand, primary-soft)), url(https://justhink.net/static/logos/thinker_logo.svg);*/
+        /* FIX LATER */
+        &-heading{
+            background-image: linear-gradient(to right, map-get($colours-sand, primary-light-2), map-get($colours-sand, primary-dark));
+        }
     }
 }

@@ -2152,6 +2152,12 @@ html.sand .tooltip__icon:hover {
 html.sand .edit-profile__save-btn {
   background-color: #d14a47;
 }
+html.sand .edit-profile__alt-text {
+  color: #C83232;
+}
+html.sand .edit-profile__alt-text span {
+  color: #DB7439;
+}
 html.sand .send-comment__btn {
   background-color: #d14a47;
 }
@@ -2163,4 +2169,11 @@ html.sand .wrapper-center__countdown-menu__btn {
 }
 html.sand .shop-category-selector-button {
   color: #C93432;
+}
+html.sand .section-about {
+  /*background-image: linear-gradient(map-get($colours-sand, primary-soft), map-get($colours-sand, primary-soft)), url(https://justhink.net/static/logos/thinker_logo.svg);*/
+  /* FIX LATER */
+}
+html.sand .section-about-heading {
+  background-image: linear-gradient(to right, #DB7439, #C83232);
 }
