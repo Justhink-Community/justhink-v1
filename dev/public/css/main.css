@@ -180,7 +180,7 @@ input {
 }
 .btn--secondary:link, .btn--secondary:visited, .btn--secondary, .btn--secondary:is(.btn--animate)::after {
   background-color: #fafafa;
-  color: #b35159;
+  color: #5168b3;
 }
 .btn--secondary:not(:is(.btn--animated)):hover, .btn--secondary:not(:is(.btn--animated)):hover:is(.btn--animate)::after {
   background-color: #f0f0f0;
@@ -2098,10 +2098,19 @@ body.sand ::-webkit-scrollbar-thumb {
 body.sand ::-webkit-scrollbar-thumb:hover {
   background: #DB7439;
 }
+body.sand .publish-idea {
+  /* Idk what the colors should be*/
+}
 body.sand .publish-idea__btn {
-  background-color: #C93432;
+  background-color: #d14a47;
 }
 body.sand .publish-idea__btn:hover {
+  background-color: #DB7439;
+}
+body.sand .publish-idea__container {
+  background-color: #DB7439;
+}
+body.sand .publish-idea__submit {
   background-color: #d14a47;
 }
 body.sand .btn--primary:link, body.sand .btn--primary:visited, body.sand .btn--primary {

@@ -13,11 +13,19 @@ body.sand{
     ::-webkit-scrollbar-thumb:hover {
         background: map-get($colours-sand, primary-light-2);
     }
-    .publish-idea__btn{
-        background-color: map-get($colours-sand, primary);
-    }
-    .publish-idea__btn:hover{
-        background-color: map-get($colours-sand, primary-light);
+    .publish-idea{
+        &__btn{     
+            background-color: map-get($colours-sand, primary-light);
+        }
+        &__btn:hover{
+            background-color: map-get($colours-sand, primary-light-2);
+        } /* Idk what the colors should be*/
+        &__container{
+            background-color: map-get($colours-sand, primary-light-2);
+        }
+        &__submit{
+            background-color: map-get($colours-sand, primary-light);
+        }
     }
     .btn--primary:link, .btn--primary:visited, .btn--primary{
         background-color: map-get($colours-sand, primary);
