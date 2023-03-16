@@ -1,0 +1,85 @@
+html.sand{
+    .summary {
+        font-size: 1.6rem;
+        background-image: linear-gradient(
+            to bottom right,
+                map-get($colours-sand, primary-light-2),
+                map-get($colours-sand, primary-dark)
+            );
+    }
+    ::-webkit-scrollbar-thumb {
+        background: map-get($colours-sand, primary);
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: map-get($colours-sand, primary-light-2);
+    }
+    .publish-idea{
+        &__btn{     
+            background-color: map-get($colours-sand, primary-light);
+        }
+        &__btn:hover{
+            background-color: map-get($colours-sand, primary-light-2);
+        } /* Idk what the colors should be */
+        &__container{
+            background-color: map-get($colours-sand, primary-light-2);
+        }
+        &__submit{
+            background-color: map-get($colours-sand, primary-light);
+        }
+    }
+    .btn--primary:link, .btn--primary:visited, .btn--primary{
+        background-color: map-get($colours-sand, primary);
+    }
+    .footer__icon{
+        color: map-get($colours-sand, primary);
+    }
+    .suggest-topic{
+        color: map-get($colours-sand, primary);
+    }
+    .header__hamburger-menu, .header__hamburger-menu::before, .header__hamburger-menu::after{
+        background-color: map-get($colours-sand, primary);
+    }
+    .footer__link{
+        color: map-get($colours-sand, primary);
+    }
+    ::selection{
+        background-color: map-get($colours-sand, primary-light-2);
+    }
+    a[aria-current="page"] .summary__navigation-icon use{
+        color: map-get($colours-sand, primary ) ;
+    }
+    .header__search{
+        &-icon{
+            color: map-get($colours-sand, primary);
+        }
+        &-box{
+            background: linear-gradient(#fafafa, #fafafa) padding-box, map-get($colours-sand, primary) border-box;
+        }
+    }
+    .idea__{
+        &administration-icon, &interaction-icon, &author{
+            color: map-get($colours-sand, primary);
+        }
+    }
+    .tooltip__icon{
+        color: map-get($colours-sand, primary);
+    }
+    .tooltip__icon:hover{
+        color: map-get($colours-sand, primary-light-2);
+    } 
+    .edit-profile__save-btn{
+        background-color: map-get($colours-sand, primary-light);
+    }
+    .send-comment__btn{
+        background-color: map-get($colours-sand, primary-light);
+    }
+    .suggestions .heading-tertiary{
+        color: map-get($colours-sand, primary-light);
+    }
+    .wrapper-center__countdown-menu__btn{
+        color: map-get($colours-sand, primary);
+    }
+    .shop-category-selector-button{
+        color: map-get($colours-sand, primary);
+    }
+}

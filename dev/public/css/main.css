@@ -180,7 +180,7 @@ input {
 }
 .btn--secondary:link, .btn--secondary:visited, .btn--secondary, .btn--secondary:is(.btn--animate)::after {
   background-color: #fafafa;
-  color: #b35159;
+  color: #5168b3;
 }
 .btn--secondary:not(:is(.btn--animated)):hover, .btn--secondary:not(:is(.btn--animated)):hover:is(.btn--animate)::after {
   background-color: #f0f0f0;
@@ -2086,4 +2086,81 @@ main.login {
 }
 .edit-profile input[type=password]:not(:placeholder-shown):valid {
   border-bottom-color: #8bb269;
+}
+
+html.sand .summary {
+  font-size: 1.6rem;
+  background-image: linear-gradient(to bottom right, #DB7439, #C83232);
+}
+html.sand ::-webkit-scrollbar-thumb {
+  background: #C93432;
+}
+html.sand ::-webkit-scrollbar-thumb:hover {
+  background: #DB7439;
+}
+html.sand .publish-idea {
+  /* Idk what the colors should be */
+}
+html.sand .publish-idea__btn {
+  background-color: #d14a47;
+}
+html.sand .publish-idea__btn:hover {
+  background-color: #DB7439;
+}
+html.sand .publish-idea__container {
+  background-color: #DB7439;
+}
+html.sand .publish-idea__submit {
+  background-color: #d14a47;
+}
+html.sand .btn--primary:link, html.sand .btn--primary:visited, html.sand .btn--primary {
+  background-color: #C93432;
+}
+html.sand .footer__icon {
+  color: #C93432;
+}
+html.sand .suggest-topic {
+  color: #C93432;
+}
+html.sand .header__hamburger-menu, html.sand .header__hamburger-menu::before, html.sand .header__hamburger-menu::after {
+  background-color: #C93432;
+}
+html.sand .footer__link {
+  color: #C93432;
+}
+html.sand ::selection {
+  background-color: #DB7439;
+}
+html.sand a[aria-current=page] .summary__navigation-icon use {
+  color: #C93432;
+}
+html.sand .header__search-icon {
+  color: #C93432;
+}
+html.sand .header__search-box {
+  background: linear-gradient(#fafafa, #fafafa) padding-box, #C93432 border-box;
+}
+html.sand .idea__administration-icon, html.sand .idea__interaction-icon, html.sand .idea__author {
+  color: #C93432;
+}
+html.sand .tooltip__icon {
+  color: #C93432;
+}
+html.sand .tooltip__icon:hover {
+  color: #DB7439;
+}
+html.sand .edit-profile__save-btn {
+  background-color: #d14a47;
+}
+html.sand .send-comment__btn {
+  background-color: #d14a47;
+}
+html.sand .suggestions .heading-tertiary {
+  color: #d14a47;
+}
+html.sand .wrapper-center__countdown-menu__btn {
+  color: #C93432;
+}
+html.sand .shop-category-selector-button {
+  color: #C93432;
 }
