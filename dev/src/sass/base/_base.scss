@@ -14,6 +14,7 @@ html {
   box-sizing: border-box;
   color-scheme: light;
   caret-color: map-get($colours, "primary-light");
+  overflow-x: hidden;
 
   @include respond(md-desktop) {
     font-size: 56.25%; // 1rem = 9px
@@ -38,6 +39,7 @@ body {
   font-weight: 400;
   min-height: 100vh;
   background-color: map-get($colours, "grey-light-3");
+  overflow-x: hidden;
 }
 
 img,

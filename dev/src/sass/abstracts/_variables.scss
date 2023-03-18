@@ -103,6 +103,12 @@ $sizes: (
   "footer-height": clamp(4.25rem, 5vh, 5rem),
 );
 
+$mobile-sizes: (
+  "navbar-height": clamp(10rem, 10vh, 11.7rem),
+  "footer-height": clamp(7rem, 10vh, 8rem),
+);
+
+
 $spacings: (
   "xs": 1.2rem,
   "semi-sm": 1.5rem,

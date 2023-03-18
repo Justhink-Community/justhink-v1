@@ -64,6 +64,7 @@ html {
   box-sizing: border-box;
   color-scheme: light;
   caret-color: #5a2a76;
+  overflow-x: hidden;
 }
 @media only screen and (max-width: 100em) {
   html {
@@ -92,6 +93,7 @@ body {
   font-weight: 400;
   min-height: 100vh;
   background-color: #e3e3e3;
+  overflow-x: hidden;
 }
 
 img,
@@ -886,12 +888,12 @@ body {
 }
 @media only screen and (max-width: 40.625em) {
   body {
-    grid-template-rows: unset;
+    grid-template-rows: clamp(10rem, 10vh, 11.7rem) 1fr clamp(7rem, 10vh, 8rem);
   }
 }
 @media only screen and (max-width: 18.75em) {
   body {
-    grid-template-rows: clamp(10rem, 10vh, 11.7rem) 1fr clamp(4.25rem, 5vh, 5rem);
+    grid-template-rows: clamp(10rem, 10vh, 11.7rem) 1fr clamp(7rem, 10vh, 8rem);
   }
 }
 
@@ -947,7 +949,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: minmax(30rem, 36rem) 1fr;
-  padding-block: 2.5rem;
+  padding-block: 2.5rem 0;
   padding-inline: 4rem;
 }
 .grid-main--ignore-first {
@@ -955,6 +957,11 @@ body {
   padding-block: unset;
   height: 100%;
   width: 100%;
+}
+@media only screen and (max-width: 65.625em) {
+  .grid-main--ignore-first {
+    padding: 0 4rem !important;
+  }
 }
 @media only screen and (max-width: 65.625em) {
   .grid-main {
@@ -1787,11 +1794,21 @@ main.login {
   gap: 3.5rem;
   align-items: start;
 }
+@media only screen and (max-width: 65.625em) {
+  .edit-profile {
+    grid-template-columns: 1fr;
+  }
+}
 .edit-profile__navigation, .edit-profile__content > * {
   height: 100%;
   background-color: #fafafa;
   border-radius: 1.1rem;
   position: relative;
+}
+@media only screen and (max-width: 90em) {
+  .edit-profile__navigation, .edit-profile__content > * {
+    height: auto;
+  }
 }
 .edit-profile__content {
   display: grid;
@@ -1801,12 +1818,25 @@ main.login {
 .edit-profile__content:not([aria-current=true]) {
   display: none;
 }
+.edit-profile__content--full-height {
+  height: 100%;
+}
+@media only screen and (max-width: 90em) {
+  .edit-profile__content {
+    grid-template-columns: 1fr;
+  }
+}
 .edit-profile:not(:has(:target)) .edit-profile__content[aria-current=true] {
   display: grid;
 }
 .edit-profile__navigation {
   padding: 6rem 0;
   position: relative;
+}
+@media only screen and (max-width: 90em) {
+  .edit-profile__navigation {
+    padding: 6rem 0 10rem;
+  }
 }
 .edit-profile__tabs {
   display: flex;
@@ -1857,13 +1887,19 @@ main.login {
 .edit-profile__overview-form {
   display: grid;
   grid-template-rows: repeat(auto-fit, auto);
-  gap: 4.5rem;
   height: 100%;
+  gap: 2.4rem;
 }
 .edit-profile__overview-header {
   display: flex;
   align-items: center;
   gap: 3.5rem;
+}
+@media only screen and (max-width: 90em) {
+  .edit-profile__overview-header {
+    flex-direction: column;
+    align-items: start;
+  }
 }
 .edit-profile__overview-user-image {
   width: min(10rem, 100%);
@@ -1885,6 +1921,11 @@ main.login {
   display: flex;
   flex-direction: column;
   gap: min(2.8rem, 3.5vw);
+}
+@media only screen and (max-width: 90em) {
+  .edit-profile__overview-user-basic-info {
+    width: 100%;
+  }
 }
 .edit-profile__overview-main {
   display: flex;

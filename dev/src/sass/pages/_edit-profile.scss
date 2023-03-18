@@ -16,12 +16,20 @@
   gap: calc(map-get($spacings, "md") + 0.3rem);
   align-items: start;
 
+  @include respond(tablet) {
+    grid-template-columns:  1fr;
+  }
+
   &__navigation,
   &__content > * {
     height: 100%;
     background-color: map-get($colours, "grey-light-5");
     border-radius: map-get($border-radius, "lg");
     position: relative;
+
+    @include respond(desktop) {
+      height: auto;
+    }
   }
 
   &__content {
@@ -32,6 +40,14 @@
     &:not([aria-current="true"]) {
       display: none;
     }
+
+    &--full-height {
+      height: 100%;
+    }
+
+    @include respond(desktop) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &:not(:has(:target)) &__content[aria-current="true"] {
@@ -41,6 +57,10 @@
   &__navigation {
     padding: 6rem 0;
     position: relative;
+
+    @include respond(desktop) {
+      padding: 6rem 0 10rem;
+    }
   }
 
   &__tabs {
@@ -102,14 +122,19 @@
     &-form {
       display: grid;
       grid-template-rows: repeat(auto-fit, auto);
-      gap: 4.5rem;
       height: 100%;
+      gap: 2.4rem;
     }
 
     &-header {
       display: flex;
       align-items: center;
       gap: 3.5rem;
+
+      @include respond(desktop) {
+        flex-direction: column;
+        align-items: start;
+      }
     }
 
     &-user {
@@ -136,6 +161,10 @@
         display: flex;
         flex-direction: column;
         gap: min(2.8rem, 3.5vw);
+
+        @include respond(desktop) {
+          width: 100%;
+        }
       }
     }
 

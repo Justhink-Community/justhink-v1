@@ -6,12 +6,16 @@ body {
     );
 
   @include respond(mobile) {
-    grid-template-rows: unset;
+    grid-template-rows: map-get($mobile-sizes, "navbar-height") 1fr map-get(
+      $mobile-sizes,
+      "footer-height"
+    );
+
   }
 
   @include respond(sm-mobile) {
-    grid-template-rows: map-get($sizes, "navbar-height") 1fr map-get(
-      $sizes,
+    grid-template-rows: map-get($mobile-sizes, "navbar-height") 1fr map-get(
+      $mobile-sizes,
       "footer-height"
     );
   }
@@ -83,6 +87,10 @@ body {
     padding-block: unset;
     height: 100%;
     width: 100%;
+
+    @include respond(tablet) {
+      padding: 0 map-get($spacings, "upper-md") !important;
+    }
   }
 
   @include respond(tablet) {
