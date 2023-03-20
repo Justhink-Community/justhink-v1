@@ -1,0 +1,112 @@
+html.ocean {
+  .summary {
+    font-size: 1.6rem;
+    background-image: linear-gradient(
+      to bottom right,
+      map-get($colours-ocean, primary-light-2),
+      map-get($colours-ocean, primary-dark)
+    );
+  }
+  ::-webkit-scrollbar-thumb {
+    background: map-get($colours-ocean, primary);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: map-get($colours-ocean, primary-light-2);
+  }
+  .publish-idea {
+    &__btn {
+      background-color: map-get($colours-ocean, primary);
+      transition: background-color 0.2s ease;
+    }
+    &__btn:hover {
+      background-color: lighten(map-get($colours-ocean, primary), 10%);
+    } /* Idk what the colors should be */
+    &__container {
+      background-color: map-get($colours-ocean, primary-light-2);
+    }
+    &__submit {
+      background-color: map-get($colours-ocean, primary-light);
+    }
+  }
+  .btn--primary:link,
+  .btn--primary:visited,
+  .btn--primary {
+    background-color: map-get($colours-ocean, primary);
+  }
+  .footer__icon {
+    color: map-get($colours-ocean, primary);
+  }
+  .suggest-topic {
+    color: map-get($colours-ocean, primary);
+  }
+  .header__hamburger-menu,
+  .header__hamburger-menu::before,
+  .header__hamburger-menu::after {
+    background-color: map-get($colours-ocean, primary);
+  }
+  .footer__link {
+    color: map-get($colours-ocean, primary);
+  }
+  ::selection {
+    background-color: map-get($colours-ocean, primary-light-2);
+  }
+  a[aria-current="page"] .summary__navigation-icon use {
+    color: map-get($colours-ocean, primary);
+  }
+  .header__search {
+    &-icon {
+      color: map-get($colours-ocean, primary);
+    }
+    &-box {
+      background: linear-gradient(#fafafa, #fafafa) padding-box,
+        map-get($colours-ocean, primary) border-box;
+    }
+  }
+  .idea__ {
+    &administration-icon,
+    &interaction-icon,
+    &author {
+      color: map-get($colours-ocean, primary);
+    }
+  }
+  .tooltip__icon {
+    color: map-get($colours-ocean, primary);
+  }
+  .tooltip__icon:hover {
+    color: map-get($colours-ocean, primary-light-2);
+  }
+  .edit-profile {
+    &__save-btn {
+      background-color: map-get($colours-ocean, primary-light);
+    }
+    &__alt-text {
+      color: map-get($colours-ocean, primary-dark);
+      span {
+        color: map-get($colours-ocean, primary-light-2);
+      }
+    }
+  }
+  .send-comment__btn {
+    background-color: map-get($colours-ocean, primary-light);
+  }
+  .suggestions .heading-tertiary {
+    color: map-get($colours-ocean, primary-light);
+  }
+  .wrapper-center__countdown-menu__btn {
+    color: map-get($colours-ocean, primary);
+  }
+  .shop-category-selector-button {
+    color: map-get($colours-ocean, primary);
+  }
+  .section-about {
+    /*background-image: linear-gradient(map-get($colours-ocean, primary-soft), map-get($colours-ocean, primary-soft)), url(https://justhink.net/static/logos/thinker_logo.svg);*/
+    /* FIX LATER */
+    &-heading {
+      background-image: linear-gradient(
+        to right,
+        map-get($colours-ocean, primary-light-2),
+        map-get($colours-ocean, primary-dark)
+      );
+    }
+  }
+}

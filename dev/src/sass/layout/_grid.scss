@@ -81,6 +81,7 @@ body {
   grid-template-rows: minmax(30rem, 36rem) 1fr;
   padding-block: 2.5rem 0;
   padding-inline: map-get($spacings, "upper-md");
+  gap: 3.5rem;
 
   &--ignore-first {
     grid-template-rows: 1fr;

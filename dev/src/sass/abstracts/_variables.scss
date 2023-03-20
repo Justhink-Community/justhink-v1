@@ -27,11 +27,19 @@ $colours: (
 );
 
 $colours-sand: (
-  "primary-soft": #EDD7D1,
+  "primary-soft": #edd7d1,
   "primary-light": #d14a47,
-  "primary-light-2": #DB7439,
-  "primary-dark": #C83232,
-  "primary": #C93432,
+  "primary-light-2": #db7439,
+  "primary-dark": #c83232,
+  "primary": #c93432,
+);
+
+$colours-ocean: (
+  "primary-soft": #009da4,
+  "primary-light": #009da4,
+  "primary-light-2": #009da4,
+  "primary-dark": #0d1665,
+  "primary": #0d1665,
 );
 
 $fonts: (
@@ -107,7 +115,6 @@ $mobile-sizes: (
   "navbar-height": clamp(10rem, 10vh, 11.7rem),
   "footer-height": clamp(7rem, 10vh, 8rem),
 );
-
 
 $spacings: (
   "xs": 1.2rem,

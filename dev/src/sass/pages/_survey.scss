@@ -1,0 +1,13 @@
+.survey{
+  &-content{
+    color: map-get($colours, grey-dark-3);
+    font-weight: map-get($font-weights, normal);
+    font-size: map-get($font-sizes, lg);
+  }
+
+  &-options{
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+}

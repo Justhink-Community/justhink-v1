@@ -951,6 +951,7 @@ body {
   grid-template-rows: minmax(30rem, 36rem) 1fr;
   padding-block: 2.5rem 0;
   padding-inline: 4rem;
+  gap: 3.5rem;
 }
 .grid-main--ignore-first {
   grid-template-rows: 1fr;
@@ -2129,15 +2130,121 @@ main.login {
   border-bottom-color: #8bb269;
 }
 
+.survey-content {
+  color: #444;
+  font-weight: 400;
+  font-size: 2rem;
+}
+.survey-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+html.ocean .summary {
+  font-size: 1.6rem;
+  background-image: linear-gradient(to bottom right, #009da4, #0d1665);
+}
+html.ocean ::-webkit-scrollbar-thumb {
+  background: #0d1665;
+}
+html.ocean ::-webkit-scrollbar-thumb:hover {
+  background: #009da4;
+}
+html.ocean .publish-idea {
+  /* Idk what the colors should be */
+}
+html.ocean .publish-idea__btn {
+  background-color: #0d1665;
+  transition: background-color 0.2s ease;
+}
+html.ocean .publish-idea__btn:hover {
+  background-color: #132092;
+}
+html.ocean .publish-idea__container {
+  background-color: #009da4;
+}
+html.ocean .publish-idea__submit {
+  background-color: #009da4;
+}
+html.ocean .btn--primary:link,
+html.ocean .btn--primary:visited,
+html.ocean .btn--primary {
+  background-color: #0d1665;
+}
+html.ocean .footer__icon {
+  color: #0d1665;
+}
+html.ocean .suggest-topic {
+  color: #0d1665;
+}
+html.ocean .header__hamburger-menu,
+html.ocean .header__hamburger-menu::before,
+html.ocean .header__hamburger-menu::after {
+  background-color: #0d1665;
+}
+html.ocean .footer__link {
+  color: #0d1665;
+}
+html.ocean ::selection {
+  background-color: #009da4;
+}
+html.ocean a[aria-current=page] .summary__navigation-icon use {
+  color: #0d1665;
+}
+html.ocean .header__search-icon {
+  color: #0d1665;
+}
+html.ocean .header__search-box {
+  background: linear-gradient(#fafafa, #fafafa) padding-box, #0d1665 border-box;
+}
+html.ocean .idea__administration-icon, html.ocean .idea__interaction-icon, html.ocean .idea__author {
+  color: #0d1665;
+}
+html.ocean .tooltip__icon {
+  color: #0d1665;
+}
+html.ocean .tooltip__icon:hover {
+  color: #009da4;
+}
+html.ocean .edit-profile__save-btn {
+  background-color: #009da4;
+}
+html.ocean .edit-profile__alt-text {
+  color: #0d1665;
+}
+html.ocean .edit-profile__alt-text span {
+  color: #009da4;
+}
+html.ocean .send-comment__btn {
+  background-color: #009da4;
+}
+html.ocean .suggestions .heading-tertiary {
+  color: #009da4;
+}
+html.ocean .wrapper-center__countdown-menu__btn {
+  color: #0d1665;
+}
+html.ocean .shop-category-selector-button {
+  color: #0d1665;
+}
+html.ocean .section-about {
+  /*background-image: linear-gradient(map-get($colours-ocean, primary-soft), map-get($colours-ocean, primary-soft)), url(https://justhink.net/static/logos/thinker_logo.svg);*/
+  /* FIX LATER */
+}
+html.ocean .section-about-heading {
+  background-image: linear-gradient(to right, #009da4, #0d1665);
+}
+
 html.sand .summary {
   font-size: 1.6rem;
-  background-image: linear-gradient(to bottom right, #DB7439, #C83232);
+  background-image: linear-gradient(to bottom right, #db7439, #c83232);
 }
 html.sand ::-webkit-scrollbar-thumb {
-  background: #C93432;
+  background: #c93432;
 }
 html.sand ::-webkit-scrollbar-thumb:hover {
-  background: #DB7439;
+  background: #db7439;
 }
 html.sand .publish-idea {
   /* Idk what the colors should be */
@@ -2146,58 +2253,58 @@ html.sand .publish-idea__btn {
   background-color: #d14a47;
 }
 html.sand .publish-idea__btn:hover {
-  background-color: #DB7439;
+  background-color: #db7439;
 }
 html.sand .publish-idea__container {
-  background-color: #DB7439;
+  background-color: #db7439;
 }
 html.sand .publish-idea__submit {
   background-color: #d14a47;
 }
 html.sand .btn--primary:link, html.sand .btn--primary:visited, html.sand .btn--primary {
-  background-color: #C93432;
+  background-color: #c93432;
 }
 html.sand .footer__icon {
-  color: #C93432;
+  color: #c93432;
 }
 html.sand .suggest-topic {
-  color: #C93432;
+  color: #c93432;
 }
 html.sand .header__hamburger-menu, html.sand .header__hamburger-menu::before, html.sand .header__hamburger-menu::after {
-  background-color: #C93432;
+  background-color: #c93432;
 }
 html.sand .footer__link {
-  color: #C93432;
+  color: #c93432;
 }
 html.sand ::selection {
-  background-color: #DB7439;
+  background-color: #db7439;
 }
 html.sand a[aria-current=page] .summary__navigation-icon use {
-  color: #C93432;
+  color: #c93432;
 }
 html.sand .header__search-icon {
-  color: #C93432;
+  color: #c93432;
 }
 html.sand .header__search-box {
-  background: linear-gradient(#fafafa, #fafafa) padding-box, #C93432 border-box;
+  background: linear-gradient(#fafafa, #fafafa) padding-box, #c93432 border-box;
 }
 html.sand .idea__administration-icon, html.sand .idea__interaction-icon, html.sand .idea__author {
-  color: #C93432;
+  color: #c93432;
 }
 html.sand .tooltip__icon {
-  color: #C93432;
+  color: #c93432;
 }
 html.sand .tooltip__icon:hover {
-  color: #DB7439;
+  color: #db7439;
 }
 html.sand .edit-profile__save-btn {
   background-color: #d14a47;
 }
 html.sand .edit-profile__alt-text {
-  color: #C83232;
+  color: #c83232;
 }
 html.sand .edit-profile__alt-text span {
-  color: #DB7439;
+  color: #db7439;
 }
 html.sand .send-comment__btn {
   background-color: #d14a47;
@@ -2206,15 +2313,15 @@ html.sand .suggestions .heading-tertiary {
   color: #d14a47;
 }
 html.sand .wrapper-center__countdown-menu__btn {
-  color: #C93432;
+  color: #c93432;
 }
 html.sand .shop-category-selector-button {
-  color: #C93432;
+  color: #c93432;
 }
 html.sand .section-about {
   /*background-image: linear-gradient(map-get($colours-sand, primary-soft), map-get($colours-sand, primary-soft)), url(https://justhink.net/static/logos/thinker_logo.svg);*/
   /* FIX LATER */
 }
 html.sand .section-about-heading {
-  background-image: linear-gradient(to right, #DB7439, #C83232);
+  background-image: linear-gradient(to right, #db7439, #c83232);
 }
