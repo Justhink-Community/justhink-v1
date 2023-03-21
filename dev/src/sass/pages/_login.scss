@@ -139,4 +139,12 @@ main.login {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: map-get($spacings, sm);
+}
+
+@media screen and (max-width: map-get($breakpoints, tablet-portrait) ) {
+  .bottom-box{
+    flex-direction: column;
+    gap: map-get($spacings, sm);
+  }
 }
