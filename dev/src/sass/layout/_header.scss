@@ -1,6 +1,7 @@
 // Path: sass\layout\_header.scss
 
 .header {
+  position: relative;
   height: map-get($sizes, "navbar-height");
   padding-inline: map-get($spacings, "upper-md");
   background-color: map-get($colours, "light");
@@ -8,6 +9,113 @@
   align-items: center;
   justify-content: space-between;
   border-bottom: map-get($colours, grey-dark-1) 0.2rem solid;
+  z-index: 2;
+
+  &__sidebar {
+    position: absolute;
+    top: map-get($sizes, navbar-height);
+    left: 0;
+    width: 0;
+    height: calc(100vh - map-get($sizes, navbar-height));
+    z-index: -1;
+    transition: all 0.5s ease;
+    background-color: map-get($colours, light);
+    gap: 5rem;
+
+    &__top {
+      display: none;
+
+      &__profile-photo {
+        display: grid;
+        place-items: center;
+        background-color: map-get($colours, grey-light-2);
+        width: 13rem;
+        height: 13rem;
+        aspect-ratio: 1/1;
+        border-radius: 100vmax;
+
+        &__src {
+          width: min(10rem, 100%);
+          height: min(10rem, 100%);
+          aspect-ratio: 1/1;
+        }
+      }
+    }
+
+    &__bottom {
+      &__list {
+        display: none;
+      }
+    }
+  }
+
+  &__sidebar.active {
+    width: 40rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+
+    .header__sidebar__top {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      padding-block: 3rem;
+      border-bottom: 0.2rem rgba(map-get($colours, dark), 0.5) solid;
+
+      &__user-content {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        &__username {
+          color: #686886;
+          font-size: map-get($font-sizes, xl);
+        }
+
+        &__stats {
+          color: rgba(104, 104, 134, 0.5);
+          font-size: map-get($font-sizes, lg);
+        }
+
+        &__log-out {
+          color: #686868;
+          font-weight: map-get($font-weights, medium);
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .header__sidebar__bottom {
+      &__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        gap: 6rem;
+
+        &-link {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          gap: 5rem;
+          font-size: map-get($font-sizes, lg);
+          color: map-get($colours, grey-dark-1);
+          font-weight: map-get($font-weights, medium);
+          letter-spacing: 0.65px;
+
+          &__icon {
+            font-size: calc(map-get($font-sizes, xxl) - 0.2rem);
+          }
+        }
+      }
+    }
+  }
 
   &__start {
     display: flex;
