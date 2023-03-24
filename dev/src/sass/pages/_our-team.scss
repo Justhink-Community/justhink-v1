@@ -1,0 +1,44 @@
+.our-team {
+  &-container {
+    margin: 20rem;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  &-heading {
+    font-size: 7rem;
+    color: #4d1b60;
+
+    margin-bottom: 2rem;
+  }
+
+  &-text {
+    font-size: 4rem;
+    color: #4d1b6080;
+
+    margin-bottom: 4.5rem;
+  }
+
+  &-information {
+    font-weight: 600;
+    color: #987fa2;
+    font-size: 3.5rem;
+
+    margin-top: 6rem;
+  }
+
+  &__profiles {
+    display: flex;
+    gap: 2rem;
+
+    &-profile {
+      cursor: pointer;
+
+      width: 7.5rem;
+      height: 7.5rem;
+      background-color: #987fa280;
+      border-radius: 50%;
+    }
+  }
+}

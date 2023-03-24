@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Justhink &ndash; Anasayfa</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/icons.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <script src="scripts/script.js" type="module" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__sidebar">
+        <div class="header__sidebar__top">
+          <a href="#" class="header__sidebar__top__profile-photo">
+            <img
+              src="./assets/user-icons/user-icon-1.png"
+              alt="Profil Fotoğrafın"
+              class="header__sidebar__top__profile-photo__src"
+            />
+          </a>
+          <div class="header__sidebar__top__user-content">
+            <a href="#" class="header__sidebar__top__user-content__username"
+              >Username</a
+            >
+            <span class="header__sidebar__top__user-content__stats"
+              >50 fikir seviye:2</span
+            >
+            <a href="#" class="header__sidebar__top__user-content__log-out"
+              >Çıkış Yap</a
+            >
+          </div>
+        </div>
+        <div class="header__sidebar__bottom">
+          <ul class="header__sidebar__bottom__list">
+            <li class="header__sidebar__bottom__list-item">
+              <a href="#" class="header__sidebar__bottom__list-link">
+                <svg class="header__sidebar__bottom__list-link__icon">
+                  <use xlink:href="assets/sprite.svg#icon-settings"></use>
+                </svg>
+                <span class="header__sidebar__bottom__list-link__text"
+                  >Ayarlar</span
+                >
+              </a>
+            </li>
+            <li class="header__sidebar__bottom__list-item">
+              <a href="#" class="header__sidebar__bottom__list-link">
+                <svg class="header__sidebar__bottom__list-link__icon">
+                  <use xlink:href="assets/sprite.svg#icon-settings"></use>
+                </svg>
+                <span class="header__sidebar__bottom__list-link__text"
+                  >Ayarlar</span
+                >
+              </a>
+            </li>
+            <li class="header__sidebar__bottom__list-item">
+              <a href="#" class="header__sidebar__bottom__list-link">
+                <svg class="header__sidebar__bottom__list-link__icon">
+                  <use xlink:href="assets/sprite.svg#icon-settings"></use>
+                </svg>
+                <span class="header__sidebar__bottom__list-link__text"
+                  >Ayarlar</span
+                >
+              </a>
+            </li>
+            <li class="header__sidebar__bottom__list-item">
+              <a href="#" class="header__sidebar__bottom__list-link">
+                <svg class="header__sidebar__bottom__list-link__icon">
+                  <use xlink:href="assets/sprite.svg#icon-settings"></use>
+                </svg>
+                <span class="header__sidebar__bottom__list-link__text"
+                  >Ayarlar</span
+                >
+              </a>
+            </li>
+            <li class="header__sidebar__bottom__list-item">
+              <a href="#" class="header__sidebar__bottom__list-link">
+                <svg class="header__sidebar__bottom__list-link__icon">
+                  <use xlink:href="assets/sprite.svg#icon-settings"></use>
+                </svg>
+                <span class="header__sidebar__bottom__list-link__text"
+                  >Ayarlar</span
+                >
+              </a>
+            </li>
+            <li class="header__sidebar__bottom__list-item">
+              <a href="#" class="header__sidebar__bottom__list-link">
+                <svg class="header__sidebar__bottom__list-link__icon">
+                  <use xlink:href="assets/sprite.svg#icon-settings"></use>
+                </svg>
+                <span class="header__sidebar__bottom__list-link__text"
+                  >Ayarlar</span
+                >
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="header__start">
+        <button
+          class="header__hamburger-btn"
+          aria-label="Justhink web sitesinin
+          menüsünü görüntülemek için tıkla."
+          aria-controls="menu"
+          aria-expanded="false"
+        >
+          <span class="header__hamburger-menu"></span>
+        </button>
+        <h1 class="header__logo">
+          <a
+            href="#"
+            aria-label="Justhink sitesinin anasayfasına gitmek için tıkla."
+          >
+            <picture class="header__logo-img">
+              <source
+                srcset="
+                  assets/logo-mobile.webp    1x,
+                  assets/logo-mobile-2x.webp 2x
+                "
+                src="assets/logo.webp"
+                media="(max-width: 40.625em)"
+              />
+              <img
+                srcset="assets/logo.webp 1x, assets/logo-2x.webp 2x"
+                src="assets/logo.webp"
+                alt="Justhink Logo"
+              />
+            </picture>
+          </a>
+        </h1>
+      </div>
+      <div class="header__center">
+        <form action="search" method="get">
+          <div class="header__search-box">
+            <a
+              href="#"
+              class="header__search-btn"
+              aria-label="İstediğiniz bir şeyi aratın"
+            >
+              <svg class="header__search-icon">
+                <use xlink:href="assets/sprite.svg#icon-search"></use>
+              </svg>
+            </a>
+            <input
+              class="header__search-input"
+              type="text"
+              placeholder="Dilediğiniz şeyi arayın."
+            />
+          </div>
+        </form>
+      </div>
+      <div class="header__end">
+        <a href="/login" class="btn btn--primary">Giriş Yap</a>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="our-team-container">
+        <h3 class="our-team-heading">Ekibimiz</h3>
+        <p class="our-team-text">Günlük inovasyon dozu</p>
+        <div class="our-team__profiles">
+          <div class="our-team__profiles-profile"></div>
+          <div class="our-team__profiles-profile"></div>
+          <div class="our-team__profiles-profile"></div>
+          <div class="our-team__profiles-profile"></div>
+          <div class="our-team__profiles-profile"></div>
+          <div class="our-team__profiles-profile"></div>
+          <div class="our-team__profiles-profile"></div>
+          <div class="our-team__profiles-profile"></div>
+          <div class="our-team__profiles-profile"></div>
+          <div class="our-team__profiles-profile"></div>
+          <div class="our-team__profiles-profile"></div>
+          <div class="our-team__profiles-profile"></div>
+          <div class="our-team__profiles-profile"></div>
+        </div>
+        <p class="our-team-information">
+          Bilgi almak için ikonların üstünde gezin.
+        </p>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <nav class="footer__nav footer__nav--main">
+        <a href="/home" class="footer__link">Anasayfa</a>
+        <a href="/about" class="footer__link">Hakkımızda</a>
+        <a href="/dashboard" class="footer__link">Medya</a>
+      </nav>
+
+      <nav class="footer__nav footer__nav--icons">
+        <a href="mailto:iletisim@justhink.net" class="footer__link">
+          <svg class="footer__icon">
+            <use xlink:href="assets/sprite.svg#icon-email"></use>
+          </svg>
+        </a>
+        <a
+          href="https://www.instagram.com/justhinkofficial/"
+          class="footer__link"
+          target="_blank"
+        >
+          <svg class="footer__icon">
+            <use xlink:href="assets/sprite.svg#icon-instagram"></use>
+          </svg>
+        </a>
+        <a
+          href="https://www.linkedin.com/company/justhink"
+          class="footer__link"
+          target="_blank"
+        >
+          <svg class="footer__icon">
+            <use xlink:href="assets/sprite.svg#icon-linkedin"></use>
+          </svg>
+        </a>
+        <a
+          href="https://www.youtube.com/@jsthink"
+          class="footer__link"
+          target="_blank"
+        >
+          <svg class="footer__icon">
+            <use xlink:href="assets/sprite.svg#icon-youtube"></use>
+          </svg>
+        </a>
+      </nav>
+    </footer>
+  </body>
+</html>

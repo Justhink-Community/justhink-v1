@@ -2238,6 +2238,40 @@ main.login {
   gap: 1.6rem;
 }
 
+.our-team-container {
+  margin: 20rem;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.our-team-heading {
+  font-size: 7rem;
+  color: #4d1b60;
+  margin-bottom: 2rem;
+}
+.our-team-text {
+  font-size: 4rem;
+  color: rgba(77, 27, 96, 0.5019607843);
+  margin-bottom: 4.5rem;
+}
+.our-team-information {
+  font-weight: 600;
+  color: #987fa2;
+  font-size: 3.5rem;
+  margin-top: 6rem;
+}
+.our-team__profiles {
+  display: flex;
+  gap: 2rem;
+}
+.our-team__profiles-profile {
+  cursor: pointer;
+  width: 7.5rem;
+  height: 7.5rem;
+  background-color: rgba(152, 127, 162, 0.5019607843);
+  border-radius: 50%;
+}
+
 html.ocean .summary {
   font-size: 1.6rem;
   background-image: linear-gradient(to bottom right, #009da4, #0d1665);
