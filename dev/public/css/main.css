@@ -1865,6 +1865,87 @@ main.login {
 .shop-theme-price span {
   font-weight: 400;
 }
+.shop-icons {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* repeat(auto-fit, minmax(30rem, 1fr)) */
+  gap: 3.5rem;
+  padding: 0 5rem;
+}
+.shop-icon-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #d9d9d9;
+  border-radius: 2.7rem;
+}
+.shop-icon-main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+.shop-icon-main__svg {
+  width: 20rem;
+  height: 20rem;
+}
+.shop-icon-main__heading {
+  text-align: left;
+  flex-grow: 1;
+  width: 100%;
+  color: #555;
+  font-size: 3rem;
+  font-weight: 600;
+}
+.shop-icon-main__text {
+  text-align: left;
+  color: #555;
+}
+.shop-icon-main-button {
+  padding: 2rem;
+  border-radius: 0 0 3rem 3rem;
+  background-color: #4e1c60;
+  width: 100%;
+  font-size: 2.4rem;
+  color: #fafafa;
+}
+.shop-icon-list {
+  display: flex;
+  flex-direction: column;
+}
+.shop-icon-list__heading {
+  text-align: left;
+  color: #555;
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+.shop-icon-list-item__heading {
+  text-align: left;
+  color: #555;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.shop-icon-list-item-content {
+  display: flex;
+  background-color: #d9d9d9;
+  width: fit-content;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+.shop-icon-list-item {
+  width: 6rem;
+  height: 6rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.shop-icon-list-item__svg {
+  transition: all 0.2s ease;
+  position: relative;
+}
+.shop-icon-list-item__svg:hover {
+  background-color: #b3b3b3;
+  top: -0.5rem;
+}
 
 .shop-main {
   height: auto;
