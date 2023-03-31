@@ -1457,6 +1457,32 @@ body {
   text-decoration: underline;
 }
 
+.profile-background-container {
+  height: 35rem;
+  width: 180rem;
+  background-image: url(https://s3-alpha-sig.figma.com/img/c028/8cab/2006e150238f59820bcef8fd69a14b79?Expires=1681084800&Signature=iOkgTtPQrxg3BS4uQv0RDOODumhWHUHZjrY0B9N30ZBQPyph40NqIUaXP84hDhQlwjBco~dRyiUPH6qhl3vKsv3n73qWKm6Mp3xKB8RxAaT6YPKJltqGs-RUf00KXtr0DeX5RnjZTM5WOZqlaLfme~ehfrubT4bYpnzGp4JkhseeybwTNSY5LHkfFWiJvmUv8OyfHWY3xBUKgzn2N-boirIWflltmJTU5Zk~YOX0ob4FhkVmMkjvWus7KWL3DERRMQsYN0BL44BnC-uIfnasb8I-FJMBVaj4l0nn01N7hhXZzO7ydGeEkXQPxx8oqjBib0-g8FvP6wPjkRC9YV5Ogg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4);
+  background-position: rev;
+}
+.profile-information {
+  max-width: 180rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, #C74B55, #552878);
+}
+.profile-count {
+  display: flex;
+  gap: 2rem;
+}
+.profile-username {
+  font-size: 5rem;
+  font: bold;
+}
+.profile-count {
+  font-size: 3rem;
+  font: bold;
+}
+
 .ranking {
   background-color: #f0f0f0;
   border-radius: 1.1rem;
@@ -1936,15 +1962,15 @@ main.login {
   width: 6rem;
   height: 6rem;
   cursor: pointer;
-  transition: all 0.2s ease;
 }
 .shop-icon-list-item__svg {
   transition: all 0.2s ease;
-  position: relative;
 }
-.shop-icon-list-item__svg:hover {
+.shop-icon-list-item:hover {
   background-color: #b3b3b3;
-  top: -0.5rem;
+}
+.shop-icon-list-item:hover .shop-icon-list-item__svg {
+  transform: translateY(-0.5rem);
 }
 
 .shop-main {
