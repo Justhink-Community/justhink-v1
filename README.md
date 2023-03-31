@@ -86,7 +86,26 @@ Sunucuyu çalıştırın
   npm run start
 ```
 
-  
+## Sıkça Yaşanan Sorunlar
+
+### Yeni eklediğim SCSS dosyası çalışmıyor:
+main.scss içerisinde dosyanızı import edin.
+
+```scss
+  @import "foldername/filename"; // Eklenti adı vermenize gerek yok.
+```
+### Svg dosyasını nasıl eklerim:
+İlgili dosyayı src/assets/sprite.svg içerisine ekleyin. Daha sonra svg dosyanızı şu şekilde olduğu gibi kullanın:
+```html
+<svg class="footer__icon">
+  <use xlink:href="assets/sprite.svg#icon-id"></use>
+</svg>
+```
+NOT: public/assets/sprite.svg dosyasına da svg'yi koymayı unutmayın.
+
+### HTML dosyasını açamıyorum, FileNotFoundError:
+Dosyanın o konumda olduğuna emin olun, eğer dosya varsa, dosya adına `.html` ekleyin.
+
 ## Yazarlar ve Teşekkür
 
 - [@furkanesenn](https://www.github.com/furkanesenn) tasarım, geliştirme ve koordinasyon için.
