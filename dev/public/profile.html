@@ -165,21 +165,68 @@
       </div>
     </header>
 
-    <main class="main">
-        <div class="profile-container">
-            <div class="profile-background-container"></div>
-            <div class="profile-picture">
-                
-            </div>
-            <div class="profile-information">
-                <p class="profile-username">arasorgun</p>
-                <div class="profile-count">
-                    <p class="fikir-count">20 Fikir</p>
-                    <p class="follower-count">15 Takipçi</p>
-                    <p class="following-count">10 Takip Edilen</p>
-                </div>
-            </div>
+    <main class="main profile-page-container">
+      <div class="profile-container">
+        <div class="profile-background-container"></div>
+        <div class="profile-picture">
+          <img
+            src="data:image/jpeg;base64,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"
+            alt=""
+          />
         </div>
+        <div class="profile-information">
+          <p class="profile-username">arasorgun</p>
+          <div class="profile-count">
+            <p class="fikir-count">20 Fikir</p>
+            <p class="follower-count">15 Takipçi</p>
+            <p class="following-count">10 Takip Edilen</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="old-idea-container">
+        <p class="old-idea">geçmiş fikirler (sitedeki tasarım)</p>
+      </div>
+
+      <div class="statics-container">
+        <p class="statics-heading">istatistikler & başarılar</p>
+
+        <div class="statics">
+          <div class="static">
+            <svg class="static-fire-svg">
+              <use xlink:href="assets/sprite.svg#icon-fire"></use>
+            </svg>
+            <div class="static-amount">50</div>
+          </div>
+
+          <div class="static">
+            <svg class="static-pencil-svg">
+              <use xlink:href="assets/sprite.svg#icon-pencil"></use>
+            </svg>
+            <div class="static-amount">100</div>
+          </div>
+
+          <div class="static">
+            <svg class="static-money-svg">
+              <use xlink:href="assets/sprite.svg#icon-money"></use>
+            </svg>
+            <div class="static-amount">2000</div>
+          </div>
+
+          <div class="static">
+            <svg class="static-badge-svg">
+              <use xlink:href="assets/sprite.svg#icon-badge"></use>
+            </svg>
+            <div class="static-amount">1.</div>
+          </div>
+        </div>
+
+        <div class="achivments">
+          <div class="achivment"></div>
+          <div class="achivment"></div>
+          <div class="achivment"></div>
+        </div>
+      </div>
     </main>
 
     <footer class="footer">
